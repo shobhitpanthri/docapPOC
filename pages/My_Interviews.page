@@ -1,0 +1,304 @@
+<apex:page sidebar="false" standardStylesheets="false" doctype="html-5.0" cache="false" controller="myInterviews" action="{!filterResults}">
+
+<html>
+    <head>
+    <style>
+        /* Font Style */
+        @font-face{
+          font-family: 'ProximaNova';
+          src: url({!URLFOR($Resource.MyDeliveries, 'Fonts/proximanovasoft-regular-webfont.ttf')});
+          font-weight: normal;
+          font-style: normal;
+        }
+        
+        @font-face{
+          font-family: 'ProximaNovaBold';
+          src: url({!URLFOR($Resource.MyDeliveries, 'Fonts/proximanovasoft-bold-webfont.ttf')});
+          font-weight: bold;
+          font-style: normal;
+        }
+        
+        @font-face{
+          font-family: 'ProximaNovaSemibold';
+          src: url({!URLFOR($Resource.MyDeliveries, 'Fonts/proximanovasoft-semibold-webfont.ttf')});
+          font-weight: normal;
+          font-style: normal;
+        }
+        
+        @font-face{
+          font-family: 'ProximaNovaMedium';
+          src: url({!URLFOR($Resource.MyDeliveries, 'Fonts/ProximaNovaSoft-Medium.ttf')});
+          font-weight: normal;
+          font-style: normal;
+        }
+    
+        body{
+          background: #f0f1f2;
+            width: 100%;
+            height: 100%;
+            margin: 0px;
+        }
+        
+        .imageContainer{
+            width: 100%;
+        }
+        .imageContainer img{
+            width: 100%;
+        }
+        
+        #sysco_header{
+          background: url({!URLFOR($Resource.Pacific, 'P2.png')}) no-repeat;
+          background-size: cover;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .21);
+          height: 165px;
+        }
+        
+          #sysco_header span{
+            background: rgba(0,0,0,.6);
+            text-align:center;
+            color: #fff;
+            display: block;
+            font-family: ProximaNovaMedium, Helvetica;
+            font-size: 24px;
+            padding: 5px 29px;
+            position: relative;
+            top: 14px;
+          }
+          
+    #sysco_header2{
+          background: url({!URLFOR($Resource.Pacific, 'P23.png')}) no-repeat;
+          background-size: cover;
+          box-shadow: 0 1px 3px rgba(0, 0, 0, .2), inset 0 1px 0 rgba(255, 255, 255, .21);
+          height: 90px;
+        }
+        
+          #sysco_header2 span{
+            background: rgba(0,0,0,.6);
+            text-align:center;           
+            color: #fff;
+            display: block;
+            font-family: ProximaNovaMedium, Helvetica;
+            font-size: 24px;
+            padding: 5px 29px;
+            position: relative;
+            top: 14px;
+          }          
+    
+                .dropdown{
+                    display: inline-block;
+                    border:1;
+                    width:300px;
+                    font-size:16px;
+                }    
+                
+                .button{
+                    width:300px;
+                   background-color:#339900 !important;
+
+                    font-size:16px !important;
+                    height:30px;
+                    
+                    
+                }                  
+        
+        .card{
+          background: #fff;
+          border: 1px solid #cfd4d9;
+          border-radius: 5px;
+          margin: 14px;
+        }
+        
+          .card > div{
+            background-position: 14px 14px;
+            background-repeat: no-repeat;
+            background-size: 30px;
+            font-family: ProximaNovaMedium, Helvetica;
+            min-height: 30px;
+            padding: 14px 14px 14px 58px;
+          }
+          
+          .card a{
+            color: #2a94d6;
+            text-decoration: none;
+            font-size: 18px;
+          }
+        
+          .card .time{
+            /*background-image: url({!URLFOR($Resource.MyDeliveries, 'Icons/Today.svg')});*/
+            font-size: 20px;
+            padding: 2px;
+          }
+          .card .account{
+            background-image: url({!URLFOR($Resource.MyDeliveries, 'Icons/Account.svg')});
+          }
+          .card .account > div{
+            font-size: 12px;
+          }
+          
+          .card .phone{
+            background-image: url({!URLFOR($Resource.MyDeliveries, 'Icons/Log-A-Call.svg')});
+          }
+          .card .order{
+            background-image: url({!URLFOR($Resource.icon_delivery)});
+            //background-color: #AA8E0A;
+            //background-image: url(/img/icon/t4/custom/custom98_120.png);
+          }
+          
+          .card #map-canvas{
+            height: 160px;
+            padding: 0;
+            margin-bottom: 14px;
+            width: 100%;
+          }
+    </style>
+    
+    <script>
+        function getDayName(){
+            var day = new Date().getDay();
+            
+            switch (day)
+            {
+                case 0:
+                    x="Sunday";
+                    break;
+                case 1:
+                    x="Monday";
+                    break;
+                case 2:
+                    x="Tuesday";
+                    break;
+                case 3:
+                    x="Wednesday";
+                    break;
+                case 4:
+                    x="Thursday";
+                    break;
+                case 5:
+                    x="Friday";
+                    break;
+                case 6:
+                    x="Saturday";
+                    break;
+            }
+            
+            return x;
+        }
+        
+        function getMonthName(){
+            var day = new Date().getMonth();
+            
+            switch (day)
+            {
+                case 0:
+                    x="January";
+                    break;
+                case 1:
+                    x="February";
+                    break;
+                case 2:
+                    x="March";
+                    break;
+                case 3:
+                    x="April";
+                    break;
+                case 4:
+                    x="May";
+                    break;
+                case 5:
+                    x="June";
+                    break;
+                case 6:
+                    x="July";
+                    break;
+                case 7:
+                    x="August";
+                    break;
+                case 8:
+                    x="September";
+                    break;
+                case 9:
+                    x="October";
+                    break;
+                case 10:
+                    x="November";
+                    break;
+                case 11:
+                    x="December";
+                    break;
+            }
+            
+            return x;
+        }
+    </script>
+    
+    
+    </head>
+    
+     <body>
+        <div id="sysco_header">
+      
+        </div>
+        
+        
+                <div id="sysco_header2">
+      
+          <span>
+              My Interviews
+              <br/>
+              <script>
+                  document.write(getDayName());
+                  var d = new Date();
+                  document.write(', ' + getMonthName() + ' ' + d.getDate());
+              </script>
+          </span>
+        </div>
+     
+        
+    </body>
+    
+    
+
+              <div class="card"> 
+            <apex:form >
+             
+
+ 
+            <apex:selectList styleClass="dropdown" size="1" value="{!selectedTimeItem}">
+                <apex:selectOptions value="{!timeItems}"/>
+            </apex:selectList>  
+<br></br>
+
+            <apex:selectList styleClass="dropdown" size="1" value="{!selectedPosition}">
+                <apex:selectOptions value="{!items}"/>
+            </apex:selectList>
+
+<br></br>
+
+          <apex:commandButton style="background:green;" styleClass="button" value="Filter" action="{!filterResults}"/>
+        
+            </apex:form>
+             </div>
+                 
+    <apex:outputPanel id="panel">
+        <apex:outputPanel rendered="{!interviewList.size = 0}">
+        </apex:outputPanel>
+        <apex:repeat value="{!interviewList}" var="interview">
+            <div class="card">
+
+              
+                <div class="time"><a href="{!URLFOR($Action.Interview__c.View, Interview.id)}"> {!interview.Title__c}</a></div>
+             
+               <div class="time"><b>Candidate: </b>{!interview.Candidate__r.Name}</div>
+              
+              
+               <div class="time"><b>Position:</b> {!interview.Position__r.Name}</div>
+
+
+            </div>
+        </apex:repeat>
+        </apex:outputPanel>
+    
+    
+    </html>
+
+</apex:page>

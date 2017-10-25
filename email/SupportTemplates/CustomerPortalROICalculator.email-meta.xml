@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>SalesforcecomGenericLogo</letterhead>
+    <name>Customer Portal ROI Calculator</name>
+    <style>freeForm</style>
+    <subject>Your Customer Portal &amp; Support Savings = {!Customer_Portal_Savings_Calculator__c.Total_Savings_per_Year__c}</subject>
+    <textOnly>Thank you for your interest in the customer portal.  The follow data was collected and the ROI was calculated on {!Customer_Portal_Savings_Calculator__c.LastModifiedDate}.  
+ 
+Description of Calculation:
+{!Customer_Portal_Savings_Calculator__c.Description__c}
+ 
+Total Number of Support Employees: {!Customer_Portal_Savings_Calculator__c.Number_of_Support_Employees__c}
+Total Number of Cases per Week: 
+{!Customer_Portal_Savings_Calculator__c.Number_of_Cases_Calls_per_week__c}
+#  of  cases per support employee per day:
+{!Customer_Portal_Savings_Calculator__c.Number_of_Cases_Calls_per_Day__c}
+Average Working Hours:
+{!Customer_Portal_Savings_Calculator__c.Working_Hours_Per_Day__c}
+Average Time spent on cases (minutes):
+{!Customer_Portal_Savings_Calculator__c.Avg_time_spent_on_case_minutes__c}
+Estimated productivity savings:
+{!Customer_Portal_Savings_Calculator__c.Estimated_Productivity_Savings__c}
+Call deflection (minutes): {!Customer_Portal_Savings_Calculator__c.Call_deflection_minutes__c}
+Total Savings (hours/week): {!Customer_Portal_Savings_Calculator__c.Total_saving_per_week_hours_per_week__c}
+Total Savings (hours/year): {!Customer_Portal_Savings_Calculator__c.Total_savings_per_year_hours_per_year__c}
+Blended cost of FTE: {!Customer_Portal_Savings_Calculator__c.FTE_Cost_hour__c}
+Total Savings: {!Customer_Portal_Savings_Calculator__c.Total_Savings_per_Year__c}
+
+Please follow this link to additional product information
+http://www.salesforce.com/products/service-support/
+
+For additional best practice information from our best practices website; including the rollout guide for customer portal and the services and support process mapping powerpoint;
+http://blogs.salesforce.com/features/2007/02/customer_portal.html
+http://blogs.salesforce.com/processes/2006/07/the_service_and.html</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

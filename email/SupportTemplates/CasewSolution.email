@@ -1,0 +1,21 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P><FONT face=Geneva,Arial,Sans-Serif color=#000099 size=2>Dear {!Case.Contact},</FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif color=#000099 size=2>In response to your recent case please review the proposed solution to your problem.&nbsp; If you have any additional issues or this does not fix your problem, please call or access our self-service portal.</FONT></P>]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[<P><FONT face=Geneva,Arial,Sans-Serif color=#000099 size=2><BR><STRONG><U>Solution Description:<BR></U></STRONG><EM>{!Case.Solution_Description}</EM></FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif color=#000099 size=2>Thank you,</FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif color=#000099 size=2>{!User.Name}<BR>{!Organization.Name}</FONT></P>
+<P><FONT color=#000099 size=2></FONT>&nbsp;</P>
+<P><FONT face=Geneva,Arial,Sans-Serif color=#000099 size=2>------ Your Question / Comment ------</FONT></P>
+<P><FONT face=Geneva,Arial,Sans-Serif color=#000099 size=2><STRONG><U>Your Original Case Description</U></STRONG>:<BR><EM>{!Case.Description}<BR>{!Case.Solution_Attachments}</EM></FONT></P>
+<P>&nbsp;</P>]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[]]></td>
+</tr>
+</table>

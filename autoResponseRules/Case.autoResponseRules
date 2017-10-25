@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AutoResponseRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <autoResponseRule>
+        <fullName>Auto</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>support@mycompany.com</senderEmail>
+            <senderName>WM Support</senderName>
+            <template>InternalNotifications/SUPPORTWebtoCaseemailresponseSAMPLE</template>
+        </ruleEntry>
+        <ruleEntry>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>notContain</operation>
+                <value>Web</value>
+            </criteriaItems>
+            <notifyCcRecipients>false</notifyCcRecipients>
+            <senderEmail>support@company.com</senderEmail>
+            <senderName>Your Support Team</senderName>
+            <template>SupportTemplates/Thistemplateisusedtoconfirmacasetoacontact</template>
+        </ruleEntry>
+    </autoResponseRule>
+</AutoResponseRules>

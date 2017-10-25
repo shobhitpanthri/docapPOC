@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Shipment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Shipments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Shipments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Contact Phone --></label>
+        <name>Contact_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Arrival Date --></label>
+        <name>Expected_Arrival_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Handling Fee --></label>
+        <name>Handling_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Num__c</name>
+        <relationshipLabel><!-- Shipments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Product Shipped --></label>
+        <name>Product_Shipped__c</name>
+        <relationshipLabel><!-- Shipments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Ship Date --></label>
+        <name>Ship_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Address --></label>
+        <name>Shipping_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Contact --></label>
+        <name>Shipping_Contact__c</name>
+        <relationshipLabel><!-- Shipments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Shipping Fee --></label>
+        <name>Shipping_Fee__c</name>
+    </fields>
+    <fields>
+        <label><!-- Shipping Vendor --></label>
+        <name>Shipping_Vendor__c</name>
+        <picklistValues>
+            <masterLabel>Courier</masterLabel>
+            <translation><!-- Courier --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DHL</masterLabel>
+            <translation><!-- DHL --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FedEx</masterLabel>
+            <translation><!-- FedEx --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Frieght</masterLabel>
+            <translation><!-- Frieght --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UPS</masterLabel>
+            <translation><!-- UPS --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Special Shipping Notes --></label>
+        <name>Shipping_notes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tracking Details --></label>
+        <name>Tracking_Details__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

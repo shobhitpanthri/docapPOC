@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>TCO Whitepaper</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>TCO Whitepaper</name>
+    <style>none</style>
+    <subject>Learn the True Total Cost of Ownership. FREE Whitepaper</subject>
+    <textOnly>Dear {!Lead.Name},
+Please find attached a white paper on the true total cost of ownership of a CRM application broken down by hardware, network, database, IT labor, IT misc. costs. 
+
+Also, it contains some great tips on leveraging Salesforce.com as a revenue generation tool and associated metrics for your organization.
+
+Thanks,
+{!Organization.Name}</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

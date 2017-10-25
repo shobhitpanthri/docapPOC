@@ -1,0 +1,166 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Reject Fund Request</title>
+<link  href="/dCSS/Theme2/default/common.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" >
+<link  href="/dCSS/Theme2/default/custom.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" >
+<link  href="/dCSS/Theme2/default/common.css" type="text/css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" >
+<link  href="/css/assistive.css" type="text/css" media="aural,braille,embossed" rel="stylesheet" >
+<style type="text/css" media="screen">div.visible { display: visible; } div.hidden { display: none; } </style>
+<div id="JavaScriptEnabled" class="visible">
+<br><table width="100%"><tr><td align=center><span class="moduleTitle">Updating ... Please Wait</span></td></tr>
+<tr><td>&nbsp;</td></tr><tr><td align=center><img src="/img/waiting_dots.gif" border="0" width=156 height=34></td></tr>
+</table>
+</div>
+<script src="https://www.salesforce.com/services/lib/ajax/beta3.3/sforceclient.js" type="text/javascript"></script> 
+<script language="JavaScript" src="{!Scontrol_URL}"></script>
+</head>
+<body class=" LookupResultsFrame">
+<script type="text/javascript"> 
+//Called from a fund claim form and changes the claim status to "rejected". It also registers an entry in the channel budget. 
+<!-- 
+/* Configuration value used to determine if budgets should be used 
+You could also just make the budget field required and remove this value */
+var bFundUseBudget = true;	
+
+//Starting values that may be changed should the user edit them on the intermediate entry page
+var updateBudget = true;
+var budgetID = "{!SFDC_MDF_SFDC_Channel_Budget_ID}";
+
+//Build the page 
+reSizeWindow();
+drawUpdating();
+writeFieldSection();
+
+//called from onLoad(). Connects to the sforceClient
+function startup() { 
+	// get session id and initialize the sforceClient object 
+	sforceClient.init("{!API_Session_ID}", "{!API_Partner_Server_URL_60}"); 
+	//check everything is ok 
+	if (sforceClient.getSessionId().indexOf("!API_Session_ID") != -1) { 
+		return false; 
+	} else { 
+		//Uncomment to have a debug window display with comments/ errors etc
+		//showDebug();
+		return true; 
+	} 
+} 
+
+//called from onLoad(). 
+function initializeForm() { 
+	var retVal = true;
+	/* Determine if the app has been configured to use the budget and if this is an approved request being rejected
+	as opposed to a request that was just submitted. In the case of the latter, just the status needs to be changed, 
+	whereas with the former there are values that need to be reversed. */
+	if("{!SFDC_MDF_Status}" == "Approved") {
+		retVal = genericInitializeForm(	"0",
+										"0",
+										"",
+										"",
+										"{!SFDC_MDF_SFDC_Channel_Budget_ID}", 
+										false,
+										"",
+										"",
+										"SFDC_Channel_Budget__c", 
+										"SFDC_MDF__c");
+		if (retVal == false) {
+			//The form requires information. Show some other fields to provide context to the user.
+			var fieldsList = new Array("Name", "account__c", "Amount__c", "Approved_Amount__c");
+			var fieldsValues= new Array("{!SFDC_MDF_Name}", "{!SFDC_MDF_account}", "{!SFDC_MDF_Amount}", "{!SFDC_MDF_Approved_Amount}");
+			showFormContextFields(fieldsList, fieldsValues, "SFDC_MDF__c");
+			document.getElementById("divErrorMsg").innerHTML = validationPageErrorHeader;
+		}
+	}
+	return retVal;
+}
+
+function main() {	
+	var retVal = true;
+	/* Funds that are in approved or submitted status can be rejected.
+	In both cases the status will change to 'rejected', however in the case of a previously approved requests
+	it needs make two budget adjustment (assuming budgets are being used):
+	  a) enter a budget transaction and b) update the master record balances */
+	if ("{!SFDC_MDF_Status}" == "Approved" && bFundUseBudget == true && updateBudget == true){
+		//Reverse the budget entry
+		var cbFields = new Array();
+		var cbValues = new Array();
+		cbFields.push("Date__c");
+		cbValues.push(new Date()); 
+		cbFields.push("Source_Record_Name__c");
+		cbValues.push("{!SFDC_MDF_Name}"); 
+		cbFields.push("Requestor__c");
+		cbValues.push("{!SFDC_MDF_CreatedBy}"); 
+		cbFields.push("Approver__c");
+		cbValues.push("{!User_FirstName}" + " " + "{!User_LastName}"); 
+		cbFields.push("Approver_Email__c");
+		cbValues.push("{!User_Email}"); 
+		cbFields.push("Source_Record_ID__c");
+		cbValues.push("{!SFDC_MDF_ID}"); 
+		cbFields.push("Approved_Request__c");
+		cbValues.push(-convertToNumber("{!SFDC_MDF_Approved_Amount}"));
+		cbFields.push("Channel_Budget__c");
+		cbValues.push(budgetID); 
+		if (!createBudgetEntry(cbFields, cbValues)) {
+			retVal = false;
+			alert("Error creating budget entry");
+		} else {
+			//Calculate the new field values and update the master record balances
+			var tableName = "SFDC_Channel_Budget__c";
+			var selectFields = new Array("id","Approved_Request__c");
+			var constrainColumns = new Array("id");
+			var constrainValues = new Array(budgetID);
+			var queryResult=getRecords(buildSelectStatement(tableName, selectFields, constrainColumns, constrainValues)); 
+			if (queryResult != null) {
+				var oldVal = parseFloat(convertToNumber(queryResult.records[0].get("Approved_Request__c")));
+				var commitVal=parseFloat(convertToNumber("{!SFDC_MDF_Approved_Amount}"));
+				var newValue = parseFloat(oldVal - commitVal);
+				var fieldNames = new Array("Approved_Request__c");
+				var fieldValues = new Array(newValue.toString());
+				var saveResults=updateFields(queryResult.records[0], fieldNames, fieldValues);	
+				if (saveResults == null) {
+					/* This is not a fatal error. Even if this fails go ahead and change the status. The user
+					can always recalc the budget totals using the s-control on that object. */
+					alert("Error updating budget balances");	
+				}
+			} else {
+				alert("Error updating budget balances");	
+			}
+		}
+	}
+
+	//Update record status and null approved amount, approved date, and budget if needed.
+	var tableName = "SFDC_MDF__c";
+	var selectFields = new Array("id","Status__c");
+	if (bFundUseBudget) 
+		selectFields.push("SFDC_Channel_Budget__c");
+	var constrainColumns = new Array("id");
+	var constrainValues = new Array("{!SFDC_MDF_ID}");
+	var queryResult =getRecords(buildSelectStatement(tableName, selectFields, constrainColumns, constrainValues)); 
+	var fieldNames = new Array("Status__c");
+	var fieldValues = new Array("Rejected");
+	if (bFundUseBudget) {
+		fieldNames.push("SFDC_Channel_Budget__c");
+		fieldValues.push(budgetID);
+	}
+	queryResult.records[0].fieldsToNull = ["Approved_Amount__c", "Date_Approved__c"];
+	var saveResults=updateFields(queryResult.records[0], fieldNames, fieldValues);
+	if (saveResults == null) {
+		retVal = false;
+		alert("Error changing record status");	
+	}
+
+	if (retVal == true){
+		opener.location.reload(); 
+	}
+	return retVal;
+}
+
+function save() {
+	genericSave(false, true)
+}
+
+setTimeout("onLoad();",2); 
+-->
+</script>
+</body>
+</html>

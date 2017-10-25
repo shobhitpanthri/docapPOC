@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>data sfga</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>data sfga</value>
+    </caseValues>
+    <fields>
+        <label><!-- Keywords --></label>
+        <name>Key_Word__c</name>
+    </fields>
+    <fields>
+        <label><!-- Keyword Phrases --></label>
+        <name>Phrases__c</name>
+    </fields>
+    <fields>
+        <label><!-- Revenue --></label>
+        <name>Revenue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Stage --></label>
+        <name>Sales_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Closed Won</masterLabel>
+            <translation><!-- Closed Won --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Needs Analysis</masterLabel>
+            <translation><!-- Needs Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Negotiation/Review</masterLabel>
+            <translation><!-- Negotiation/Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Prospecting</masterLabel>
+            <translation><!-- Prospecting --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Search Campaign --></label>
+        <name>Search_Campaign_Data__c</name>
+        <relationshipLabel><!-- data sfga --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Text Ad --></label>
+        <name>Text_Ad__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Month --></label>
+        <name>date__c</name>
+    </fields>
+    <fields>
+        <label><!-- # deals per stage --></label>
+        <name>deals_per_stage__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of leads --></label>
+        <name>of_leads__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

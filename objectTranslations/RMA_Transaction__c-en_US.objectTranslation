@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RMA Transaction</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RMA Transactions</value>
+    </caseValues>
+    <fields>
+        <label><!-- RMA --></label>
+        <name>RMA__c</name>
+        <relationshipLabel><!-- RMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Replacement Asset --></label>
+        <name>Replacement_Asset__c</name>
+        <relationshipLabel><!-- RMA Transactions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Transaction Date --></label>
+        <name>Transaction_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Transaction Type --></label>
+        <name>Transaction_Type__c</name>
+        <picklistValues>
+            <masterLabel>Issue</masterLabel>
+            <translation><!-- Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Receipt</masterLabel>
+            <translation><!-- Receipt --></translation>
+        </picklistValues>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

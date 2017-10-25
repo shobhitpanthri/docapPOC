@@ -1,0 +1,12 @@
+<apex:page cache="false" showHeader="false" contentType="text/css">
+.oneMdp .publisherPanel {
+    left: 50%;
+    margin-left: -160px;
+    width: 320px;
+    height: 100%;
+    top: 135px;
+}
+.oneMdp .uiCarouselPage{
+    height:100%;
+}
+</apex:page>

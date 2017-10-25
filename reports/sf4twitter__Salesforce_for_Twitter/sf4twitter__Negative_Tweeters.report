@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>FK_CNTC_FIRST_NAME</field>
+    </columns>
+    <columns>
+        <field>sf4twitter__Twitter_Conversation__c.sf4twitter__Content__c</field>
+    </columns>
+    <columns>
+        <field>sf4twitter__Twitter_Conversation__c.sf4twitter__Origin_Date__c</field>
+    </columns>
+    <columns>
+        <aggregateTypes>Sum</aggregateTypes>
+        <field>sf4twitter__Twitter_Conversation__c.sf4twitter__Negative_Tweets__c</field>
+    </columns>
+    <columns>
+        <field>sf4twitter__Twitter_Conversation__c.sf4twitter__Tweet_Sentiment__c</field>
+    </columns>
+    <filter>
+        <criteriaItems>
+            <column>sf4twitter__Twitter_Conversation__c.sf4twitter__Negative_Tweets__c</column>
+            <isUnlocked>false</isUnlocked>
+            <operator>greaterThan</operator>
+            <value>0</value>
+        </criteriaItems>
+        <language>en_US</language>
+    </filter>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>FK_NAME</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Negative Tweeters</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$sf4twitter__Twitter_Conversation__c@sf4twitter__Twitter_Conversation__c.sf4twitter__Contact__c</reportType>
+    <scope>user</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>sf4twitter__Twitter_Conversation__c.sf4twitter__Origin_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

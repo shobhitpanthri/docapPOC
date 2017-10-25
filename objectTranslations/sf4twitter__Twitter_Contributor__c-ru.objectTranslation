@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Автор Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Авторы Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Автора Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Авторов Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Автора Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Авторов Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Автору Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Авторам Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Автором Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Авторами Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value>Авторе Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value>Авторах Twitter</value>
+    </caseValues>
+    <fields>
+        <label><!-- Authentication --></label>
+        <name>sf4twitter__Authentication__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tweet as Main Account --></label>
+        <name>sf4twitter__Main_Account__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Secret --></label>
+        <name>sf4twitter__OAuth_Secret__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Token --></label>
+        <name>sf4twitter__OAuth_Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Account --></label>
+        <name>sf4twitter__TwitterAccount__c</name>
+        <relationshipLabel><!-- Contributors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Twitter User Id --></label>
+        <name>sf4twitter__Twitter_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- User --></label>
+        <name>sf4twitter__User__c</name>
+        <relationshipLabel><!-- Twitter Contributors --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>sf4twitter__Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validated --></label>
+        <name>sf4twitter__Valid__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Имя автора Twitter</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- You must enter a value --></errorMessage>
+        <name>sf4twitter__Twitter_Account_Needed</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid username --></errorMessage>
+        <name>sf4twitter__Username_different_to_main_account</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Add_Contributor --></label>
+        <name>sf4twitter__Add_Contributor</name>
+    </webLinks>
+</CustomObjectTranslation>

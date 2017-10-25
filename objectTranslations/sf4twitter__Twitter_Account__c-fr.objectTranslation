@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Compte Twitter</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Comptes Twitter</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>sf4twitter__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bit.ly Api Key --></label>
+        <name>sf4twitter__Bit_ly_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bit.ly Username --></label>
+        <name>sf4twitter__Bit_ly_Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contributor Enabled --></label>
+        <name>sf4twitter__Contributor_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direct Message Id Threshold --></label>
+        <name>sf4twitter__Direct_Message_Id_Threshold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Auto-Case Creation --></label>
+        <name>sf4twitter__Enable_Auto_Case_Creation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Password --></label>
+        <name>sf4twitter__Has_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Number --></label>
+        <name>sf4twitter__Klout_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Score --></label>
+        <name>sf4twitter__Klout_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last DM Ids --></label>
+        <name>sf4twitter__Last_DM_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Tweet Ids --></label>
+        <name>sf4twitter__Last_Tweet_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Secret --></label>
+        <name>sf4twitter__OAuth_Secret__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Token --></label>
+        <name>sf4twitter__OAuth_Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Twitter Max Message --></label>
+        <name>sf4twitter__Partial_Twitter_Max_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Twitter Max Twitter --></label>
+        <name>sf4twitter__Partial_Twitter_Max_Twitter__c</name>
+    </fields>
+    <fields>
+        <help>Twitter remplace la paire Nom d&apos;utilisateur/Mot de passe par le protocole d&apos;accès sécurisé OAuth. Pour utiliser OAuth, saisissez un texte dans ce champ, puis cliquez sur le bouton « Accorder l&apos;accès à Twitter » une fois le compte Twitter enregistré.</help>
+        <label><!-- Password --></label>
+        <name>sf4twitter__Password__c</name>
+    </fields>
+    <fields>
+        <help>Lorsque cette fonctionnalité est activée, les tweets de ce compte Twitter contenant #ch sont automatiquement publiés dans le fil du créateur du compte Twitter. Les commentaires sur cette publication dans Chatter ne sont pas envoyés vers Twitter.</help>
+        <label><!-- Add Posts with #ch to Chatter --></label>
+        <name>sf4twitter__Post_Hashtag_Chatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Results Per Page --></label>
+        <name>sf4twitter__Results_Per_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Direct Message Id Offset --></label>
+        <name>sf4twitter__Search_Direct_Message_Id_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Tweet Id Offset --></label>
+        <name>sf4twitter__Search_Tweet_Id_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tweet Id Threshold --></label>
+        <name>sf4twitter__Tweet_Id_Threshold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Max Message --></label>
+        <name>sf4twitter__Twitter_Max_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Max Twitter --></label>
+        <name>sf4twitter__Twitter_Max_Twitter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter User Id --></label>
+        <name>sf4twitter__Twitter_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unknown Twitter Usernames --></label>
+        <name>sf4twitter__Unknown_Twitter_Usernames__c</name>
+        <picklistValues>
+            <masterLabel>Create Contact</masterLabel>
+            <translation>Créer un contact</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Lead</masterLabel>
+            <translation>Créer une piste</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Person Account</masterLabel>
+            <translation>Créer un compte personnel</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do nothing</masterLabel>
+            <translation>Ne rien faire</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>sf4twitter__Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validated --></label>
+        <name>sf4twitter__Valid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apply Case Association Logic to Tweets --></label>
+        <name>sf4twitter__associate_DM__c</name>
+    </fields>
+    <fields>
+        <help>Cela empêche l&apos;association automatique des tweets aux requêtes qui ne sont pas initiées par l&apos;auteur des tweets</help>
+        <label><!-- Only Associate Matching Usernames --></label>
+        <name>sf4twitter__associate_cases_same_username__c</name>
+    </fields>
+    <fields>
+        <help>Lors de la recherche d&apos;une requête candidate, pour des Messages directs ou des Réponses, toutes les requêtes fermées, dont la date de clôture est inférieure au nombre de minutes défini, sont disponibles pour la logique Threading.</help>
+        <label><!-- Time to Keep Assoc. After Case Close --></label>
+        <name>sf4twitter__closed_case_duration__c</name>
+    </fields>
+    <fields>
+        <help>Lors de la recherche de tweets, les résultats précédents sont filtrés par les nouveaux résultats. En activant cette option, la recherche renvoie tous les résultats, dans la limite fixée par twitter.</help>
+        <label><!-- Get Max Tweets Incl. Previous Results --></label>
+        <name>sf4twitter__ignore_maxid__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Nom de compte Twitter</nameFieldLabel>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- This field is required --></errorMessage>
+        <name>sf4twitter__Save_unknown_twitter_usernames_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid number --></errorMessage>
+        <name>sf4twitter__Search_DM_Id_Offset_must_be_a_number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid number --></errorMessage>
+        <name>sf4twitter__Search_Tweet_Id_Offset_must_be_a_number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Get_Klout_Score --></label>
+        <name>sf4twitter__Get_Klout_Score</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Klout_Score_Massive --></label>
+        <name>sf4twitter__Get_Klout_Score_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Revoke --></label>
+        <name>sf4twitter__Revoke</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Schedule_Account_Searches --></label>
+        <name>sf4twitter__Schedule_Account_Searches</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Validate --></label>
+        <name>sf4twitter__Validate</name>
+    </webLinks>
+</CustomObjectTranslation>

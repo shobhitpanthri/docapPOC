@@ -1,0 +1,16 @@
+<!--PLEASE READ: If you override the automatically generated CSS, your Chatter Answers community might not function correctly.-->
+<apex:page language="en_US" showHeader="false" cache="true">
+   
+   <body style="font-size:75%;">
+       <div class="headerdiv">
+            <a href="/Communities"><img src="{!$Resource.Logo}" alt="Header Default" /></a>
+       </div>
+       <div class="mychatteranswers">
+         <chatteranswers:allfeeds communityId="09a46000000l7he"/>
+       </div>
+       <div class="footerdiv">
+            <img src="{!$Resource.pkb_footer}" alt="Footer Default" />
+       </div>
+   </body>
+    <link href="/Communities/ChatterAnswersCSS" rel="stylesheet" type="text/css" />
+</apex:page>

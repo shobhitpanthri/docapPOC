@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Account.Entitlements$ServiceContract</field>
+    </columns>
+    <columns>
+        <field>Account.Entitlements$Asset</field>
+    </columns>
+    <columns>
+        <field>Account.Entitlements.EntitlementContacts$Name</field>
+    </columns>
+    <description>Service Contract Contacts by Entitlement</description>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Account.Entitlements$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Entitlements: Contracts with Contacts</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Accounts_with_Entitlements_with_Contacts__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Account$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

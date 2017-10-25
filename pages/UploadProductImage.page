@@ -1,0 +1,12 @@
+<apex:page controller="UploadProductImage">
+    <apex:messages />
+    <apex:form id="ContentUpload">
+     <h2>Product Image Uploader</h2>
+     <br/><br/>
+     <b>1. Select the File</b><br/><br/>
+     Type the path of the file or click the Browse button to find the file.<br/>
+            <apex:inputFile value="{!content.VersionData}" filename="{!content.PathOnClient}"/><br/><br/><br/>
+     <b>2.  Click the Upload button</b><br/>
+            <apex:commandButton value="Upload" action="{!attach}"/> 
+    </apex:form> 
+</apex:page>

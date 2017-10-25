@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot; align=&quot;center&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot; size=&quot;5&quot;&gt;Welcome to&amp;nbsp; Universal Container&amp;nbsp;new case management portal&lt;/font&gt;&lt;o:p&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/o:p&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&lt;/font&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&lt;/font&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot; size=&quot;3&quot;&gt;Some Important changes:&lt;/font&gt;&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;
+&lt;div class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;You are able to view every case opened under each support contract you are associated with &lt;/font&gt;&lt;/div&gt;
+&lt;/li&gt;&lt;li&gt;
+&lt;div class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;Cases may now be sorted by date, contact, status, etc.&lt;/font&gt;&lt;/div&gt;
+&lt;/li&gt;&lt;li&gt;
+&lt;div class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;Improved search capabilities&lt;/font&gt;&lt;/div&gt;
+&lt;/li&gt;&lt;li&gt;
+&lt;div class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;Product upgrade requests can now be submitted through the portal, allowing visibility into the progress of each request&lt;/font&gt;&lt;/div&gt;&lt;/li&gt;&lt;/ul&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

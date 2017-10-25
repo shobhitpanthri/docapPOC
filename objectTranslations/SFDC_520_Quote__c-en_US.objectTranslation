@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quote_OLD</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quotes_OLD</value>
+    </caseValues>
+    <fields>
+        <label><!-- Stage --></label>
+        <name>Approval_Stage__c</name>
+        <picklistValues>
+            <masterLabel>*Convert to Order*</masterLabel>
+            <translation><!-- *Convert to Order* --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customer Accepted</masterLabel>
+            <translation><!-- Customer Accepted --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied by Customer</masterLabel>
+            <translation><!-- Denied by Customer --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Review</masterLabel>
+            <translation><!-- In Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Internally Approved</masterLabel>
+            <translation><!-- Internally Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Presented to Customer</masterLabel>
+            <translation><!-- Presented to Customer --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Quotes_OLD --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Presented --></label>
+        <name>Presented_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary --></label>
+        <name>Primary__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote Amount --></label>
+        <name>Quote_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Approval --></label>
+        <name>Request_Approval__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valid Until --></label>
+        <name>Valid_Until__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- Attach_Quote --></label>
+        <name>Attach_Quote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CloneQuotewithDetails --></label>
+        <name>CloneQuotewithDetails</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Quote_as_PDF --></label>
+        <name>Email_Quote_as_PDF</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- ReportViewCurrentTotals --></label>
+        <name>ReportViewCurrentTotals</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- RequestApproval --></label>
+        <name>RequestApproval</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- x1AddProductstoQuote --></label>
+        <name>x1AddProductstoQuote</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- x2EditLineItems --></label>
+        <name>x2EditLineItems</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- x3CalculateQuoteAmount --></label>
+        <name>x3CalculateQuoteAmount</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- x4CopyDetailstoOpportunity --></label>
+        <name>x4CopyDetailstoOpportunity</name>
+    </webLinks>
+</CustomObjectTranslation>

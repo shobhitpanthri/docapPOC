@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ReportType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <baseObject></baseObject>
+    <category>cases</category>
+    <deployed>true</deployed>
+    <description>Answers: Questions with Answers</description>
+    <label>Answers: Questions with Answers</label>
+    <sections>
+        <masterLabel>Questions</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>Replies</masterLabel>
+    </sections>
+    <sections>
+        <masterLabel>Votes</masterLabel>
+    </sections>
+</ReportType>

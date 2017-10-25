@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>In Office Meeting</fullName>
+        <default>false</default>
+        <label>In Office Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Onsite Meeting</fullName>
+        <default>false</default>
+        <label>Onsite Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Web Meeting</fullName>
+        <default>false</default>
+        <label>Web Meeting</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Work Outing (Internal)</fullName>
+        <default>false</default>
+        <label>Work Outing (Internal)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Work Outing (Customer)</fullName>
+        <default>false</default>
+        <label>Work Outing (Customer)</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Team Meeting</fullName>
+        <default>false</default>
+        <label>Team Meeting</label>
+    </standardValue>
+</StandardValueSet>

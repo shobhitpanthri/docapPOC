@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>false</active>
+    <dataCategory>
+        <dataCategory>
+            <label>Internal Support</label>
+            <name>Internal_Support</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Tier 1</label>
+            <name>Tier_1</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Tier 2</label>
+            <name>Tier_2</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Tier 3</label>
+            <name>Tier_3</name>
+        </dataCategory>
+        <dataCategory>
+            <label>Public Knowledge</label>
+            <name>Public_Knowledge</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Tiered Support</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Referral</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Referrals</value>
+    </caseValues>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+        <relationshipLabel><!-- Referrals --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Relationship --></label>
+        <name>Relationship__c</name>
+        <picklistValues>
+            <masterLabel>Colleague</masterLabel>
+            <translation><!-- Colleague --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Friend</masterLabel>
+            <translation><!-- Friend --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>LinkedIn Contact</masterLabel>
+            <translation><!-- LinkedIn Contact --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>family</masterLabel>
+            <translation><!-- family --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>school</masterLabel>
+            <translation><!-- school --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Numero de telephone --></help>
+        <label><!-- phone --></label>
+        <name>phone__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

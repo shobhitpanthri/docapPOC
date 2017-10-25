@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scontrol xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contentSource>HTML</contentSource>
+    <description>This S-Control contains an interactive Google map based on an account&apos;s address and can be put on the account detail page.</description>
+    <encodingKey>UTF-8</encodingKey>
+    <name>Google Map on Account</name>
+    <supportsCaching>true</supportsCaching>
+</Scontrol>

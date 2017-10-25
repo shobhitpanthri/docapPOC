@@ -1,0 +1,24 @@
+<table height="400" width="650" cellpadding="0" border="0" cellspacing="0" >
+<tr valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="180" >
+<table height="400" width="180" cellpadding="5" border="0" cellspacing="5" >
+<tr height="100" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="180" tEditID="c1r1" locked="0" rowspan="3" aEditID="c1r1" >
+<![CDATA[<P><A href="http://www.yahoo.com">Corportate Website</A></P>
+<P>&nbsp;</P>
+<P><A href="http://www.yahoo.com">Submit Comments</A></P>]]></td>
+</tr>
+</table>
+</td>
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="10" >
+<![CDATA[]]></td>
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" width="460" >
+<table height="400" width="460" cellpadding="5" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td style=" color:#000000; font-size:12pt; background-color:#FFFFFF; font-family:arial; bLabel:main; bEditID:r3st1;" tEditID="c2r1" locked="0" aEditID="c2r1" >
+<![CDATA[<p><font color="#000099">Dear {!Contact.Salutation} {!Contact.LastName},<br><br>As follow up to your recent interaction with {!Organization.Name} Customer Support, we would like to ensure that your issue was resolved to your satisfaction.&nbsp; In order to ensure the best possible quality is provided, please take a moment to complete the following survey:<br></font><span style="color: red; font-family: Arial;"><br><a href="http://www.zoomerang.com/Survey/?p=WEB22A8SVP6ZU7">Please click here</a></span></p><p><span style="color: red; font-family: Arial;"><font color="#000099"><br></font></span></p><p><span style="color: red; font-family: Arial;"><font color="#000099">Thank you and please let us know how we can help in the future!<br><br>Sincerely,<br><br>{!Case.OwnerFullName}</font></span></p>]]></td>
+</tr>
+</table>
+</td>
+</tr>
+</table>

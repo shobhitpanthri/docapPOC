@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value>Twitter-kontot</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>false</plural>
+        <value>Twitter-konto</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value>Twitter-konto</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value>Twitter-kontona</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>true</plural>
+        <value>Twitter-konton</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value>Twitter-konton</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>sf4twitter__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bit.ly Api Key --></label>
+        <name>sf4twitter__Bit_ly_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bit.ly Username --></label>
+        <name>sf4twitter__Bit_ly_Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contributor Enabled --></label>
+        <name>sf4twitter__Contributor_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direct Message Id Threshold --></label>
+        <name>sf4twitter__Direct_Message_Id_Threshold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Auto-Case Creation --></label>
+        <name>sf4twitter__Enable_Auto_Case_Creation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Password --></label>
+        <name>sf4twitter__Has_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Number --></label>
+        <name>sf4twitter__Klout_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Score --></label>
+        <name>sf4twitter__Klout_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last DM Ids --></label>
+        <name>sf4twitter__Last_DM_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Tweet Ids --></label>
+        <name>sf4twitter__Last_Tweet_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Secret --></label>
+        <name>sf4twitter__OAuth_Secret__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Token --></label>
+        <name>sf4twitter__OAuth_Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Twitter Max Message --></label>
+        <name>sf4twitter__Partial_Twitter_Max_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Twitter Max Twitter --></label>
+        <name>sf4twitter__Partial_Twitter_Max_Twitter__c</name>
+    </fields>
+    <fields>
+        <help>Twitter åsidosätter användarnamn/lösenord till fördel för OAuth, ett säkert protokoll för åtkomst. För att använda OAuth så anger du en text i detta fält och klickar sedan på knappen “Bevilja åtkomst till Twitter” efter att du har sparat Twitter-kontot.</help>
+        <label><!-- Password --></label>
+        <name>sf4twitter__Password__c</name>
+    </fields>
+    <fields>
+        <help>När den här funktionen är aktiverad, kommer alla tweets från det här Twitter-kontot som innehåller #ch att skickas automatiskt till Twitter-kontoskaparens kanal. Kommentarer till den här posten i Chatter kommer inte att skickas till Twitter.</help>
+        <label><!-- Add Posts with #ch to Chatter --></label>
+        <name>sf4twitter__Post_Hashtag_Chatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Results Per Page --></label>
+        <name>sf4twitter__Results_Per_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Direct Message Id Offset --></label>
+        <name>sf4twitter__Search_Direct_Message_Id_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Tweet Id Offset --></label>
+        <name>sf4twitter__Search_Tweet_Id_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tweet Id Threshold --></label>
+        <name>sf4twitter__Tweet_Id_Threshold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Max Message --></label>
+        <name>sf4twitter__Twitter_Max_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Max Twitter --></label>
+        <name>sf4twitter__Twitter_Max_Twitter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter User Id --></label>
+        <name>sf4twitter__Twitter_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unknown Twitter Usernames --></label>
+        <name>sf4twitter__Unknown_Twitter_Usernames__c</name>
+        <picklistValues>
+            <masterLabel>Create Contact</masterLabel>
+            <translation>Skapa kontakt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Lead</masterLabel>
+            <translation>Skapa lead</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Person Account</masterLabel>
+            <translation>Skapa personkonto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do nothing</masterLabel>
+            <translation>Göra ingenting</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>sf4twitter__Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validated --></label>
+        <name>sf4twitter__Valid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apply Case Association Logic to Tweets --></label>
+        <name>sf4twitter__associate_DM__c</name>
+    </fields>
+    <fields>
+        <help>Detta kommer att förhindra att tweets automatiskt associeras till kundcase som inte är från denna tweetens författare</help>
+        <label><!-- Only Associate Matching Usernames --></label>
+        <name>sf4twitter__associate_cases_same_username__c</name>
+    </fields>
+    <fields>
+        <help>När man söker efter ett kandidatkundcase (för direktmeddelanden eller svar), kommer alla stängda kundcase med ett stängningsdatum mindre än det angivna antalet minuter vara tillgängligt för trådlogiken.</help>
+        <label><!-- Time to Keep Assoc. After Case Close --></label>
+        <name>sf4twitter__closed_case_duration__c</name>
+    </fields>
+    <fields>
+        <help>När du söker efter tweets så filtreras föregående resultat bort från de nya resultaten. Genom att sätta detta alternativ i läget ON (på), kommer sökningen att föra alla resultat upp till Twitters maximala antal.</help>
+        <label><!-- Get Max Tweets Incl. Previous Results --></label>
+        <name>sf4twitter__ignore_maxid__c</name>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Twitter-kontots namn</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- This field is required --></errorMessage>
+        <name>sf4twitter__Save_unknown_twitter_usernames_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid number --></errorMessage>
+        <name>sf4twitter__Search_DM_Id_Offset_must_be_a_number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid number --></errorMessage>
+        <name>sf4twitter__Search_Tweet_Id_Offset_must_be_a_number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Get_Klout_Score --></label>
+        <name>sf4twitter__Get_Klout_Score</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Klout_Score_Massive --></label>
+        <name>sf4twitter__Get_Klout_Score_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Revoke --></label>
+        <name>sf4twitter__Revoke</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Schedule_Account_Searches --></label>
+        <name>sf4twitter__Schedule_Account_Searches</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Validate --></label>
+        <name>sf4twitter__Validate</name>
+    </webLinks>
+</CustomObjectTranslation>

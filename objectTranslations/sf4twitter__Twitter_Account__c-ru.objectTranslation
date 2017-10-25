@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>false</plural>
+        <value>Аккаунт Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Nominative</caseType>
+        <plural>true</plural>
+        <value>Аккаунты Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>false</plural>
+        <value>Аккаунт Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Accusative</caseType>
+        <plural>true</plural>
+        <value>Аккаунты Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>false</plural>
+        <value>Аккаунта Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Genitive</caseType>
+        <plural>true</plural>
+        <value>Аккаунтов Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>false</plural>
+        <value>Аккаунту Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Dative</caseType>
+        <plural>true</plural>
+        <value>Аккаунтам Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>false</plural>
+        <value>Аккаунтом Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Instrumental</caseType>
+        <plural>true</plural>
+        <value>Аккаунтами Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>false</plural>
+        <value>Аккаунте Twitter</value>
+    </caseValues>
+    <caseValues>
+        <caseType>Prepositional</caseType>
+        <plural>true</plural>
+        <value>Аккаунтах Twitter</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>sf4twitter__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bit.ly Api Key --></label>
+        <name>sf4twitter__Bit_ly_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Bit.ly Username --></label>
+        <name>sf4twitter__Bit_ly_Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contributor Enabled --></label>
+        <name>sf4twitter__Contributor_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direct Message Id Threshold --></label>
+        <name>sf4twitter__Direct_Message_Id_Threshold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Enable Auto-Case Creation --></label>
+        <name>sf4twitter__Enable_Auto_Case_Creation__c</name>
+    </fields>
+    <fields>
+        <label><!-- Has Password --></label>
+        <name>sf4twitter__Has_Password__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Number --></label>
+        <name>sf4twitter__Klout_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Score --></label>
+        <name>sf4twitter__Klout_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last DM Ids --></label>
+        <name>sf4twitter__Last_DM_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Tweet Ids --></label>
+        <name>sf4twitter__Last_Tweet_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Secret --></label>
+        <name>sf4twitter__OAuth_Secret__c</name>
+    </fields>
+    <fields>
+        <label><!-- OAuth Token --></label>
+        <name>sf4twitter__OAuth_Token__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Twitter Max Message --></label>
+        <name>sf4twitter__Partial_Twitter_Max_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Twitter Max Twitter --></label>
+        <name>sf4twitter__Partial_Twitter_Max_Twitter__c</name>
+    </fields>
+    <fields>
+        <help>Имя пользователя или пароль Twitter объявлен нерекомендуемым в пользу протокола безопасного доступа OAuth. Чтобы воспользоваться OAuth, введите любой текст в данное поле, сохраните аккаунт Twitter и нажмите кнопку &quot;Предоставить доступ к Twitter&quot;.</help>
+        <label><!-- Password --></label>
+        <name>sf4twitter__Password__c</name>
+    </fields>
+    <fields>
+        <help>После включения данной функции любые заметки этого аккаунта Twitter, содержащие элемент #ch, будут автоматически опубликованы в ленту автора аккаунта Twitter. Комментарии к данному сообщению в сети Chatter не будут опубликованы в сервисе Twitter.</help>
+        <label><!-- Add Posts with #ch to Chatter --></label>
+        <name>sf4twitter__Post_Hashtag_Chatter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Results Per Page --></label>
+        <name>sf4twitter__Results_Per_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Direct Message Id Offset --></label>
+        <name>sf4twitter__Search_Direct_Message_Id_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Tweet Id Offset --></label>
+        <name>sf4twitter__Search_Tweet_Id_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tweet Id Threshold --></label>
+        <name>sf4twitter__Tweet_Id_Threshold__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Max Message --></label>
+        <name>sf4twitter__Twitter_Max_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Max Twitter --></label>
+        <name>sf4twitter__Twitter_Max_Twitter__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter User Id --></label>
+        <name>sf4twitter__Twitter_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unknown Twitter Usernames --></label>
+        <name>sf4twitter__Unknown_Twitter_Usernames__c</name>
+        <picklistValues>
+            <masterLabel>Create Contact</masterLabel>
+            <translation>Создать контакт</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Lead</masterLabel>
+            <translation>Создать интерес</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Person Account</masterLabel>
+            <translation>Создать организацию-лицо</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do nothing</masterLabel>
+            <translation>Ничего не делать</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Username --></label>
+        <name>sf4twitter__Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validated --></label>
+        <name>sf4twitter__Valid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Apply Case Association Logic to Tweets --></label>
+        <name>sf4twitter__associate_DM__c</name>
+    </fields>
+    <fields>
+        <help>В этом случае заметки не будут автоматически связываться с обращениями, которые были созданы авторами других заметок.</help>
+        <label><!-- Only Associate Matching Usernames --></label>
+        <name>sf4twitter__associate_cases_same_username__c</name>
+    </fields>
+    <fields>
+        <help>При любом поиске подходящего обращения (для прямых сообщений или ответов) все закрытые обращения с датой закрытия, не превышающей заданное количество минут, будут доступны для логики поточной обработки.</help>
+        <label><!-- Time to Keep Assoc. After Case Close --></label>
+        <name>sf4twitter__closed_case_duration__c</name>
+    </fields>
+    <fields>
+        <help>При поиске заметок новые результаты поиска не содержат предыдущих. Выберите значение &amp;apos;Вкл.&amp;apos; для отображения всех результатов поиска — до достижения заданного ограничения.</help>
+        <label><!-- Get Max Tweets Incl. Previous Results --></label>
+        <name>sf4twitter__ignore_maxid__c</name>
+    </fields>
+    <gender>Masculine</gender>
+    <nameFieldLabel>Имя аккаунта Twitter</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- This field is required --></errorMessage>
+        <name>sf4twitter__Save_unknown_twitter_usernames_required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid number --></errorMessage>
+        <name>sf4twitter__Search_DM_Id_Offset_must_be_a_number</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid number --></errorMessage>
+        <name>sf4twitter__Search_Tweet_Id_Offset_must_be_a_number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Get_Klout_Score --></label>
+        <name>sf4twitter__Get_Klout_Score</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Klout_Score_Massive --></label>
+        <name>sf4twitter__Get_Klout_Score_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Revoke --></label>
+        <name>sf4twitter__Revoke</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Schedule_Account_Searches --></label>
+        <name>sf4twitter__Schedule_Account_Searches</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Validate --></label>
+        <name>sf4twitter__Validate</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,6 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<FONT face=Verdana>Dear {!Contact.FirstName}, <BR><BR>All of us at {!Organization.Name} are glad to have {!Account.Name} as a customer. <BR><BR>I would like to introduce myself as your Account Manager. Should you have any questions, please feel free to call me at {!User.Phone} or email me at {!User.Email}. <BR><BR>You can also contact&nbsp;{!Organization.Name} on the following numbers: <BR><BR>Main: 810-545-1000 <BR>Sales: 810-545-1222 <BR>Customer Service &amp; Support: 810-545-1333 <BR>Fax: 810-545-1001 <BR><BR>I am confident {!Organization.Name} will serve you well and hope to see our relationship grow over the years. <BR><BR>Best Regards, <BR>{!User.Name}</FONT>]]></td>
+</tr>
+</table>

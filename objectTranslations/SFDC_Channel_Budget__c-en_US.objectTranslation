@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Budget</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Budgets</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Allocated Budget --></label>
+        <name>Allocated_Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Claims --></label>
+        <name>Approved_Claims__c</name>
+    </fields>
+    <fields>
+        <label><!-- Approved Requests --></label>
+        <name>Approved_Request__c</name>
+    </fields>
+    <fields>
+        <label><!-- Available Budget --></label>
+        <name>Available_Budget__c</name>
+    </fields>
+    <fields>
+        <label><!-- Requests Approved --></label>
+        <name>Committed_To_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Refresh Date --></label>
+        <name>Last_Refresh_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partner --></label>
+        <name>Partner__c</name>
+        <relationshipLabel><!-- Budgets --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Refresh Balances --></label>
+        <name>Refresh__c</name>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unclaimed Requests --></label>
+        <name>Unclaimed__c</name>
+    </fields>
+    <fields>
+        <label><!-- &amp;nbsp;&amp;nbsp; --></label>
+        <name>nbsp2__c</name>
+    </fields>
+    <fields>
+        <label><!-- &amp;nbsp; --></label>
+        <name>nbsp__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

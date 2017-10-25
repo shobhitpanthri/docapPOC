@@ -1,0 +1,15 @@
+<apex:page controller="GoogleCharts" standardstylesheets="false" showheader="false">
+<table width="750" >
+<tr>
+<td>
+<apex:image value="{!mapURL3}" rendered="{!IF(mapURL3 == null, false, true)}"/>
+</td>
+<td >
+<apex:image value="{!mapURL2}" rendered="{!IF(mapURL2 == null, false, true)}"/>
+</td>
+<td >
+<apex:image value="{!mapURL1}" rendered="{!IF(mapURL1 == null, false, true)}"/>
+</td>
+</tr>
+</table>
+</apex:page>

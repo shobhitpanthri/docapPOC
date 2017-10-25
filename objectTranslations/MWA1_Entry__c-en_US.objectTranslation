@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Entry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Entries</value>
+    </caseValues>
+    <fields>
+        <label><!-- Alignment --></label>
+        <name>Alignment__c</name>
+        <picklistValues>
+            <masterLabel>Center</masterLabel>
+            <translation><!-- Center --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Left</masterLabel>
+            <translation><!-- Left --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Right</masterLabel>
+            <translation><!-- Right --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Correct Value --></label>
+        <name>Correct_Value__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>False</masterLabel>
+            <translation><!-- False --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>N/A</masterLabel>
+            <translation><!-- N/A --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>No</masterLabel>
+            <translation><!-- No --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>True</masterLabel>
+            <translation><!-- True --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yes</masterLabel>
+            <translation><!-- Yes --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Entry Type --></label>
+        <name>EType__c</name>
+        <picklistValues>
+            <masterLabel>DIVIDER TEXT</masterLabel>
+            <translation><!-- DIVIDER TEXT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Date</masterLabel>
+            <translation><!-- Date --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Long Answer (32000)</masterLabel>
+            <translation><!-- Long Answer (32000) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-select (Horizontal)</masterLabel>
+            <translation><!-- Multi-select (Horizontal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Multi-select (Vertical)</masterLabel>
+            <translation><!-- Multi-select (Vertical) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Number (ranged)</masterLabel>
+            <translation><!-- Number (ranged) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Number (unranged)</masterLabel>
+            <translation><!-- Number (unranged) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>RATING SCALE LABELS</masterLabel>
+            <translation><!-- RATING SCALE LABELS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Short Answer (255)</masterLabel>
+            <translation><!-- Short Answer (255) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single-select (Horizontal)</masterLabel>
+            <translation><!-- Single-select (Horizontal) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Single-select (Vertical)</masterLabel>
+            <translation><!-- Single-select (Vertical) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>VERTICAL SPACER</masterLabel>
+            <translation><!-- VERTICAL SPACER --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Entry Text --></label>
+        <name>Entry_Text__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image File URL --></label>
+        <name>Include_Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lower Limit --></label>
+        <name>Lower_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey --></label>
+        <name>MWASurvey__c</name>
+        <relationshipLabel><!-- Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- # of Values --></label>
+        <name>NOV__c</name>
+    </fields>
+    <fields>
+        <label><!-- Position --></label>
+        <name>Position__c</name>
+    </fields>
+    <fields>
+        <label><!-- Required Field --></label>
+        <name>Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rows to Display --></label>
+        <name>Rows_to_Display__c</name>
+        <picklistValues>
+            <masterLabel>1</masterLabel>
+            <translation><!-- 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>10</masterLabel>
+            <translation><!-- 10 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2</masterLabel>
+            <translation><!-- 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3</masterLabel>
+            <translation><!-- 3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4</masterLabel>
+            <translation><!-- 4 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5</masterLabel>
+            <translation><!-- 5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6</masterLabel>
+            <translation><!-- 6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>7</masterLabel>
+            <translation><!-- 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>8</masterLabel>
+            <translation><!-- 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>9</masterLabel>
+            <translation><!-- 9 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suppress Scale --></label>
+        <name>Supress_Scale__c</name>
+    </fields>
+    <fields>
+        <label><!-- Type Code --></label>
+        <name>TCode__c</name>
+    </fields>
+    <fields>
+        <label><!-- Upper Limit --></label>
+        <name>Upper_Limit__c</name>
+    </fields>
+    <fields>
+        <label><!-- Valid --></label>
+        <name>Valid__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 10 --></label>
+        <name>Value_10__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 1 --></label>
+        <name>Value_1__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 2 --></label>
+        <name>Value_2__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 3 --></label>
+        <name>Value_3__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 4 --></label>
+        <name>Value_4__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 5 --></label>
+        <name>Value_5__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 6 --></label>
+        <name>Value_6__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 7 --></label>
+        <name>Value_7__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 8 --></label>
+        <name>Value_8__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value 9 --></label>
+        <name>Value_9__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vertical Spacer Height (pixels) --></label>
+        <name>Vertical_pixels__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

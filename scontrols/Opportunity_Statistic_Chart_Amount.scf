@@ -1,0 +1,1 @@
+http://chart.apis.google.com/chart?cht=p3&chs=300x160&chtt=Win%20-%20Loss%20(Amount)&chl=Win%7CLoss&chco=1DD445,CAA014&chf=bg,s,ffffff&chd=t:{!Account.Total_Opportunity_Win__c},{!Account.Total_Opportunity_Loss__c}

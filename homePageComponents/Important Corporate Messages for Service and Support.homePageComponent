@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;P&gt;
+&lt;TABLE cellSpacing=0 cellPadding=0 width=&quot;100%&quot; border=0&gt;
+&lt;TBODY&gt;
+&lt;TR bgColor=#cc0000&gt;
+&lt;TD bgColor=#cc0000&gt;&amp;nbsp;&amp;nbsp;&lt;/TD&gt;
+&lt;TD style=&quot;FONT-WEIGHT: bold; FONT-SIZE: 18px; COLOR: rgb(255,255,255); FONT-FAMILY: tahoma&quot; width=&quot;100%&quot; bgColor=#cc0000&gt;Important Corporate Notices&lt;/TD&gt;
+&lt;TD&gt;&lt;IMG height=30 src=&quot;https://na1.salesforce.com/img/1x1_spacer_wht.gif&quot; width=1&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD colSpan=3&gt;&lt;IMG height=1 src=&quot;https://na1.salesforce.com/img/1x1_spacer_wht.gif&quot; width=1&gt;&lt;/TD&gt;&lt;/TR&gt;
+&lt;TR&gt;
+&lt;TD bgColor=#eeeeee colSpan=3&gt;
+&lt;TABLE cellSpacing=0 cellPadding=15 width=&quot;100%&quot; border=0&gt;
+&lt;TBODY&gt;
+&lt;TR&gt;
+&lt;TD&gt;
+&lt;UL&gt;&lt;FONT face=Tahoma size=2&gt;&lt;STRONG&gt;
+&lt;LI&gt;&lt;FONT size=2&gt;&lt;FONT color=#ff0000&gt;&lt;STRONG&gt;&lt;FONT face=Tahoma&gt;We have a new patch for&amp;nbsp;Cad 2008 Version 6&amp;nbsp;&lt;/FONT&gt;&lt;/STRONG&gt;&lt;BR&gt;&lt;/FONT&gt;&lt;FONT color=#000000&gt;&lt;EM&gt;&amp;nbsp;(&lt;/EM&gt;&lt;/FONT&gt;&lt;EM&gt;&lt;FONT color=#000000&gt;Notices &lt;/FONT&gt;&lt;FONT color=#000000&gt;have been sent out - patch can be downloaded from our website)&lt;/FONT&gt;&lt;/EM&gt; &lt;/FONT&gt;
+&lt;LI&gt;&lt;EM&gt;&lt;FONT color=#000000&gt;&lt;/EM&gt;&lt;/FONT&gt;&lt;FONT face=Tahoma size=2&gt;&lt;STRONG&gt;!!!!!!&lt;FONT color=#ff0000&gt;$500&lt;/FONT&gt; Cash bonus for wildly referenceable and satisfied customers (Based on&amp;nbsp;Agent&amp;nbsp;Survey results for the month)!!!!!!&lt;/STRONG&gt;&lt;/FONT&gt;&lt;/LI&gt;&lt;/STRONG&gt;&lt;/FONT&gt;
+&lt;LI&gt;&lt;FONT face=Tahoma size=2&gt;&lt;STRONG&gt;The deadline for Open Benefits Enrollment is TODAY! &lt;A href=&quot;http://intranet.mycompany.com/benefits.jsp&quot;&gt;Enroll&lt;/A&gt; now!&lt;/STRONG&gt;&lt;/FONT&gt; 
+&lt;LI&gt;&lt;FONT face=Tahoma size=2&gt;&lt;STRONG&gt;Beginning tomorrow, all expense reports should be sent to &lt;A href=&quot;mailto:chris.lepinski@mycompany.com&quot;&gt;Chris Lepinski&lt;/A&gt; for processing.&lt;/STRONG&gt;&lt;/FONT&gt; 
+&lt;LI&gt;&lt;FONT face=Tahoma size=2&gt;&lt;STRONG&gt;Don&apos;t forget to &lt;A href=&quot;https://na1.salesforce.com/00O46000001emxq&quot;&gt;run your daily call report&lt;/A&gt;.&lt;/STRONG&gt;&lt;/FONT&gt; &lt;/LI&gt;&lt;/UL&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/TD&gt;&lt;/TR&gt;&lt;/TBODY&gt;&lt;/TABLE&gt;&lt;/P&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

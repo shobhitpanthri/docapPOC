@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Customer Portal Savings Calculators can be used to perform a ROI calculation on the fly.  Under support email templates, you can email your customer using the Customer Portal ROI Calculator template.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Avg_time_spent_on_case_minutes__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Working_Hours_Per_Day__c / Number_of_Cases_Calls_per_Day__c )*60</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Avg. time spent on case (minutes)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Call_deflection_minutes__c</fullName>
+        <externalId>false</externalId>
+        <formula>Estimated_Productivity_Savings__c  *  Avg_time_spent_on_case_minutes__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Call Deflection (minutes)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter a description of this return on investment calculation.</inlineHelpText>
+        <label>Description</label>
+        <length>32000</length>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>9</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Email__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the email address to email this calculation to your customer.  Use the customer portal email template under the Services and Support Email Template Folder.</inlineHelpText>
+        <label>Email</label>
+        <required>false</required>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Email</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Estimated_Productivity_Savings__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Enter the percentage of the estimated time savings for your customer support team. i.e. 25%-30% savings is expected for opening up the self-service portal channel.</inlineHelpText>
+        <label>Estimated Productivity Savings</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>FTE_Cost_hour__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the cost per hour of your FTE (full time equivalent) for your call center representatives.</inlineHelpText>
+        <label>FTE Cost/hour</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Number_of_Cases_Calls_per_Day__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Number_of_Cases_Calls_per_week__c / Number_of_Support_Employees__c) / 5</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Number of Cases per Rep per Day</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Cases_Calls_per_week__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the Number of Cases/Calls per week.</inlineHelpText>
+        <label>Number of Cases/Calls per week</label>
+        <precision>18</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Number_of_Support_Employees__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Please enter the Number of Support Employees</inlineHelpText>
+        <label>Number of Support Employees</label>
+        <precision>5</precision>
+        <required>true</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_Savings_per_Year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_savings_per_year_hours_per_year__c  *  FTE_Cost_hour__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total Savings per Year</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Total_saving_per_week_hours_per_week__c</fullName>
+        <externalId>false</externalId>
+        <formula>(Number_of_Cases_Calls_per_week__c * Call_deflection_minutes__c )/60</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total saving per week  (hours per week)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Total_savings_per_year_hours_per_year__c</fullName>
+        <externalId>false</externalId>
+        <formula>Total_saving_per_week_hours_per_week__c *52</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Total savings per year (hours per year)</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackHistory>false</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Working_Hours_Per_Day__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>What is the average number of working hours per call center reps?</inlineHelpText>
+        <label>Working Hours Per Day</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackHistory>true</trackHistory>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <label>Customer Portal Savings Calculator</label>
+    <nameField>
+        <displayFormat>{YYYY}{MM}-{0}</displayFormat>
+        <label>Customer Portal Savings Calculator Name</label>
+        <trackHistory>true</trackHistory>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Customer Portal Savings Calculators</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Number_of_Support_Employees__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Estimated_Productivity_Savings__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Total_Savings_per_Year__c</customTabListAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

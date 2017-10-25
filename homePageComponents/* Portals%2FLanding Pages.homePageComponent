@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>Corporate_Intranet</links>
+    <links>Chatter_Answers_Community</links>
+    <links>Public_Knowledgebase</links>
+    <links>Customer_Portal</links>
+    <links>Partner_Portal</links>
+    <links>Simple_Web2Lead</links>
+    <links>Simple_Web2Case</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

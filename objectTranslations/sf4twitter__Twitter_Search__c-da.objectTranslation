@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <article>Definite</article>
+        <plural>false</plural>
+        <value>Twitter-søgning</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>false</plural>
+        <value>Twitter-søgning</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>false</plural>
+        <value>Twitter-søgning</value>
+    </caseValues>
+    <caseValues>
+        <article>Definite</article>
+        <plural>true</plural>
+        <value>Twitter-søgninger</value>
+    </caseValues>
+    <caseValues>
+        <article>Indefinite</article>
+        <plural>true</plural>
+        <value>Twitter-søgninger</value>
+    </caseValues>
+    <caseValues>
+        <article>None</article>
+        <plural>true</plural>
+        <value>Twitter-søgninger</value>
+    </caseValues>
+    <fields>
+        <label><!-- Active --></label>
+        <name>sf4twitter__Active__c</name>
+    </fields>
+    <fields>
+        <label><!-- Campaign --></label>
+        <name>sf4twitter__Campaign__c</name>
+        <relationshipLabel><!-- Twitter Searches --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Last Tweet Ids --></label>
+        <name>sf4twitter__Last_Tweet_Ids__c</name>
+    </fields>
+    <fields>
+        <label><!-- Partial Twitter Max Search --></label>
+        <name>sf4twitter__Partial_Twitter_Max_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Results Per Page --></label>
+        <name>sf4twitter__Results_Per_Page__c</name>
+    </fields>
+    <fields>
+        <label><!-- Search Tweet Id Offset --></label>
+        <name>sf4twitter__Search_Tweet_Id_Offset__c</name>
+    </fields>
+    <fields>
+        <label><!-- Tweet Id Threshold --></label>
+        <name>sf4twitter__Tweet_Id_Threshold__c</name>
+    </fields>
+    <fields>
+        <help>Søg efter oplysninger i http://search.twitter.com/operators</help>
+        <label><!-- Twitter Keyword Search --></label>
+        <name>sf4twitter__Twitter_Keyword_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Max Search --></label>
+        <name>sf4twitter__Twitter_Max_Search__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unknown Twitter Usernames --></label>
+        <name>sf4twitter__Unknown_Twitter_Usernames__c</name>
+        <picklistValues>
+            <masterLabel>Create Contact</masterLabel>
+            <translation>Opret kontakt</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Lead</masterLabel>
+            <translation>Opret emne</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Create Person Account</masterLabel>
+            <translation>Opret personkonto</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Do nothing</masterLabel>
+            <translation>Gør intet</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Order --></label>
+        <name>sf4twitter__Weight__c</name>
+    </fields>
+    <fields>
+        <help>Når der søges efter tweets, filtreres tidligere resultater ud fra de nye resultater - når denne indstilling aktiveres viser søgningen alle resultater op til det maksimalt tilladte af filteret.</help>
+        <label><!-- Get max tweets incl. previous results --></label>
+        <name>sf4twitter__ignore_maxid__c</name>
+    </fields>
+    <gender>Neuter</gender>
+    <nameFieldLabel>Navn på Twitter-søgning</nameFieldLabel>
+    <validationRules>
+        <errorMessage><!-- You must select an object to add to the campaign --></errorMessage>
+        <name>sf4twitter__Create_contact_or_lead</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The number of results per page must be below 100 --></errorMessage>
+        <name>sf4twitter__Max_results_per_page</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- The order must be non negative. --></errorMessage>
+        <name>sf4twitter__Non_negative_search_orders</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Invalid number --></errorMessage>
+        <name>sf4twitter__Search_Tweet_Id_Offset_must_be_a_number</name>
+    </validationRules>
+    <webLinks>
+        <label><!-- Schedule_Twitter_Searches --></label>
+        <name>sf4twitter__Schedule_Twitter_Searches</name>
+    </webLinks>
+</CustomObjectTranslation>

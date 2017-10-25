@@ -1,0 +1,68 @@
+<apex:page showHeader="false">
+<script type="text/javascript">
+    document.addEventListener('load' , initialize() , false);
+    
+    function initialize(){
+        document.addEventListener('click' , function(e){clicks(e);});
+    }
+    
+    function clicks(e){
+        var obj = e.srcElement ? e.srcElement : e.target;
+        
+        switch(obj.id){
+            case 'postchat_submit' :
+                window.close();
+                break;
+        }
+    }
+</script>
+<form id='postchatForm'>
+<table align="center" id="theTable" cellpadding="0" cellspacing="0">
+<tr><td>
+<div id="headerContainer"><center><h1 style="color:white;">Please Give Us Some Feedback</h1></center></div>
+</td></tr>
+<tr><td class="paddedCell">
+How would you rate the service you were provided?  <select id='serviceProvided'>
+<option>Excellent</option>
+<option>Good</option>
+<option>Fair</option>
+<option>Poor</option>
+</select> <br />
+</td></tr>
+<tr><td class="paddedCell">
+How likely are you to use Chat again in the future? <select id='futureChat' >
+<option>Very</option>
+<option>Somewhat</option>
+<option>Unlikely</option>
+</select> <br />
+</td></tr>
+<tr><td class="paddedCell">
+Would you suggest our products/services to a friend? <select id='prechat_field' >
+<option>Yes</option>
+<option>No</option>
+</select> <br />
+</td></tr>
+<tr><td class="paddedCell">
+<!-- Creates an auto-query for a matching Contact record’s Email field based on the
+value of the liveagent.prechat:Email field -->
+<!-- <input type="hidden" name="liveagent.prechat.query:Email" value="Contact,Contact.Email"/> -->
+<input type='submit' value='Send Feedback' id='postchat_submit'/>
+</td></tr>
+</table>
+<style type="text/css">
+p {font-weight: bolder }
+#headerContainer{padding:2px;background:#85a949;border-top-left-radius:6px;border-top-right-radius:6px;}
+#prechat_submit{border: 2px outset;
+padding: 0 2px 2px;
+text-decoration: none;
+background:white;}
+#theTable{
+width:350px;
+margin-top:15px;
+border:1px solid #ccc;
+border-radius:6px;
+}
+.paddedCell{padding:5px;}
+</style>
+</form>
+</apex:page>

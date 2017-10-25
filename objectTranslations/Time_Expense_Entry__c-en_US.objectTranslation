@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Time &amp; Expense Entry</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Time &amp; Expense Entries</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Time &amp; Expense Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Airline --></label>
+        <name>Airline__c</name>
+        <picklistValues>
+            <masterLabel>American</masterLabel>
+            <translation><!-- American --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delta</masterLabel>
+            <translation><!-- Delta --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Southwest</masterLabel>
+            <translation><!-- Southwest --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>United</masterLabel>
+            <translation><!-- United --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Virgin America</masterLabel>
+            <translation><!-- Virgin America --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Arrival Airport --></label>
+        <name>Arrival_Airport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date --></label>
+        <name>Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Departure Airport --></label>
+        <name>Departure_Airport__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engineer --></label>
+        <name>Engineer__c</name>
+        <relationshipLabel><!-- Time &amp; Expense Entries --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Expense Entry Total --></label>
+        <name>Expense_Entry_Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expense Type --></label>
+        <name>Expense_Type__c</name>
+        <picklistValues>
+            <masterLabel>Airfare</masterLabel>
+            <translation><!-- Airfare --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Hotel</masterLabel>
+            <translation><!-- Hotel --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Meals</masterLabel>
+            <translation><!-- Meals --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mileage</masterLabel>
+            <translation><!-- Mileage --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Flight Cost --></label>
+        <name>Flight_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Flight Type --></label>
+        <name>Flight_Type__c</name>
+        <picklistValues>
+            <masterLabel>One Way</masterLabel>
+            <translation><!-- One Way --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Round Trip</masterLabel>
+            <translation><!-- Round Trip --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Gross Amount --></label>
+        <name>Gross__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hotel Name --></label>
+        <name>Hotel_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Labor Charges --></label>
+        <name>Labor_Charges__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meal Cost --></label>
+        <name>Meal_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Meal Type --></label>
+        <name>Meal_Type__c</name>
+        <picklistValues>
+            <masterLabel>Breakfast</masterLabel>
+            <translation><!-- Breakfast --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Dinner</masterLabel>
+            <translation><!-- Dinner --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lunch</masterLabel>
+            <translation><!-- Lunch --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Misc.</masterLabel>
+            <translation><!-- Misc. --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Mileage Cost --></label>
+        <name>Mileage_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Miles Traveled --></label>
+        <name>Miles_Traveled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Nights --></label>
+        <name>Number_of_Nights__c</name>
+    </fields>
+    <fields>
+        <label><!-- Rate Type --></label>
+        <name>Rate_Type__c</name>
+        <picklistValues>
+            <masterLabel>Overtime</masterLabel>
+            <translation><!-- Overtime --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Standard</masterLabel>
+            <translation><!-- Standard --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Warranty</masterLabel>
+            <translation><!-- Warranty --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Nightly Rate --></label>
+        <name>Rate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Receipts? --></label>
+        <name>Receipts__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time In --></label>
+        <name>Time_In__c</name>
+    </fields>
+    <fields>
+        <label><!-- Time Out --></label>
+        <name>Time_Out__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Hotel Cost --></label>
+        <name>Total_Hotel_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Hours --></label>
+        <name>Total_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Vendor --></label>
+        <name>Vendor__c</name>
+    </fields>
+    <fields>
+        <label><!-- Work Order --></label>
+        <name>Work_Order__c</name>
+        <relationshipLabel><!-- Time &amp; Expense Entries --></relationshipLabel>
+    </fields>
+    <recordTypes>
+        <label><!-- Expense --></label>
+        <name>Expense</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Time --></label>
+        <name>Time</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

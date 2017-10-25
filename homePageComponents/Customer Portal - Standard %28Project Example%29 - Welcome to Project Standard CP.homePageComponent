@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt; background-color: rgb(255, 102, 0);&quot; align=&quot;center&quot;&gt;&lt;font color=&quot;#ff0000&quot;&gt;&lt;font style=&quot;color: rgb(0, 0, 0);&quot; face=&quot;Geneva,Arial,Sans-Serif&quot; size=&quot;5&quot;&gt;Welcome to Project Collaboration Portal&lt;/font&gt;&lt;o:p&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;/o:p&gt;&lt;/font&gt;&lt;/p&gt;
+&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 255, 255);&quot;&gt;&amp;nbsp;&lt;/span&gt;&lt;/p&gt;
+&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt; background-color: rgb(255, 153, 102);&quot;&gt;&lt;font face=&quot;Times New Roman&quot; size=&quot;3&quot;&gt;&lt;/font&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt; background-color: rgb(255, 153, 102);&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot; size=&quot;3&quot;&gt;Project Collaboration Portal Instructions:&lt;/font&gt;&lt;/p&gt;
+&lt;ul style=&quot;background-color: rgb(255, 153, 102);&quot;&gt;
+&lt;li style=&quot;background-color: rgb(255, 153, 102);&quot;&gt;
+&lt;div class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;For detailed information on your project, this includes document and project charter information, click on the project name.&amp;nbsp; &lt;br&gt;&lt;/font&gt;&lt;/div&gt;&lt;/li&gt;&lt;li style=&quot;background-color: rgb(255, 153, 102);&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;Please find project milestone status on the homepage as well as attached to the project.&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;li style=&quot;background-color: rgb(255, 153, 102);&quot;&gt;
+&lt;div class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;The documents tabs is a directory of project templates documentation such as the weekly status reports and meeting agenda templates.&amp;nbsp; &lt;br&gt;&lt;/font&gt;&lt;/div&gt;
+&lt;/li&gt;&lt;li style=&quot;background-color: rgb(255, 153, 102);&quot;&gt;
+&lt;div class=&quot;MsoNormal&quot; style=&quot;margin: 0in 0in 0pt;&quot;&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;Solutions is another resource for best practices and troubleshooting.&lt;/font&gt;&lt;/div&gt;&lt;/li&gt;&lt;li&gt;&lt;font face=&quot;Geneva,Arial,Sans-Serif&quot;&gt;&lt;span style=&quot;background-color: rgb(255, 153, 102);&quot;&gt;Cases can be submited for billing, technical or feature enhancement requests.&amp;nbsp; &lt;/span&gt;&lt;br&gt;&lt;/font&gt;&lt;/li&gt;&lt;/ul&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

@@ -1,0 +1,10 @@
+<apex:page sidebar="no" >
+<apex:pageBlock title="GREEN RIDER V1.0">
+       <apex:variable var="sessionID" value="{!$Api.session_ID}" />
+            
+            
+        <apex:flash src="{!$Resource.GreenRider}" width="100%" height="650"
+             flashvars="surl={!$Api.Partner_Server_URL_200}&sid={!sessionID}"/>
+  </apex:pageBlock>
+        
+ </apex:page>

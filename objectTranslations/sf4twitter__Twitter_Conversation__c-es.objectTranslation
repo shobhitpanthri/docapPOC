@@ -1,0 +1,506 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Conversation</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Conversations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>sf4twitter__Account__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Author External Id --></label>
+        <name>sf4twitter__Author_External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Author Username --></label>
+        <name>sf4twitter__Author_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Author Full Name --></label>
+        <name>sf4twitter__Author_Real_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Author URL --></label>
+        <name>sf4twitter__Author_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Link Icon --></label>
+        <name>sf4twitter__Case_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case --></label>
+        <name>sf4twitter__Case__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Chatter Post --></label>
+        <name>sf4twitter__Chatter_Post_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chatter Post Id --></label>
+        <name>sf4twitter__Chatter_Post__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact Link Icon --></label>
+        <name>sf4twitter__Contact_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Contact --></label>
+        <name>sf4twitter__Contact__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Content --></label>
+        <name>sf4twitter__Content__c</name>
+    </fields>
+    <fields>
+        <label><!-- Direct Message --></label>
+        <name>sf4twitter__Direct_Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Download Name --></label>
+        <name>sf4twitter__Download_Name__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Facebook Page --></label>
+        <name>sf4twitter__Facebook_Page__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Follower Count --></label>
+        <name>sf4twitter__Follower_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Following Count --></label>
+        <name>sf4twitter__Following_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Geo Coordinates --></label>
+        <name>sf4twitter__Geo_Coordinates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Avatar Icon --></label>
+        <name>sf4twitter__Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replied Conversation&apos;s External Id --></label>
+        <name>sf4twitter__In_Reply_To_Status_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replied User&apos;s External Id --></label>
+        <name>sf4twitter__In_Reply_To_User_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Direct Message --></label>
+        <name>sf4twitter__IsDirectMessage__c</name>
+    </fields>
+    <fields>
+        <label><!-- Is Geo Enabled --></label>
+        <name>sf4twitter__Is_Geo_Enabled__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Number --></label>
+        <name>sf4twitter__Klout_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Klout Score --></label>
+        <name>sf4twitter__Klout_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead Link Icon --></label>
+        <name>sf4twitter__Lead_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Lead --></label>
+        <name>sf4twitter__Lead__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Likes --></label>
+        <name>sf4twitter__Likes_Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Likes Count --></label>
+        <name>sf4twitter__Likes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Link --></label>
+        <name>sf4twitter__Link__c</name>
+    </fields>
+    <fields>
+        <label><!-- Message --></label>
+        <name>sf4twitter__Message__c</name>
+    </fields>
+    <fields>
+        <label><!-- Negative Tweets --></label>
+        <name>sf4twitter__Negative_Tweets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Neutral Tweets --></label>
+        <name>sf4twitter__Neutral_Tweets__c</name>
+    </fields>
+    <fields>
+        <help>Crea un nuevo caso para esta conversación con independencia de su relación con otras conversaciones y casos</help>
+        <label><!-- New Case --></label>
+        <name>sf4twitter__New_Case__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origin Date --></label>
+        <name>sf4twitter__Origin_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origin --></label>
+        <name>sf4twitter__Origin_Icon__c</name>
+    </fields>
+    <fields>
+        <label><!-- Origin Value --></label>
+        <name>sf4twitter__Origin__c</name>
+        <picklistValues>
+            <masterLabel>Facebook</masterLabel>
+            <translation>Facebook</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Twitter</masterLabel>
+            <translation>Twitter</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- ParentConversation (deprecated) --></label>
+        <name>sf4twitter__ParentConversation__c</name>
+        <relationshipLabel><!-- Conversations (deprecated) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Parent --></label>
+        <name>sf4twitter__Parent__c</name>
+        <relationshipLabel><!-- Child Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Place Coordinates --></label>
+        <name>sf4twitter__Place_Coordinates__c</name>
+    </fields>
+    <fields>
+        <label><!-- Place --></label>
+        <name>sf4twitter__Place__c</name>
+    </fields>
+    <fields>
+        <label><!-- Positive Tweets --></label>
+        <name>sf4twitter__Positive_Tweets__c</name>
+    </fields>
+    <fields>
+        <label><!-- Published Date --></label>
+        <name>sf4twitter__Published_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replied Status --></label>
+        <name>sf4twitter__Replied_Status__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replied User --></label>
+        <name>sf4twitter__Replied_User__c</name>
+    </fields>
+    <fields>
+        <label><!-- Solution Link Icon --></label>
+        <name>sf4twitter__Solution_Created__c</name>
+    </fields>
+    <fields>
+        <label><!-- Solution --></label>
+        <name>sf4twitter__Solution__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>sf4twitter__Status__c</name>
+        <picklistValues>
+            <masterLabel>Actioned</masterLabel>
+            <translation>Con acción</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deleted</masterLabel>
+            <translation>Eliminado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Ignored</masterLabel>
+            <translation>Ignorado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mark as reviewed</masterLabel>
+            <translation>Marcar como revisado</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation>Nuevo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound @reply</masterLabel>
+            <translation>@Respuesta saliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound Direct Message</masterLabel>
+            <translation>Mensaje directo saliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solved by Community</masterLabel>
+            <translation>Solucionado por la comunidad</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Conversation Sentiment --></label>
+        <name>sf4twitter__Tweet_Sentiment__c</name>
+    </fields>
+    <fields>
+        <label><!-- External ID --></label>
+        <name>sf4twitter__TwitterID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Account --></label>
+        <name>sf4twitter__Twitter_Account__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Twitter Id Number --></label>
+        <name>sf4twitter__Twitter_Id_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Profile Image --></label>
+        <name>sf4twitter__Twitter_Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Location --></label>
+        <name>sf4twitter__Twitter_Location__c</name>
+    </fields>
+    <fields>
+        <label><!-- Twitter Search --></label>
+        <name>sf4twitter__Twitter_Search__c</name>
+        <relationshipLabel><!-- Conversations --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Twitter Source --></label>
+        <name>sf4twitter__Twitter_Source__c</name>
+    </fields>
+    <fields>
+        <help>El origen de API del recurso. Pueden ser @Respuestas, Mensajes o Búsqueda</help>
+        <label><!-- Type --></label>
+        <name>sf4twitter__Type__c</name>
+        <picklistValues>
+            <masterLabel>@Replies</masterLabel>
+            <translation>@Respuestas</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Comment</masterLabel>
+            <translation>Comentar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Conversation</masterLabel>
+            <translation>Conversación</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Direct Message</masterLabel>
+            <translation>Mensaje directo</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound Direct Message</masterLabel>
+            <translation>Mensaje directo saliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound comment</masterLabel>
+            <translation>Comentario saliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound post</masterLabel>
+            <translation>Publicación saliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Outbound reply</masterLabel>
+            <translation>Respuesta saliente</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Registered Account</masterLabel>
+            <translation>Cuenta registrada</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Search</masterLabel>
+            <translation>Buscar</translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wall Post</masterLabel>
+            <translation>Publicación en muro</translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Updated Date --></label>
+        <name>sf4twitter__Updated_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Bio --></label>
+        <name>sf4twitter__User_Bio__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Creation Date --></label>
+        <name>sf4twitter__User_Creation_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Last tweet --></label>
+        <name>sf4twitter__User_Last_tweet__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Likes --></label>
+        <name>sf4twitter__User_Likes__c</name>
+    </fields>
+    <fields>
+        <label><!-- User Status Count --></label>
+        <name>sf4twitter__User_Status_count__c</name>
+    </fields>
+    <gender>Feminine</gender>
+    <nameFieldLabel>Nombre de conversación</nameFieldLabel>
+    <webLinks>
+        <label><!-- Add_To_Campaign --></label>
+        <name>sf4twitter__Add_To_Campaign</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Add_to_Campaign_Massive --></label>
+        <name>sf4twitter__Add_to_Campaign_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Case --></label>
+        <name>sf4twitter__Create_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Contact --></label>
+        <name>sf4twitter__Create_Contact</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Contact_Massive --></label>
+        <name>sf4twitter__Create_Contact_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Knowledge --></label>
+        <name>sf4twitter__Create_Knowledge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Lead --></label>
+        <name>sf4twitter__Create_Lead</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Lead_Massive --></label>
+        <name>sf4twitter__Create_Lead_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Person_Account --></label>
+        <name>sf4twitter__Create_Person_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Person_Account_Massive --></label>
+        <name>sf4twitter__Create_Person_Account_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Delete_Ignored --></label>
+        <name>sf4twitter__Delete_Ignored</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Escalate_to_Case --></label>
+        <name>sf4twitter__Escalate_to_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Author_Info --></label>
+        <name>sf4twitter__Get_Author_Info</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Author_Info_Massive --></label>
+        <name>sf4twitter__Get_Author_Info_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Comments --></label>
+        <name>sf4twitter__Get_Comments</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Comments_Massive --></label>
+        <name>sf4twitter__Get_Comments_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Conversation --></label>
+        <name>sf4twitter__Get_Conversation</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Conversation_Detail --></label>
+        <name>sf4twitter__Get_Conversation_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Klout_Score --></label>
+        <name>sf4twitter__Get_Klout_Score</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_Klout_Score_Massive --></label>
+        <name>sf4twitter__Get_Klout_Score_Massive</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Get_More_Tweets --></label>
+        <name>sf4twitter__Get_More_Tweets</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Ignore --></label>
+        <name>sf4twitter__Ignore</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Ignore_Detail --></label>
+        <name>sf4twitter__Ignore_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mark_as_reviewed --></label>
+        <name>sf4twitter__Mark_as_reviewed</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Mark_as_reviewed_Detail --></label>
+        <name>sf4twitter__Mark_as_reviewed_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Negative_Sentiment_Detail --></label>
+        <name>sf4twitter__Negative_Sentiment_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Neutral_Sentiment_Detail --></label>
+        <name>sf4twitter__Neutral_Sentiment_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Positive_Sentiment_Detail --></label>
+        <name>sf4twitter__Positive_Sentiment_Detail</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Post_to_Chatter --></label>
+        <name>sf4twitter__Post_to_Chatter</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Promote_to_Knowledge --></label>
+        <name>sf4twitter__Promote_to_Knowledge</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Remove_from_Facebook --></label>
+        <name>sf4twitter__Remove_from_Facebook</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reply --></label>
+        <name>sf4twitter__Reply</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_A_Tweet --></label>
+        <name>sf4twitter__Send_A_Tweet</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Send_Twitter_Message --></label>
+        <name>sf4twitter__Send_Twitter_Message</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Solved_By_Community --></label>
+        <name>sf4twitter__Solved_By_Community</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Solved_By_Community_Massive --></label>
+        <name>sf4twitter__Solved_By_Community_Massive</name>
+    </webLinks>
+</CustomObjectTranslation>

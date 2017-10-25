@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>DEMODATA</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>DEMODATA</value>
+    </caseValues>
+    <fields>
+        <label><!-- Number of Logins --></label>
+        <name>Number_of_Logins__c</name>
+    </fields>
+    <fields>
+        <label><!-- Portal Login Date --></label>
+        <name>Portal_Login_Date__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Customer Portal --></label>
+        <name>CustomerPortal</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

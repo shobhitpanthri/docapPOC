@@ -1,0 +1,51 @@
+<apex:component allowDML="true">
+<apex:attribute name="pkbCon" type="pkb_Controller" required="true" description="handle to the pkb controller" />
+
+  <apex:form >
+	  <apex:outputPanel layout="block" style="width: 100%; margin-top: 5px;">
+	    <div style="font-weight: bold; font-size: 125%; float: left;">
+	     <apex:outputText rendered="{!pkbCon.displayContactUs}">
+	       <apex:outputLink value="{!pkbCon.currentSiteUrl}">Home</apex:outputLink>
+	       &nbsp;&gt;&nbsp;
+	       {!$Label.PKB2_Contact_Us}
+	     </apex:outputText>
+	    </div>
+	    <apex:outputPanel layout="block" style="float: right;" rendered="{!pkbCon.multiLanguage}">
+
+	      <apex:selectList styleClass="languages" value="{!pkbCon.selectedLanguage}" multiSelect="false" size="1" onchange="setLanguage(this);">
+	        <apex:selectOptions value="{!pkbCon.languageOptions}" />
+	      </apex:selectList>
+
+      </apex:outputPanel>
+	  </apex:outputPanel>
+  </apex:form>
+
+  <div style="clear: both;"></div>
+  
+  <form class="form" id="searchAskForm">
+    <div style="float: left;">
+	    <div id="searchAskInputContainer">
+				<textarea 
+				  onfocus="clearPrompt(this);" 
+				  onblur="restorePrompt(this); buildSearchHref();"
+				  onkeypress="checkForEnter(event, this);"
+				  title="{!pkbCon.searchPrompt}" 
+				  tabindex="1" 
+				  type="text" 
+				  name="inputboxform" 
+				  class="{!IF(pkbCon.enteredSearchQuery == pkbCon.searchPrompt, 'default', '')}" 
+				  id="searchAskInput" 
+				  style="height: 36px;">{!pkbCon.enteredSearchQuery}</textarea>
+				<a href="#" id="resetButton" style="display: inline;" class="reset" onclick="resetPrompt($$('#' +SEARCH_TEXT_ID)[0]); return false;">{!$Label.PKB2_Reset_Search}</a>
+	    </div>
+    </div>
+
+    <div style="float: left;">
+      <a href="#" id="searchAskButton" tabindex="2" class="action" onclick="searchButtonClicked(); return false;">
+        <span title="{!pkbCon.buttonPrompt}" class="tip">{!pkbCon.buttonPrompt}</span>
+      </a>
+    </div>
+  </form>
+
+<script type="text/javascript">buildSearchHref();</script>
+</apex:component>

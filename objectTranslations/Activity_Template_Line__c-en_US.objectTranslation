@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Activity Template Line</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Activity Template Lines</value>
+    </caseValues>
+    <fields>
+        <label><!-- Activity Template --></label>
+        <name>Activity_Template__c</name>
+        <relationshipLabel><!-- Activity Template Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Activity Template Lines --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Subject --></label>
+        <name>Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- # of Days --></label>
+        <name>of_Days__c</name>
+    </fields>
+    <startsWith>Vowel</startsWith>
+</CustomObjectTranslation>

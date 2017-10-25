@@ -1,0 +1,811 @@
+var AutoComplete = function(){
+
+    this.originalElement;
+    this.baseName;
+    this.lookupInput;
+    
+    this.hasFocus = false;
+
+    this.type;
+    this.entityName;
+    this.entityNameFields;
+
+    this.valQueried = null;
+    this.records;
+    this.selected = -1;
+     
+}
+
+// static variables
+AutoComplete.prototype.RECORD_HEIGHT = 17;
+AutoComplete.prototype.MIN_LENGTH_THRESHOLD = 3;
+AutoComplete.prototype.TYPING_THRESHOLD_MILLIS = 400;
+AutoComplete.prototype.HIGHLIGHT_COLOR = "#AACCFF";
+AutoComplete.prototype.IS_IE = document.all;
+
+// class variables
+AutoComplete.prototype.AUTOCOMPLETE_MAP = [];
+AutoComplete.prototype.IS_PROCESSING = false;
+AutoComplete.prototype.FORM_NAME = 'editPage';
+AutoComplete.prototype.HAS_B2I;
+
+AutoComplete.prototype.setElement = function(el){
+
+    this.originalElement = el;
+    this.baseName = this.getBaseName(el);
+    this.lookupInput = this.getLookupInput(el);
+    
+    this.lookupInput.onkeyup = AutoComplete.prototype.onKeyUp;
+    this.lookupInput.onfocus = AutoComplete.prototype.onFocus;
+    this.lookupInput.onblur = AutoComplete.prototype.onBlur;
+
+}
+
+AutoComplete.prototype.establishType = function(el){
+
+    if (!el) return this.type;
+     
+    this.type = this.getLookupType(el);
+
+    if (this.type == '001'){
+        this.entityName = 'Account';
+        this.entityNameFields = ['Name'];
+    } else if (this.type == '003') {
+        this.entityName = 'Contact';
+        this.entityNameFields = ['FirstName', 'LastName'];
+    } else if (this.type == '005') {
+        this.entityName = 'User';
+        this.entityNameFields = ['FirstName', 'LastName', 'Alias'];
+    } else if (this.type == '006') {
+        this.entityName = 'Opportunity';
+        this.entityNameFields = ['Name'];
+    } else if (this.type == '00Q') {
+        this.entityName = 'Lead';
+        this.entityNameFields = ['FirstName', 'LastName'];
+    } else if (this.type == '500') {
+        this.entityName = 'Case';
+        this.entityNameFields = ['CaseNumber'];
+    } else if (this.type == '501') {
+        this.entityName = 'Solution';
+        this.entityNameFields = ['SolutionName'];
+    } else if (this.type == '800') {
+        this.entityName = 'Contract';
+        this.entityNameFields = ['ContractNumber'];
+    } else if (this.type == '01t') {
+        this.entityName = 'Product2';
+        this.entityNameFields = ['Name'];
+    } else if (this.type == '02i') {
+        this.entityName = 'Asset';
+        this.entityNameFields = ['Name'];
+    }
+ 
+}
+
+AutoComplete.prototype.getBaseName = function(el){
+    if (!el) return this.baseName;
+    var name = el.name;
+    var idx = name.indexOf('_');
+    if (idx > -1){
+        return name.substring(0, idx);
+    } else {
+        return name;
+    }
+}
+
+AutoComplete.prototype.isLookup = function(el){
+    return el.name.indexOf('_lkid') > 0;
+}
+
+AutoComplete.prototype.getLookupInput = function(el){
+    if (!el) return this.lookupInput;
+    var base = this.getBaseName(el);
+    return document.getElementById(base);
+}
+
+AutoComplete.prototype.getLookupType = function(el){
+    if (!el) return this.type;
+    var type;
+    var base = this.getBaseName(el);
+
+    // find multi-lookup 
+    var name = base + "_mlktp";
+    var lookupEl = document.getElementById(name);
+    if (lookupEl && lookupEl.options && lookupEl.selectedIndex > 0){
+        type = lookupEl.options[lookupEl.selectedIndex].value;
+    } else {
+        // find standard lookup
+        name = base +  "_lktp";
+        lookupEl = document.getElementById(name);
+        if (lookupEl){
+            type = lookupEl.value;
+        }
+    }    
+    return type;
+}
+
+AutoComplete.prototype.doLookup = function(val){
+
+    if (!this.hasFocus || AutoComplete.prototype.IS_PROCESSING) return;
+
+    // validate name parts before doing query
+    var nameParts = this.parseName(val);
+    if (!nameParts || nameParts.length == 0){
+        return;
+    }
+
+    this.establishType(this.originalElement);
+
+    if (!this.type || !this.entityName || !this.entityNameFields){
+        return;
+    }
+
+    // mark as processing so we don't run multiple queries at a time
+    AutoComplete.prototype.IS_PROCESSING = true;
+
+    if (val != null) {
+        val = val.toLowerCase();
+        val = val.replace(/'/g, '\\\'');
+    }
+    
+    // keep last queried so we can do client-side subfiltering
+    this.valQueried = val;
+    
+    var soql = this.makeSoql(nameParts, val);
+        
+    this.records = AutoComplete.prototype.query(soql).records;
+    this.displayResults(this.records, val);
+    
+    AutoComplete.prototype.IS_PROCESSING = false;
+    
+}
+
+AutoComplete.prototype.makeSoql = function(nameParts, val){
+    return this.makeSoqlInner(nameParts, val);
+}
+
+AutoComplete.prototype.makeSoqlInner = function(nameParts, val){
+        
+    var soql = "SELECT Id";
+
+    for (var i = 0; i < this.entityNameFields.length; i++){
+        soql += ", " + this.entityNameFields[i];
+    }
+
+    soql += " FROM " + this.entityName + " WHERE ";
+
+    // for single-name entities, query single field as complete string
+    if (this.entityNameFields.length == 1){
+    
+        soql += this.entityNameFields[0] + " LIKE '" + val + "%' ";
+    
+    // for person-name entities, query for variations on the name
+    } else {
+        for (var i = 0; i < this.entityNameFields.length; i++){
+            for (var j = 0; j < nameParts.length; j++){
+                var part = nameParts[j];
+                if (part){
+                    part = part.toLowerCase();
+                    soql += this.entityNameFields[i] + " LIKE '" + part + "%' ";
+                    if (i != this.entityNameFields.length - 1 || j != nameParts.length - 1){
+                        soql += " OR "
+                    }
+                }
+            }
+        }
+    }
+    
+    return soql;
+}
+
+AutoComplete.prototype.parseName = function(val){
+    var partsTemp;
+    if (val){
+        partsTemp = val.split(' ');
+    } else {
+        partsTemp = [];
+    }
+    
+    var parts = [];
+    for (var i = 0; i < partsTemp.length; i++){
+        var part = partsTemp[i];
+        part = part.replace(' ', '');
+        if (part){
+            parts.push(part);
+        }
+    }
+    return parts;
+}
+
+AutoComplete.prototype.displayResults = function(records, value){
+
+    if (records && records.length > 0){
+
+        var baseName = this.getBaseName();
+
+        var html = [];
+        html.push("<table width='100%' cellpadding='0' cellspacing='0' border='0'>");
+        for (var i = 0; i < records.length; i++){
+            var record = records[i];
+            var id = AutoComplete.prototype.getId(record);
+            html.push("<tr><td style='cursor: pointer;' onmouseover='AutoComplete.prototype.setSelected(\""+baseName+"\", "+i+");this.style.backgroundColor=\""+AutoComplete.prototype.HIGHLIGHT_COLOR+"\";' onmouseout='this.style.backgroundColor=\"\";'>");
+            html.push("<div style='height:"+AutoComplete.prototype.RECORD_HEIGHT+"px;' id='"+id+"'>");
+            var name = this.getName(record);
+            html.push(this.highlightMatch(name, value));
+            html.push("</div>");
+            html.push("</td></tr>");
+        }
+        html.push("</table>");
+
+        var boxName = this.getBaseName();
+        var box = AutoComplete.prototype.getBox(boxName);
+        if (!box){
+            box = AutoComplete.prototype.makeBox(boxName, records.length * AutoComplete.prototype.RECORD_HEIGHT, 200);
+    	    var inputEl = this.getLookupInput();
+    	    var top = getObjY(inputEl) + 20;
+    	    var left = getObjX(inputEl);
+    	    AutoComplete.prototype.moveBox(boxName, top, left);
+        } else {
+            AutoComplete.prototype.resizeBox(baseName, records.length * AutoComplete.prototype.RECORD_HEIGHT, 200);
+        }
+        box.innerHTML = html.join('');    
+        this.displaySuggestions(true);
+    }    
+
+}
+
+AutoComplete.prototype.getName = function(record){
+    var name = "";
+    var numFields = this.entityNameFields.length;
+    var addedParens = false;
+    for (var i = 0; i < numFields; i++){
+        var value = record.get(this.entityNameFields[i]);
+        if (i == 2 && numFields > 2 && !addedParens){
+            name += "(";
+            addedParens = true;
+        }
+        if (value){
+            name += value;
+	        if (addedParens && i+1 == numFields){
+	            name += ")";
+	        } else {
+				name += " ";
+	        }
+        }
+
+    }
+    return name;
+}
+
+AutoComplete.prototype.highlightMatch = function(name, value){
+    if (!name || !value) return "";
+    
+    var nameLower = name.toLowerCase();
+    var valueLower = value.toLowerCase();
+    
+    var idx = nameLower.indexOf(valueLower);
+    if (idx == -1){
+        return name;
+    } else {
+        var before = name.substring(0, idx);
+        var middle = name.substring(idx, idx + value.length);
+        var after = name.substring(idx + value.length);
+        var match = before + "<b>" + middle + "</b>" + after;
+        return match;
+    }
+}
+
+AutoComplete.prototype.doFilter = function(val){
+
+    var filteredRecords = [];
+    for (var i = 0; i < this.records.length; i++){
+        var record = this.records[i];
+        if (this.isMatch(record, val)){
+            filteredRecords.push(record);
+        }
+    }
+    
+    if (filteredRecords && filteredRecords.length > 0){
+        this.displayResults(filteredRecords, val);
+    } else {
+        this.doClear();
+    }
+	        
+}
+
+// similar to doLookup() code
+AutoComplete.prototype.isMatch = function(record, val){
+
+    var value = null;
+
+    // for single-name entities, match single field as complete string
+    if (this.entityNameFields.length == 1){
+        value = record.get(this.entityNameFields[0]);
+    // for person-name entities, query for variations on the name
+    } else {
+        value = this.getName(record);
+    }
+    
+    return (value && value.toLowerCase().indexOf(val.toLowerCase()) > -1);
+    
+}
+
+AutoComplete.prototype.doClear = function(){
+    this.displaySuggestions(false);
+    this.selected = -1;
+}
+
+AutoComplete.prototype.displaySuggestions = function(isVisible){
+    AutoComplete.prototype.showBox(this.getBaseName(), isVisible);    
+}
+
+AutoComplete.prototype.selectItem = function(selectedIndex){
+
+    var baseName = this.getBaseName();
+    var id = null;
+    var name = null;
+            
+    var box = AutoComplete.prototype.getBox(baseName);
+    if (box && selectedIndex >= 0){
+         var content = box.childNodes[0].childNodes[0];
+     	 if (content && content.rows && selectedIndex < content.rows.length){
+            var row = content.rows[selectedIndex];
+			if (row){
+			    var cell = row.cells[0];
+                var div = cell.getElementsByTagName("div")[0];
+                if (div){
+                    id = div.id;
+                }
+			}
+    	}
+    }
+    
+    if (id){
+        for (var i = 0; i < this.records.length; i++){
+            var rec = this.records[i];
+            if (id == AutoComplete.prototype.getId(rec)){
+                name = this.getName(rec);
+                break;
+            } 
+        }
+    }
+
+    // found an ID and a name; load the picklist
+    if (id && name){
+    
+        // remove alias from user/entity, if it exists
+        if (this.entityName == 'User'){
+            var startParens = name.lastIndexOf('(');
+            if (startParens > 0){
+                name = name.substring(0, startParens);
+            }
+        }
+        lookupPick(AutoComplete.prototype.FORM_NAME, baseName+'_lkid', baseName, '', id, name, '', '');
+    }    
+
+    // item selected; clear the suggestion box
+    var autoComplete = AutoComplete.prototype.AUTOCOMPLETE_MAP[baseName];
+    if (autoComplete){
+        autoComplete.doClear();
+    }
+    
+}
+
+//////////////////////////////
+// Event hooks on lookup input element.
+//////////////////////////////
+
+AutoComplete.prototype.onKeyUp = function(event){
+
+    if (!event){
+        event = window.event;
+    }
+
+    var autoComplete = AutoComplete.prototype.AUTOCOMPLETE_MAP[this.name];
+    if (!autoComplete){
+        return;
+    }
+
+    var val = this.value;
+    
+    var isKeyPress = (event && event.keyCode);
+    if (AutoComplete.prototype.IS_PROCESSING) {
+        return;
+    } else if (isKeyPress && AutoComplete.prototype.isEnter(event)) {
+        // BUGBUG: how do we avoid submitting form on [ENTER] before
+        // executing the onBlur()?
+        return;
+    } else if (isKeyPress && AutoComplete.prototype.isNavigation(event)) {
+        AutoComplete.prototype.handleNav(this.name, event);
+        return;
+    } else if (isKeyPress && AutoComplete.prototype.isTypingFast(this.name, event)){
+        return;
+    } else if (isKeyPress && AutoComplete.prototype.isIgnore(event)) {
+    	return;
+    } else if (isKeyPress && AutoComplete.prototype.isEscape(event)){
+        autoComplete.doClear();
+    	return;
+    }
+
+    if (val != null && val.length >= AutoComplete.prototype.MIN_LENGTH_THRESHOLD){
+    
+        // initial query
+        if (autoComplete.valQueried == null || val.toLowerCase().indexOf(autoComplete.valQueried.toLowerCase()) == -1){
+            autoComplete.doLookup(val);
+        // subquery; filter results
+        } else {
+            autoComplete.doFilter(val);
+        }
+            
+   } else if (val == null || val.length <= AutoComplete.prototype.MIN_LENGTH_THRESHOLD){
+       autoComplete.valQueried = null;
+       autoComplete.doClear();
+   }
+
+}
+
+AutoComplete.prototype.onFocus = function(event){
+
+    var autoComplete = AutoComplete.prototype.AUTOCOMPLETE_MAP[this.name];
+    if (!autoComplete){
+        return;
+    }
+    autoComplete.hasFocus = true;
+
+}
+
+AutoComplete.prototype.onBlur = function(event){
+
+    if (!event){
+        event = window.event;
+    }
+
+    var autoComplete = AutoComplete.prototype.AUTOCOMPLETE_MAP[this.name];
+    if (!autoComplete){
+        return;
+    }
+
+    autoComplete.hasFocus = false;
+
+    if (AutoComplete.prototype.TIMEOUT_ID){    
+        clearTimeout(AutoComplete.prototype.TIMEOUT_ID);
+    }
+    
+    // leaving input and is NOT ignore and NOT escape: select the highlighted item
+    if (event && !AutoComplete.prototype.isIgnore(event) && !AutoComplete.prototype.isEscape(event) && autoComplete.selected >= 0){
+        autoComplete.selectItem(autoComplete.selected);
+        
+    // otherwise: clear the complete suggestion w/ slight delay to allow
+    // possible onclick to pass through to the suggestion div
+    } else {
+        setTimeout("AutoComplete.prototype.AUTOCOMPLETE_MAP['"+this.name+"'].doClear()", 200);
+    }
+    
+}
+
+//////////////////////////////
+// Interaction with suggestion box.
+//////////////////////////////
+
+// sets selected index of a given auto-complete object. 
+AutoComplete.prototype.setSelected = function(baseName, idx){
+    var autoComplete = AutoComplete.prototype.AUTOCOMPLETE_MAP[baseName];
+    if (!autoComplete){
+        return;
+    } else {
+        autoComplete.selected = idx;
+    }
+    
+}
+
+// handle up/down for auto-complete
+AutoComplete.prototype.handleNav = function(name, event){
+
+    var autoComplete = AutoComplete.prototype.AUTOCOMPLETE_MAP[name];
+    if (!autoComplete){
+        return;
+    }
+
+    var code = event.keyCode;
+    var isDown = (code == 40);
+    
+    var newSelected = autoComplete.selected;
+
+      var box = AutoComplete.prototype.getBox(autoComplete.getBaseName());
+      if (box){
+      
+          var content = box.childNodes[0].childNodes[0];
+          if (content && content.rows){
+
+              if (isDown){
+                  if (autoComplete.selected < content.rows.length - 1){
+                      newSelected++;
+                  }
+              } else {
+                  if (autoComplete.selected > 0){
+                      newSelected--;
+                  }
+              }
+              
+              if (autoComplete.selected >= 0){
+                  var oldRow = content.rows[autoComplete.selected];
+                  if (oldRow && oldRow.childNodes[0]){
+                      oldRow.childNodes[0].onmouseout();
+                  }
+              }
+
+			  if (newSelected >= 0){
+                  var newRow = content.rows[newSelected];
+                  if (newRow && newRow.childNodes[0]){
+                      newRow.childNodes[0].onmouseover();
+                  }
+                  autoComplete.selected = newSelected;
+		      }                  
+
+		}           
+     
+    }
+    
+}
+
+//////////////////////////
+// Typing helpers.
+//////////////////////////
+
+// fast typing gets delayed complete
+AutoComplete.prototype.LAST_DATE = null;
+AutoComplete.prototype.TIMEOUT_ID = null;
+
+// if typing fast, will delay onKeyUp() until after typing is slowed
+AutoComplete.prototype.isTypingFast = function(name, event){
+    
+    // clear existing timeout to avoid flood of delayed onKeyUp calls
+    if (AutoComplete.prototype.TIMEOUT_ID){    
+        clearTimeout(AutoComplete.prototype.TIMEOUT_ID);
+    }
+    
+	var d = new Date();
+	if (AutoComplete.prototype.LAST_DATE == null){
+	    AutoComplete.prototype.LAST_DATE = d;
+	    return true;
+	} else {
+	    var diff = d.getTime() - AutoComplete.prototype.LAST_DATE.getTime();
+	    AutoComplete.prototype.LAST_DATE = d;
+	    if (diff < AutoComplete.prototype.TYPING_THRESHOLD_MILLIS){
+	        var delayedExec = "document.getElementById('"+name+"').onkeyup();";
+	        AutoComplete.prototype.TIMEOUT_ID = setTimeout(delayedExec, AutoComplete.prototype.TYPING_THRESHOLD_MILLIS);
+	        return true;
+	    } else {
+	        return false;
+	    }
+	}
+}
+
+AutoComplete.prototype.isNavigation = function(event){
+    var code = event.keyCode;
+    return (code == 38 || code == 40);
+}
+
+// 9 is TAB; 16 is SHIFT-TAB
+AutoComplete.prototype.isIgnore = function(event){
+    var code = event.keyCode;
+    return (code == 9 || code == 16 || (code >= 33 && code <= 46) || (code >= 112 && code <= 123));
+}
+
+AutoComplete.prototype.isEscape = function(event){
+    var code = event.keyCode;
+    return code == 27;
+}
+
+AutoComplete.prototype.isEnter = function(event){
+    var code = event.keyCode;
+    return code == 13;
+}
+
+/////////////////////////
+// Query Helpers
+/////////////////////////
+
+AutoComplete.prototype.query = function(soql){
+
+    try {
+        var qr = sforce.connection.query(soql);
+        var results = new Object();
+        results.size = qr.size;
+        results.records = qr.getArray("records");
+        return results;
+    } catch (fault){
+        alert("error: " + fault);
+    }
+}
+
+//////////////////////////
+// Box helpers.
+//////////////////////////
+
+AutoComplete.prototype.makeBox = function(name, height, width) {
+
+    // iframe shim b/c IE has input elements show throw plain DIVs
+    if (AutoComplete.prototype.IS_IE){
+        var iframe = document.createElement("iframe");
+        iframe.id = name+"I";
+        iframe.src = "/blank.html";
+        iframe.style.display = "block";
+        iframe.style.position = "absolute";
+        iframe.style.padding = "3px";
+        iframe.style.height = height + "px";
+        iframe.style.width = width + "px";
+        iframe.style.backgroundColor = "#ffffCC";
+        document.body.appendChild(iframe);
+    }
+
+    // div for the contents
+    var div = document.createElement("div");
+    div.id = name+"D";
+    div.style.border = "1px solid #666";
+    div.style.display = "block";
+    div.style.position = "absolute";
+    div.style.padding = "2px";
+    div.style.height = height + "px";
+    div.style.width = width + "px";
+    div.style.backgroundColor = "#ffffCC";
+    document.body.appendChild(div);
+    
+    return div;
+
+}
+
+AutoComplete.prototype.getBox = function(name){
+    return document.getElementById(name+'D');
+
+}
+
+AutoComplete.prototype.resizeBox = function(name, height, width) {
+
+    var iframe = document.getElementById(name+'I');
+    if (iframe){
+        iframe.style.height = height + "px";
+        iframe.style.width = width + "px";
+    }
+
+    var box = document.getElementById(name+'D');
+    if (box){
+        box.style.height = height + "px";
+        box.style.width = width + "px";
+    }
+}
+
+AutoComplete.prototype.moveBox = function(name, top, left){
+
+    var iframe = document.getElementById(name+'I');
+    if (iframe){
+        iframe.style.top = top + "px";
+        iframe.style.left = left + "px";
+        iframe.style.zIndex = 10;
+    }
+
+    var box = document.getElementById(name+'D');
+    if (box){
+        box.style.top = top + "px";
+        box.style.left = left + "px";
+        box.style.zIndex = 20;
+    }
+
+}
+
+AutoComplete.prototype.showBox = function(name, isVisible){
+    var disp = isVisible ? "block" : "none";
+    var iframe = document.getElementById(name+'I');
+    if (iframe){
+        iframe.style.display = disp;
+    }
+
+    var box = document.getElementById(name+'D');
+    if (box){
+        box.style.display = disp;
+    }
+}
+
+//////////////////////////
+// Subclass to support Accounts/Person Accounts
+//////////////////////////
+
+var AccountAutoComplete = function(){};
+
+AccountAutoComplete.prototype = new AutoComplete;
+
+AccountAutoComplete.prototype.makeSoql = function(nameParts, val){
+
+    var soql;
+
+
+    if (AutoComplete.prototype.HAS_B2I == undefined){
+	    try {
+	        sforce.connection.query("SELECT IsPersonAccount FROM Account WHERE Id = '00146000003JtCa'");
+	        AutoComplete.prototype.HAS_B2I = true;
+	    } catch (fault){}    
+	}
+
+    if (AutoComplete.prototype.HAS_B2I){
+        soql = "SELECT Id, Name, FirstName, LastName, IsPersonAccount FROM Account WHERE ";
+        soql += " Name LIKE '" + val + "%' OR ";
+        soql += " FirstName LIKE '" + val + "%' OR ";
+        soql += " LastName LIKE '" + val + "%' ";
+    } else {
+        soql = this.makeSoqlInner(nameParts, val);
+    }
+    
+    return soql;
+    
+}
+
+//////////////////////////
+// Misc helpers.
+//////////////////////////
+
+AutoComplete.prototype.makeAutoComplete = function(el){
+
+    var ac;
+    
+    var type = AutoComplete.prototype.getLookupType(el);
+	if (type && type == '001'){
+	    ac = new AccountAutoComplete();
+	} else {
+		ac = new AutoComplete();
+	}
+	ac.setElement(el);
+	
+	return ac;
+}
+
+AutoComplete.prototype.to15CharId = function(id){
+    if (!id) return null;
+    return id.substring(0, 15);
+}
+
+// the id field returned by the API is often returned twice,resulting
+// in an array when calling record.get(). this returns a single ID always.
+AutoComplete.prototype.getId = function(record){
+    if (!record) return null;
+    var id = record.get("Id");
+    // looking for array by checking for "splice()" function
+    if (id.splice && id.length && id.length > 0) {
+        id = id[0];
+    }
+    if (id){
+        id = AutoComplete.prototype.to15CharId(id);
+    }
+    return id;
+}
+
+AutoComplete.prototype.getApiURL = function(isPartner, version) {
+    var url = window.location.href;
+    var idx = url.indexOf('/', 10); // well after (http|https)://
+    var base = url.substring(0, idx) + "/services/Soap/" + (isPartner ? "u" : "c") + "/" + version;
+    return base;
+}
+
+//////////////////////////
+// Initialization helpers.
+//////////////////////////
+
+AutoComplete.prototype.loadAutoComplete = function(formName){
+
+    if (!formName){
+        AutoComplete.prototype.FORM_NAME = "editPage";
+    }
+    
+    // initialize sforce connection
+    var apiSession = getCookie("sid");
+    var apiURL = AutoComplete.prototype.getApiURL(true, "8.0");
+
+    sforce.connection.init(apiSession, apiURL, true);
+
+    var els = document.getElementsByTagName("input");
+    for (var i = 0; i < els.length; i++){
+        var el = els[i];
+        if (AutoComplete.prototype.isLookup(el)){
+            var autoComplete = AutoComplete.prototype.makeAutoComplete(el);
+            AutoComplete.prototype.AUTOCOMPLETE_MAP[autoComplete.getBaseName()] = autoComplete;
+        }
+    }
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <script src="/soap/ajax/10.0/connection.js"></script>
+	
+    <script src="http://maps.google.com/maps?file=api&amp;v=2&amp;key=ABQIAAAAn-_wL1b8pbIpJfus300460000008eAaI-P7ekoe_gyhfzl1yZhQIi8Cp4aV-qJ1UGOrfYuaqMQ64Dw"
+      type="text/javascript">
+	  /*
+		KEY FOR na1 = ABQIAAAARms8MGvnV-BbiTjwR8z1eBS300460000008eAbrgGXs5szHHahQdD86Zd300460000008eAcieQrLQ
+		KEY FOR na2= ABQIAAAAn-_wL1b8pbIpJfus300460000008eAdg1N8Ce0246000000PBCrg04RfeXqfJttrBEVklwfOQn2xNA
+		KEY FOR na3= ABQIAAAAn-_wL1b8pbIpJfus300460000008eAe_jsQk84g_OzUaojTBGhSetwHN8w7iaZgkWincYpb3inlM5w
+		KEY FOR na4=ABQIAAAAn-_wL1b8pbIpJfus300460000004PWooAkiOINMA2L3CdHnjwRTDGIUZZctCpWuTgsmBTVfM2m-zGw
+		KEY FOR na5= ABQIAAAAn-_wL1b8pbIpJfus300460000008eAaI-P7ekoe_gyhfzl1yZhQIi8Cp4aV-qJ1UGOrfYuaqMQ64Dw 
+		KEY FOR na6= ABQIAAAAn-_wL1b8pbIpJfus300460000004PWpbI5KFRawO0dUAA_H1zxT4GgBIrvvw23OpfYYkx0d11SMXPw
+		*/  
+	  </script>
+
+</head>
+
+ <body onunload="GUnload()" onload="window.resizeTo(450,700)" >
+ 
+	<div id="map" style="width: 400px; height: 300px"></div>
+    <script type="text/javascript">
+    //<![CDATA[
+    document.bgColor = '#f3f3ec';
+    var map = new GMap(document.getElementById("map"));
+    //map.disableDragging();
+    map.enableScrollWheelZoom();
+    map.enableContinuousZoom();
+    map.getContainer().style.overflow="hidden";
+
+   map.addControl(new GSmallZoomControl());
+    map.addControl(new GMapTypeControl());
+
+var geo = new GClientGeocoder();
+
+var street= "{!Account.BillingStreet} ";
+var city = "{!Account.BillingCity}";
+var zip= "{!Account.BillingPostalCode}"; 
+  geo.getLatLng(
+    street+" "+city,
+    function(point) {
+      if (!point) {
+        alert(street+" "+city + " " +zip+ " not found");
+      } else {
+        map.setCenter(point,13);
+		var marker = new GMarker(point);
+		map.addOverlay(marker);
+
+		GEvent.addListener(marker, "click", function() {
+          marker.openInfoWindowHtml(street+" " +city +" " + zip);
+        });
+
+      }
+    }
+  );
+
+
+
+function wheelevent(e)
+{
+
+	if (!e){
+		e = window.event
+	}
+	if (e.preventDefault){
+		e.preventDefault()
+	}
+	e.returnValue = false;
+}
+
+GEvent.addDomListener(map.getContainer(), "DOMMouseScroll", wheelevent);
+map.getContainer().onmousewheel = wheelevent; 
+
+function clearMarkers(){
+	map.clearOverlays();
+}
+
+function addMarker(street, city, zip,type,name){
+	var geoTwo = new GClientGeocoder();
+	geoTwo.getLatLng(street+" "+city, 
+    	function(point) {
+   		   if (!point) {
+        	alert(street+" "+city + " " +zip+ " not found");
+      	   } 
+      	    else {
+        		map.setCenter(point,13);
+				var marker = new GMarker(point);
+				map.addOverlay(marker);
+				GEvent.addListener(marker, "click", function() {
+                                marker.openInfoWindowHtml("<b>"+name+"</b><br/>"+street+"<br/>"+city+", "+zip);
+				});	
+			}
+		});
+}
+    //]]>
+
+
+
+</script>
+<div>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" id="FlexSalesforce" width="100%" height="90%"
+	 codebase="https://fpdownload.macromedia.com/get/flashplayer/current/swflash.cab">
+	<param name="movie" value="{!Scontrol.JavaArchive}" /> 
+	<param name="quality" value="high" /><param name="play" value="true" />
+	<param name="bgcolor" value="#f3f3ec" /><param name="allowScriptAccess" value="always"/>
+        <param name="wmode" value="transparent" />
+        <param name="flashvars"          value="session_id={!API.Session_ID}&server_url={!API.Partner_Server_URL_90}&BillingCode={!Account.BillingPostalCode}" />
+	
+	<embed src="{!Scontrol.JavaArchive}"  play="true"  bgcolor="#f3f3ec" width="100%" height="700"  
+		name="FlexSalesforce" align="middle" 
+		flashvars="session_id={!API.Session_ID}&server_url={!API.Partner_Server_URL_90}&BillingCode={!Account.BillingPostalCode}"	
+	 	loop="false" allowScriptAccess="always" 
+	 	type="application/x-shockwave-flash" 
+	 	pluginspage="http://www.adobe.com/go/getflashplayer">
+	</embed>
+</object>
+</div>
+</body>
+</html>

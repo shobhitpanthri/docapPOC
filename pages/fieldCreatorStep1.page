@@ -1,0 +1,26 @@
+<apex:page controller="fieldCreatorController">
+<style>
+.myForm {
+	background-image: url({!$Label.FieldCreatorBaseUrl}{!$Label.FieldCreatorBG});
+}
+#selectObject { 
+	font-size: 160%;
+	padding-top: 25px;
+	text-align: left;
+}
+</style>
+<apex:stylesheet value="{!$Label.FieldCreatorBaseUrl}{!$Label.FieldCreatorCSS}"/>
+<script src="{!$Label.FieldCreatorBaseUrl}{$!Label.FieldCreatorJS}"/>
+<div id="container">
+<apex:form styleClass="myForm">
+
+<div id="selectObject">
+<h3 style="text-align: left;">select object:</h3>
+<apex:selectList value="{!obj}" size="1">
+	<apex:selectOptions value="{!objects}"/>
+	<apex:actionSupport action="{!selectObject}" event="onchange"/>
+</apex:selectList>
+</div>
+</apex:form>
+</div>
+</apex:page>

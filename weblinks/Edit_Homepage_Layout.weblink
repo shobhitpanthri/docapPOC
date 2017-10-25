@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>Edit Homepage Layout</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/setup/ui/homePageLayoutWizard.jsp?pCPLID=02T46000000HfmB&amp;setupid=HomePageLayouts</url>
+</CustomPageWebLink>

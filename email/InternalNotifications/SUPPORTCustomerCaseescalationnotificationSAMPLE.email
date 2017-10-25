@@ -1,0 +1,14 @@
+*** CUSTOMER CASE ESCALATION ALERT ***  
+
+The following case has been escalated:  
+Company:  {!Account.Name} 
+Case:  {!Case.CaseNumber}:  {!Case.Subject} 
+Case Created Time: {!Case.CreatedDate}
+
+Click on the link to access the case:  {!Case.Link}
+
+Were are working diligently to resolve your issue.  An agent should be reaching out to you in the very near future.
+
+Thank You,
+
+{!Organization.Name} Support Staff

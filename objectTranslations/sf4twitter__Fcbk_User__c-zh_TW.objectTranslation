@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Facebook 使用者</value>
+    </caseValues>
+    <fields>
+        <label><!-- Picture --></label>
+        <name>sf4twitter__Facebook_Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Facebook Id --></label>
+        <name>sf4twitter__Fcbk_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Image --></label>
+        <name>sf4twitter__Image__c</name>
+    </fields>
+    <fields>
+        <label><!-- Validated --></label>
+        <name>sf4twitter__Valid__c</name>
+    </fields>
+    <fields>
+        <label><!-- About Me --></label>
+        <name>sf4twitter__about_me__c</name>
+    </fields>
+    <fields>
+        <label><!-- Birthday --></label>
+        <name>sf4twitter__birthday__c</name>
+    </fields>
+    <fields>
+        <label><!-- City --></label>
+        <name>sf4twitter__city__c</name>
+    </fields>
+    <fields>
+        <label><!-- Country --></label>
+        <name>sf4twitter__country__c</name>
+    </fields>
+    <fields>
+        <label><!-- Email --></label>
+        <name>sf4twitter__email__c</name>
+    </fields>
+    <fields>
+        <label><!-- First Name --></label>
+        <name>sf4twitter__first_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Name --></label>
+        <name>sf4twitter__last_name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Political --></label>
+        <name>sf4twitter__political__c</name>
+    </fields>
+    <fields>
+        <label><!-- Religion --></label>
+        <name>sf4twitter__religion__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sex --></label>
+        <name>sf4twitter__sex__c</name>
+    </fields>
+    <fields>
+        <label><!-- State --></label>
+        <name>sf4twitter__state__c</name>
+    </fields>
+    <nameFieldLabel>名稱</nameFieldLabel>
+    <webLinks>
+        <label><!-- Revoke_Facebook_Access --></label>
+        <name>sf4twitter__Revoke_Facebook_Access</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Validate --></label>
+        <name>sf4twitter__Validate</name>
+    </webLinks>
+</CustomObjectTranslation>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <description>(Docs, Leads, Approvals, Custom Objects) --&gt; username: ssilver@simpledemo.com / salesforce</description>
+    <emailSenderAddress>support@uci.com</emailSenderAddress>
+    <emailSenderName>support@uci.com</emailSenderName>
+    <enableSelfCloseCase>false</enableSelfCloseCase>
+    <footerDocument>CustomerPortalImages/CustomerPortalFooterHTML.html</footerDocument>
+    <forgotPassTemplate>unfiled$public/PartnerRelationshipManagementPartnerPortalResetPasswordSAMPLE</forgotPassTemplate>
+    <headerDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</headerDocument>
+    <isSelfRegistrationActivated>false</isSelfRegistrationActivated>
+    <loginHeaderDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</loginHeaderDocument>
+    <newPassTemplate>unfiled$public/PartnerRelationshipManagementPartnerPortalResetPasswordSAMPLE</newPassTemplate>
+    <newUserTemplate>unfiled$public/PartnerRelationshipManagementPartnerPortalNewUserLoginInformationSAMPLE</newUserTemplate>
+    <showActionConfirmation>false</showActionConfirmation>
+    <type>Partner</type>
+</Portal>

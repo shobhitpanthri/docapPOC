@@ -1,0 +1,6 @@
+*** NEW ORDER NOTIFICATION ***  
+
+The following Opportunity has been assigned to you for Invoicing follow up.  
+Company:  {!Opportunity.Account}
+
+Click on the link to access the opportunity directly:  {!Opportunity.Link}

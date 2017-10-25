@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <narrowComponents>standard-GoogleTalk</narrowComponents>
+    <narrowComponents>standard-PortalWelcome</narrowComponents>
+    <narrowComponents>Customer Portal - Helpful Links</narrowComponents>
+    <narrowComponents>standard-StandardSearch</narrowComponents>
+    <narrowComponents>Customer Portal - Custom - Sidebar Picture - 2007 Annual Report</narrowComponents>
+    <narrowComponents>standard-RecentItems</narrowComponents>
+    <narrowComponents>standard-CreateNew</narrowComponents>
+    <narrowComponents>standard-SolutionSearch</narrowComponents>
+    <wideComponents>Customer Portal - Standard -  Welcome Message</wideComponents>
+    <wideComponents>Customer Portal - Standard - Flex Dashboards</wideComponents>
+    <wideComponents>Customer Portal - Standard - My recent cases</wideComponents>
+    <wideComponents>Customer Portal - Standard - Auto Top Solution</wideComponents>
+</HomePageLayout>

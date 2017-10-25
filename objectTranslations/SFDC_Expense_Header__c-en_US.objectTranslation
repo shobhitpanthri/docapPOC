@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Expense Report</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Expense Reports</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Expense Reports --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Billable --></label>
+        <name>Billable__c</name>
+    </fields>
+    <fields>
+        <label><!-- Department # --></label>
+        <name>Dept_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Long Description --></label>
+        <name>Long_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Manager For Approval --></label>
+        <name>Manager_For_Approval__c</name>
+        <relationshipLabel><!-- Expense Reports (Manager For Approval) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Contract --></label>
+        <name>Related_Contract__c</name>
+        <relationshipLabel><!-- Expense Reports --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Related Opportunity --></label>
+        <name>Related_Opportunity__c</name>
+        <relationshipLabel><!-- Expense Reports --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Draft</masterLabel>
+            <translation><!-- Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payment Complete</masterLabel>
+            <translation><!-- Payment Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Rejected</masterLabel>
+            <translation><!-- Rejected --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Total --></label>
+        <name>Total__c</name>
+    </fields>
+    <fields>
+        <label><!-- Employee Name --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Expense Reports (Employee Name) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Week Ending --></label>
+        <name>Week_Ending__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+    <webLinks>
+        <label><!-- CalculateTotal --></label>
+        <name>CalculateTotal</name>
+    </webLinks>
+</CustomObjectTranslation>

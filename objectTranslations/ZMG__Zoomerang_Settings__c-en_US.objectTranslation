@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- API URL --></label>
+        <name>ZMG__API_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Dial URL --></label>
+        <name>ZMG__Dial_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Gateway URL --></label>
+        <name>ZMG__Gateway_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Pie Chart URL --></label>
+        <name>ZMG__Pie_Chart_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Powered By URL --></label>
+        <name>ZMG__Powered_By_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Zoomerang Tab ID --></label>
+        <name>ZMG__Zoomerang_Tab_ID__c</name>
+    </fields>
+    <validationRules>
+        <errorMessage><!-- The Gateway URL must either be empty, in the domain of .zoomerang.com or .zoomqanew.markettools.com with https, or in the domain of .markettools.com with http (but not .zoomqanew.markettools.com under http). --></errorMessage>
+        <name>ZMG__SecureAndNonSecureDomains</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,66 @@
+<apex:page StandardController="Issue__c" showHeader="true" sidebar="false" extensions="locController">
+
+<html>
+<head>
+<script>
+    
+
+var pos = {};
+
+
+
+function success(position) {
+  pos = position.coords;
+  console.log(pos);
+}
+ 
+function error(msg) {
+ console.log(msg);
+}
+ 
+if (navigator.geolocation) {
+  navigator.geolocation.getCurrentPosition(success, error);
+  setPos();
+} else {
+  error('not supported');
+}
+ 
+function setPos() {
+    var inputs = document.getElementsByTagName('input');
+    for(var x = 0; x < inputs.length; x++) {
+        if(inputs[x].id.indexOf('contactlat') >= 0) { inputs[x].value = pos.latitude; }
+        if(inputs[x].id.indexOf('contactlong') >= 0) { inputs[x].value = pos.longitude; }
+    }
+}
+
+$(document).ready(function(){
+    updateLatLong();
+});
+
+</script>
+
+
+
+</head>
+ 
+<body> 
+ 
+<apex:form >
+
+<apex:commandButton value="Click Me" onclick="setPos()" reRender="contactLat,ContactLong"/><br></br>
+
+<apex:actionFunction name="updateLatLong" rerender="contactlat,contactlong"/>
+
+
+    <apex:inputField value="{!Issue__c.Geolocation__Latitude__s}" id="contactlat" /><br></br>
+    <apex:inputField value="{!Issue__c.Geolocation__Longitude__s}" id="contactlong" /><br></br>
+                <apex:commandButton action="{!quicksave}" value="Save"/><br></br>
+
+
+
+</apex:form>
+
+</body>
+</html>
+
+</apex:page>

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sales Order</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sales Orders</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- Sales Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Average Discount for Order --></label>
+        <name>Average_Discount_for_Order__c</name>
+    </fields>
+    <fields>
+        <label><!-- Customer Order Number --></label>
+        <name>Customer_Order_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Install Date --></label>
+        <name>Install_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Opportunity --></label>
+        <name>Opportunity__c</name>
+        <relationshipLabel><!-- Sales Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Date --></label>
+        <name>Order_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Order Line Items --></label>
+        <name>Order_Line_Items__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Email --></label>
+        <name>Primary_Email__c</name>
+    </fields>
+    <fields>
+        <label><!-- Primary Order Contact --></label>
+        <name>Primary_Order_Contact__c</name>
+        <relationshipLabel><!-- Sales Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Primary Phone --></label>
+        <name>Primary_Phone__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product__c</name>
+        <relationshipLabel><!-- Sales Orders --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Price --></label>
+        <name>Sales_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Ship Date --></label>
+        <name>Ship_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Discount --></label>
+        <name>Total_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Order Amount --></label>
+        <name>Total_Order_Amount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Sale Amount --></label>
+        <name>Total_Sale_Amount__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

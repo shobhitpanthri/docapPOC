@@ -1,0 +1,514 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Additional Customer Feedback --></label>
+        <name>Additional_Customer_Feedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Browser --></label>
+        <name>Browser__c</name>
+        <picklistValues>
+            <masterLabel>Firefox 1.5</masterLabel>
+            <translation><!-- Firefox 1.5 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firefox 1.6</masterLabel>
+            <translation><!-- Firefox 1.6 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Firefox 2</masterLabel>
+            <translation><!-- Firefox 2 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Google Chrome</masterLabel>
+            <translation><!-- Google Chrome --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IE 5.0</masterLabel>
+            <translation><!-- IE 5.0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IE 6.0</masterLabel>
+            <translation><!-- IE 6.0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>IE 7.0</masterLabel>
+            <translation><!-- IE 7.0 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Netscape 7</masterLabel>
+            <translation><!-- Netscape 7 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Netscape 8</masterLabel>
+            <translation><!-- Netscape 8 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opera 9</masterLabel>
+            <translation><!-- Opera 9 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Safari 3.1</masterLabel>
+            <translation><!-- Safari 3.1 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Bugzilla # --></label>
+        <name>Bugzilla__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Age (Actual) --></label>
+        <name>Case_Age_Actual__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Age (Hrs) --></label>
+        <name>Case_Age_Hrs__c</name>
+    </fields>
+    <fields>
+        <help><!-- The total case age in business hours from open to close. --></help>
+        <label><!-- Case Cycletime In Business Hours --></label>
+        <name>Case_Age_In_Business_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Case Area --></label>
+        <name>Case_Area__c</name>
+        <picklistValues>
+            <masterLabel>Contracts</masterLabel>
+            <translation><!-- Contracts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Credit</masterLabel>
+            <translation><!-- Credit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Invoicing</masterLabel>
+            <translation><!-- Invoicing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Orders</masterLabel>
+            <translation><!-- Orders --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Payments</masterLabel>
+            <translation><!-- Payments --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Case Routing --></label>
+        <name>Case_Routing__c</name>
+        <picklistValues>
+            <masterLabel>Billing</masterLabel>
+            <translation><!-- Billing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Feature Request</masterLabel>
+            <translation><!-- Feature Request --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>General/Technical</masterLabel>
+            <translation><!-- General/Technical --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Close Disposition --></label>
+        <name>Close_Disposition__c</name>
+        <picklistValues>
+            <masterLabel>Closed - Self Resolved</masterLabel>
+            <translation><!-- Closed - Self Resolved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Existing Issue - Documented</masterLabel>
+            <translation><!-- Existing Issue - Documented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Issue - KB Created</masterLabel>
+            <translation><!-- New Issue - KB Created --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Issue - One and Done</masterLabel>
+            <translation><!-- New Issue - One and Done --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Customer Satisfaction Score --></label>
+        <name>Customer_Satisfaction_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Case Duration Hours --></label>
+        <name>DB_Case_Duration_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- DB Hours --></label>
+        <name>DB_Hours__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Description --></label>
+        <name>Data_Quality_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Data Quality Score --></label>
+        <name>Data_Quality_Score__c</name>
+    </fields>
+    <fields>
+        <label><!-- DateTime Closed --></label>
+        <name>DateTime_Closed_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- DateTime Opened --></label>
+        <name>DateTime_Opened_c__c</name>
+    </fields>
+    <fields>
+        <label><!-- Demand For Feature --></label>
+        <name>Demand_For_Feature__c</name>
+        <picklistValues>
+            <masterLabel>Critical</masterLabel>
+            <translation><!-- Critical --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deal Pending</masterLabel>
+            <translation><!-- Deal Pending --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- DB --></label>
+        <name>EDY_ORGCUSTOM__DB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Description --></label>
+        <name>EDY_ORGCUSTOM__Old_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Old Subject --></label>
+        <name>EDY_ORGCUSTOM__Old_Subject__c</name>
+    </fields>
+    <fields>
+        <label><!-- Engineering Review --></label>
+        <name>Engineering_Review__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature Description --></label>
+        <name>Feature_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Feature Request Date --></label>
+        <name>Feature_Request_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Hardware --></label>
+        <name>Hardware__c</name>
+        <picklistValues>
+            <masterLabel>MAC</masterLabel>
+            <translation><!-- MAC --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PC</masterLabel>
+            <translation><!-- PC --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- InterviewID --></label>
+        <name>InterviewID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Payment --></label>
+        <name>Last_Payment__c</name>
+    </fields>
+    <fields>
+        <label><!-- Last Status Change --></label>
+        <name>Last_Status_Change__c</name>
+    </fields>
+    <fields>
+        <label><!-- Operating System --></label>
+        <name>Operating_System__c</name>
+        <picklistValues>
+            <masterLabel>AIX</masterLabel>
+            <translation><!-- AIX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>FreeBSD</masterLabel>
+            <translation><!-- FreeBSD --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>HP-UX</masterLabel>
+            <translation><!-- HP-UX --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Linux</masterLabel>
+            <translation><!-- Linux --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac 0S X 10.3</masterLabel>
+            <translation><!-- Mac 0S X 10.3 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac 0S X 10.4 (Tiger)</masterLabel>
+            <translation><!-- Mac 0S X 10.4 (Tiger) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Mac 0S X 10.5 (Leopard)</masterLabel>
+            <translation><!-- Mac 0S X 10.5 (Leopard) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows 2000</masterLabel>
+            <translation><!-- Windows 2000 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows 95</masterLabel>
+            <translation><!-- Windows 95 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows NT</masterLabel>
+            <translation><!-- Windows NT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows Vista</masterLabel>
+            <translation><!-- Windows Vista --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Windows XP</masterLabel>
+            <translation><!-- Windows XP --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Payment Billing --></label>
+        <name>Payment_Billing__c</name>
+        <picklistValues>
+            <masterLabel>Annually</masterLabel>
+            <translation><!-- Annually --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Monthly</masterLabel>
+            <translation><!-- Monthly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Quarterly</masterLabel>
+            <translation><!-- Quarterly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Semi-Annually</masterLabel>
+            <translation><!-- Semi-Annually --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Problem --></label>
+        <name>Problem__c</name>
+        <picklistValues>
+            <masterLabel>Balance Incorrect</masterLabel>
+            <translation><!-- Balance Incorrect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Incorrect Total on Order</masterLabel>
+            <translation><!-- Incorrect Total on Order --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Insufficient Funds</masterLabel>
+            <translation><!-- Insufficient Funds --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Wrong Invoice</masterLabel>
+            <translation><!-- Wrong Invoice --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Round Robin ID --></label>
+        <name>Round_Robin_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- SLA Compliance --></label>
+        <name>SLA_Compliance__c</name>
+    </fields>
+    <fields>
+        <label><!-- Source --></label>
+        <name>Source__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Indicator --></label>
+        <name>Status_Indicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sub-Type --></label>
+        <name>Sub_Type__c</name>
+        <picklistValues>
+            <masterLabel>End-User-Functionality</masterLabel>
+            <translation><!-- End-User-Functionality --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New Installation</masterLabel>
+            <translation><!-- New Installation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release Notes</masterLabel>
+            <translation><!-- Release Notes --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Reporting</masterLabel>
+            <translation><!-- Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Admin Guide</masterLabel>
+            <translation><!-- System Admin Guide --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>System Administrator</masterLabel>
+            <translation><!-- System Administrator --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Question</masterLabel>
+            <translation><!-- Technical Question --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Upgrade</masterLabel>
+            <translation><!-- Upgrade --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Tied to revenue? --></label>
+        <name>Tied_to_revenue__c</name>
+    </fields>
+    <fields>
+        <help><!-- The time in business hours that this case spent in the hands of the customer. --></help>
+        <label><!-- Time With Customer --></label>
+        <name>Time_With_Customer__c</name>
+    </fields>
+    <fields>
+        <help><!-- The time in business hours that this case spent with support. --></help>
+        <label><!-- Time With Support --></label>
+        <name>Time_With_Support__c</name>
+    </fields>
+    <fields>
+        <label><!-- Value of Deal --></label>
+        <name>Value_of_Deal__c</name>
+    </fields>
+    <fields>
+        <label><!-- ZMG_Survey Completed --></label>
+        <name>ZMG__ZMG_Survey_Completed__c</name>
+    </fields>
+    <fields>
+        <label><!-- cv --></label>
+        <name>cv__c</name>
+    </fields>
+    <fields>
+        <label><!-- Author External Id --></label>
+        <name>sf4twitter__Author_External_Id__c</name>
+    </fields>
+    <fields>
+        <label><!-- Author Username --></label>
+        <name>sf4twitter__Twitter_Username__c</name>
+    </fields>
+    <fields>
+        <label><!-- Conversation External Id --></label>
+        <name>sf4twitter__twitterId__c</name>
+    </fields>
+    <recordTypes>
+        <label><!-- Billing Issue --></label>
+        <name>BillingIssue</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Community Case --></label>
+        <name>Community_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cust Portal - Billing Issue --></label>
+        <name>CustPortalBillingIssue</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Cust Portal - Technical Issue --></label>
+        <name>CustPortalTechnicalIssue</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Email to Case --></label>
+        <name>Email_to_Case</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Bug/Feature Request --></label>
+        <name>Tech_Issue_Bug_Feature_Request</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Field Service Request --></label>
+        <name>Tech_Issue_Field_Service</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- *Technical Issue - Knowledge* --></label>
+        <name>Tech_Issue_Knowledge</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Technical Issue - Solutions --></label>
+        <name>TechnicalIssueAdvanced</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Entitlement Case --></label>
+        <name>TechnicalIssueBasic</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Social Service Request --></label>
+        <name>Technical_Twitter</name>
+    </recordTypes>
+    <webLinks>
+        <label><!-- Bugzilla --></label>
+        <name>Bugzilla</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- CaseTimeline --></label>
+        <name>CaseTimeline</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Create_Contact_Account --></label>
+        <name>Create_Contact_Account</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Customer_Survey --></label>
+        <name>Customer_Survey</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Article_Case --></label>
+        <name>Email_Article_Case</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Email_Solution --></label>
+        <name>Email_Solution</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Find_Solution --></label>
+        <name>Find_Solution</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Follow --></label>
+        <name>Follow</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Login_to_Self_Service --></label>
+        <name>Login_to_Self_Service</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- New_Article --></label>
+        <name>New_Article</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Reassign_to_Queue --></label>
+        <name>Reassign_to_Queue</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- Troubleshoot_w_Cross_Sell --></label>
+        <name>Troubleshoot_w_Cross_Sell</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- UpSellCrossSellOpp --></label>
+        <name>UpSellCrossSellOpp</name>
+    </webLinks>
+    <webLinks>
+        <label><!-- VPM_Script --></label>
+        <name>VPM_Script</name>
+    </webLinks>
+</CustomObjectTranslation>

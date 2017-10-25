@@ -1,0 +1,66 @@
+<apex:page controller="CaseDeflection" cache="false" >
+
+<style>
+    ul { list-style-type: none; }
+</style>
+         <apex:form id="theform">
+        <!--<apex:pageblock title="Your Case is Being Reviewed." tabstyle="Contact" rendered="{!submitted}" >
+            <apex:pageBlockButtons location="bottom">
+                <apex:commandButton value="Continue" action="{!goBackHome}" />
+            </apex:pageBlockButtons>
+             Your case #{!c.casenumber} has been submitted and a support engineer will follow up shortly.
+                
+              You can view details on your case <a target="_top" href="/{!c.id}">here</a>
+        </apex:pageblock>-->
+        
+        <apex:pageblock title="Missing Information" tabstyle="Contact" rendered="{!throwError}" >  
+             <div style="color:red;font-style:italic;">Record Type *Technical Issue - Knowledge* does not exist. Either create this record type, or change line 46 in CaseDeflection.cls.'</div>
+        </apex:pageblock>
+        
+        <apex:pageblock title="Tell Us About Your Issue" tabstyle="Contact" rendered="{!!submitted}">
+            <apex:pageblockbuttons location="bottom">
+                <apex:commandbutton value="Submit Case" action="{!doSubmit}" rerender="theform" rendered="{!c.subject != null }" />
+                <apex:commandbutton value="Next" action="{!doSearch}" rerender="theform" />
+            </apex:pageblockbuttons>
+            
+            <apex:pageblocksection title="Contact Details">
+                <apex:inputField value="{!con.First_Name__c}" />
+                <apex:inputField value="{!con.Last_Name__c}" />
+                <apex:inputField value="{!con.Email__c}" /><!-- required="true" -->
+                <apex:inputField value="{!con.Phone__c}" />
+            </apex:pageblocksection>
+            
+            <apex:pageblocksection title="Case Details" columns="1">
+                <apex:inputfield value="{!c.Type}" />
+                <apex:pageblocksectionitem >
+                    <apex:outputlabel for="sub" value="Describe your Problem" />
+                    <apex:inputtextarea id="sub" value="{!c.subject}" rows="5" cols="80" required="true" />
+                </apex:pageblocksectionitem>
+            </apex:pageblocksection> 
+            <br/>
+            
+            <apex:pageblocksection title="Knowledge Search Results" columns="1" rendered="{!AND( c.subject != null, c.subject != '' )}"> 
+                <div id="knowledgeResults" style="position:relative;left:50px;">
+                <apex:outputPanel layout="block">
+                    <!-- <apex:pageBlockSection title="FAQ" columns="1"> -->
+                        <knowledge:articleList articleVar="article"
+                            sortBy="mostViewed"
+                            pageSize="10"
+                            keyword="{!c.subject}"
+                        >   <ul>
+                            <li class="mylist" >
+                                <table>
+                                <tr><td><a href="{!URLFOR($Action.KnowledgeArticle.View, article.id)}?popup=true&isdtp=vw" id="a1" target="_blank">{!article.title}</a></td></tr>
+                                <tr><td style="color:#6D6D6D;">{!article.Summary}</td></tr>
+                                </table>
+                            </li>
+                            </ul>
+                        </knowledge:articleList>
+                    <!-- </apex:pageBlockSection> -->
+                    
+                </apex:outputPanel>
+                </div>
+            </apex:pageblocksection>
+        </apex:pageblock>
+        </apex:form>
+</apex:page>

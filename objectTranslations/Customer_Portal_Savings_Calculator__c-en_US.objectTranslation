@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Customer Portal Savings Calculator</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Customer Portal Savings Calculators</value>
+    </caseValues>
+    <fields>
+        <label><!-- Avg. time spent on case (minutes) --></label>
+        <name>Avg_time_spent_on_case_minutes__c</name>
+    </fields>
+    <fields>
+        <label><!-- Call Deflection (minutes) --></label>
+        <name>Call_deflection_minutes__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter a description of this return on investment calculation. --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the email address to email this calculation to your customer.  Use the customer portal email template under the Services and Support Email Template Folder. --></help>
+        <label><!-- Email --></label>
+        <name>Email__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the percentage of the estimated time savings for your customer support team. i.e. 25%-30% savings is expected for opening up the self-service portal channel. --></help>
+        <label><!-- Estimated Productivity Savings --></label>
+        <name>Estimated_Productivity_Savings__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the cost per hour of your FTE (full time equivalent) for your call center representatives. --></help>
+        <label><!-- FTE Cost/hour --></label>
+        <name>FTE_Cost_hour__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Cases per Rep per Day --></label>
+        <name>Number_of_Cases_Calls_per_Day__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the Number of Cases/Calls per week. --></help>
+        <label><!-- Number of Cases/Calls per week --></label>
+        <name>Number_of_Cases_Calls_per_week__c</name>
+    </fields>
+    <fields>
+        <help><!-- Please enter the Number of Support Employees --></help>
+        <label><!-- Number of Support Employees --></label>
+        <name>Number_of_Support_Employees__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Savings per Year --></label>
+        <name>Total_Savings_per_Year__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total saving per week  (hours per week) --></label>
+        <name>Total_saving_per_week_hours_per_week__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total savings per year (hours per year) --></label>
+        <name>Total_savings_per_year_hours_per_year__c</name>
+    </fields>
+    <fields>
+        <help><!-- What is the average number of working hours per call center reps? --></help>
+        <label><!-- Working Hours Per Day --></label>
+        <name>Working_Hours_Per_Day__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,258 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>Timeline</title>
+<link  href="/sCSS/9.0/1173909788000/PortalDefault/default/elements.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/9.0/1173909788000/PortalDefault/default/common.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/css/assistive.css" media="aural,braille,embossed" rel="stylesheet" type="text/css" /><link  href="/sCSS/9.0/1172698507000/PortalDefault/dStandard.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/9.0/1174078528000/PortalDefault/00D46000000aU4b/005460000012H5I/dCustom.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/9.0/1173909788000/PortalDefault/default/extended.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<link  href="/sCSS/9.0/1173932616000/PortalDefault/00D46000000aU4b/06046000000kh93/portal.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+
+<!-- Include the MIT timeline library and CSS-->
+{!INCLUDE($SControl.Timeline_CSS)}
+{!INCLUDE($SControl.Timeline_mit_lib)}
+
+<!-- Apex AJAX connection library change-->
+<script src="/soap/ajax/8.0/connection.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+
+var theTimeLine;
+var eventSource;
+var baseURL = window.location.protocol + '//' + window.location.hostname;
+
+var registeredCourses = new Array();
+var courses = new Array();
+
+// see what tab we are called from
+function validId(id) { return ("{!$Request.eid}" != null && "{!$Request.eid}" != "" && "{!$Request.eid}" === id); }
+
+/**************************
+ * load the timeline UI, then query for events to add
+ * all the events are added async to give a quicker load
+ */
+function initPage() {
+    //build the timeline widget
+    eventSource = new Timeline.DefaultEventSource();
+
+    var theme = Timeline.ClassicTheme.create();
+    //theme.event.label.width = 300; // px  this will truncate the labels that appear on the timline
+    //theme.event.bubble.width = 250;
+    //theme.event.bubble.height = 200;
+    //theme.ether.backgroundColors.unshift("#f3f3ec");
+
+    var dayStartDate = new Date();
+    dayStartDate.setDate(dayStartDate.getDate()+5);
+
+    var weekStartDate = new Date();
+    weekStartDate.setDate(weekStartDate.getDate()+49);
+
+    var bandInfos = [
+        Timeline.createBandInfo({
+            eventSource: eventSource,
+            width:          "80%",
+            date: dayStartDate,
+            intervalUnit:   Timeline.DateTime.DAY,
+            intervalPixels: 100,
+            timeZone: -8,
+            theme: theme
+        }),
+        Timeline.createBandInfo({
+            eventSource: eventSource,
+            width:          "20%",
+            date: dayStartDate,
+            intervalUnit:   Timeline.DateTime.WEEK,
+            intervalPixels: 100,
+            timeZone: -8,
+            showEventText:  false,
+            trackHeight:    0.5,
+            trackGap:       0.2,
+            theme: theme
+        })
+    ];
+
+    bandInfos[1].syncWith = 0;
+    bandInfos[1].highlight = true;
+
+    theTimeLine = Timeline.create(document.getElementById("my-timeline"), bandInfos,Timeline.HORIZONTAL);
+
+    storeCourses();
+    appendRegistrations();
+
+    fillTimeline();
+}
+
+function fillTimeline() {
+    eventSource.clear();
+    layoutCourses();
+}
+
+function storeCourses()
+{
+    var qr = sforce.connection.query("Select t.Course_End_Time__c, t.Course_Start_Time__c, t.Id, t.Name,t.Synopsis__c from Training_Course__c t Order By t.Course_Start_Time__c");
+    var it = new sforce.QueryResultIterator(qr);
+
+    while(it.hasNext()) {
+        var record = it.next();
+
+        courses.push(record);
+    }
+}
+
+function appendRegistrations(qr) {
+    var qr = sforce.connection.query("Select t.Id, t.Training_Course__c from Training_Registration__c t Where t.User__c='{!User.Id}'");
+    var it = new sforce.QueryResultIterator(qr);
+
+    while(it.hasNext()) {
+        var record = it.next();
+
+        if (record.Training_Course__c!=null) {
+            registeredCourses[record.Training_Course__c] = record.Id;
+        }
+    }
+}
+
+function signupUser(courseId) {
+    var reg = new sforce.SObject("Training_Registration__c");
+    reg.Training_Course__c = courseId;
+    reg.User__c = '{!User.Id}';
+
+    var result = sforce.connection.create([reg]);
+    registeredCourses[courseId] = result[0].id;
+
+    var band0 = theTimeLine.getBand(0);
+    if (band0!=null) {
+        band0.closeBubble();
+    }
+
+    var band1 = theTimeLine.getBand(1);
+    if (band1!=null) {
+        band1.closeBubble();
+    }
+
+    fillTimeline();
+}
+
+function dropCourse(courseId, registrationId) {
+    var result = sforce.connection.deleteIds([registrationId]);
+
+    var band0 = theTimeLine.getBand(0);
+    if (band0!=null) {
+        band0.closeBubble();
+    }
+
+    var band1 = theTimeLine.getBand(1);
+    if (band1!=null) {
+        band1.closeBubble();
+    }
+
+    registeredCourses[courseId] = null;
+    fillTimeline();
+}
+
+/*
+ * layout callbacks, gets a list of query results, formats a timeline entry and bubble contents
+ * when constructing data.events array of objects to add via loadJSON, the following are available
+ *
+ *	{ start:
+        end:
+        title:
+        link: 	'parent:link...'
+        latestStart: null,
+        earliestEnd: null,
+        isDuration: false,
+        description:
+        image: img,
+        icon: img,
+        color: "#999",
+        textColor: null,
+        onclick: "javascript:..."
+        }
+    Note, for IE and IE7 the last data element must not have a comma following it
+ */
+function layoutCourses() {
+    loadJSON ( map ( courses, function(rec,idx,ary) {
+        var desc;
+        var barColor = "#0000FF";
+        if (registeredCourses[rec.Id]==null) {
+            desc = rec.Synopsis__c + '<br><br><a href="javascript:signupUser(\''+rec.Id+'\');">Sign up</a> for this course!<br>';
+        } else {
+            desc = rec.Synopsis__c + '<br><br>You are already signed up for this course. <a href="javascript:dropCourse(\''+rec.Id+'\',\''+registeredCourses[rec.Id]+'\');">Drop</a> this course.';
+            barColor = "#FF0000";
+        }
+        return  {
+            start: rec.getDateTime('Course_Start_Time__c'),
+            end: rec.getDateTime('Course_End_Time__c'),
+            title: rec.Name,
+            description: desc,
+            intervalUnit: Timeline.DateTime.HOUR,
+            width: "70%",
+            image:"/img/icon/documents16.gif",
+            icon: "/img/icon/documents16.gif",
+            color: barColor }
+    } ) );
+}
+
+// some helper functions
+// take an array of events, load them into a data object and pass to loadJSON
+function loadJSON (events) {
+    if (!events || events.length <1) return;
+    var data = {};
+    data.events = events;
+    eventSource.loadJSON(data,baseURL); // eventSource is part of the Timeline API
+}
+// call a function on each member of the array, return an array
+// of the results of the callbacks
+function map(anArray /* Array */, callback /* Function */){
+    var outArr = [];
+    for(var i=0,l=anArray.length; i<l; i++){
+        var topush = callback(anArray[i], i, anArray);
+        if (topush != null) {
+            outArr.push( topush );
+        }
+    }
+    return outArr;
+}
+
+/***********************
+ * function onResize()
+ * If the page is resized, the timeline is resized to match
+ * this waits for resize to finish 1/2 second
+ */
+var resizeTimerID = null;
+function onResize() {
+    if (resizeTimerID == null) {
+        resizeTimerID = window.setTimeout( function() {	resizeTimerID = null; theTimeLine.layout();}, 500 );
+    }
+}
+
+
+</script> <!--  main functions -->
+</head>
+<body onload="javascript:initPage();" onresize="javascript:onResize();" class="solutionTab  overviewPage">
+
+<table class="outer" width="100%" id="bodyTable" border="0" cellspacing="0" cellpadding="0">
+<!-- Start page content table -->
+<tr><td class="oRight" id="bodyCell" style="padding-left: 0px;">
+<!-- Start page content -->
+
+<a name="skiplink"><img src="/s.gif" height='1' width='1' alt="Content Starts Here" class="skiplink" title="Content Starts Here"></a>
+<div class="bPageTitle"><div class="ptBody secondaryPalette"><div class="content">
+<img src="/s.gif" alt="Solutions"  class="pageTitleIcon" title="Solutions"/>
+<h1 class="pageType">Training Calendar<span  class="titleSeparatingColon">:</span></h1>
+<h2 class="pageDescription"> &nbsp;</h2><div class="blank">&nbsp;</div></div>
+</div></div>
+</span></div></form></div>
+<!-- Begin RelatedListElement -->
+<div class="bRelatedList">
+<!-- Begin ListElement -->
+
+<!-- motif: Custom74 -->
+<div class="bNext"><div class="withFilter"><div class="clearingBox"></div></div></div></div></td></tr></table>
+
+To view details or sign up for a course, click on it in the calendar below.<br><br>
+
+<div id="my-timeline" style="height:450px; border: 1px solid #aaa"></div>
+</body>
+</html>

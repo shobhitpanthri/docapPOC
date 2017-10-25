@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <admin>spanthri@demo.com</admin>
+    <description>Steve Ideas from Vand Enterprises - username&gt;&gt; si@&lt;yourdemo&gt; / pw&gt;&gt;salesforce1  - (Ideas, Ideas &amp; Action, Ideas home page)</description>
+    <emailSenderAddress>support@ubt.com</emailSenderAddress>
+    <emailSenderName>SUPPORT@UBT.com</emailSenderName>
+    <enableSelfCloseCase>false</enableSelfCloseCase>
+    <footerDocument>CustomerPortalImages/CustomerPortalFooterHTML.html</footerDocument>
+    <forgotPassTemplate>unfiled$public/CustomerPortalCustomerPortalResetPasswordSAMPLE</forgotPassTemplate>
+    <headerDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</headerDocument>
+    <isSelfRegistrationActivated>true</isSelfRegistrationActivated>
+    <loginHeaderDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</loginHeaderDocument>
+    <newPassTemplate>unfiled$public/CustomerPortalCustomerPortalResetPasswordSAMPLE</newPassTemplate>
+    <newUserTemplate>unfiled$public/CustomerPortalCustomerPortalNewUserLoginInformationSAMPLE</newUserTemplate>
+    <selfRegUserDefaultProfile>customer portal - ideas (si@)</selfRegUserDefaultProfile>
+    <selfRegUserDefaultRole>Worker</selfRegUserDefaultRole>
+    <selfRegUserTemplate>unfiled$public/CustomerPortalSelfRegistrationErrorSAMPLE</selfRegUserTemplate>
+    <showActionConfirmation>false</showActionConfirmation>
+    <type>CustomerSuccess</type>
+</Portal>

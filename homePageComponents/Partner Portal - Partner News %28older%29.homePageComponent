@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;table style=&quot;border: 1px solid rgb(15, 34, 108); margin-bottom: 10px; background-color: rgb(255, 255, 255);&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr valign=&quot;top&quot;&gt;
+&lt;td class=&quot;messageright&quot; width=&quot;95%&quot;&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;2&quot; cellspacing=&quot;1&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td colspan=&quot;2&quot; valign=&quot;top&quot;&gt;&lt;font style=&quot;font-weight: bold; color: rgb(51, 51, 51);&quot; size=&quot;5&quot;&gt;&lt;span style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot;&gt;Welcome to our Partner Center&lt;/span&gt;&lt;/font&gt;&lt;br&gt;&lt;font style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; size=&quot;2&quot;&gt;&lt;br&gt;&lt;font size=&quot;3&quot;&gt;Be sure to come back often to check for new leads.&lt;/font&gt;&lt;br&gt;&lt;br&gt;&lt;b&gt;Tip: &lt;/b&gt;Did you know that you can get help and answers to common questions by clicking on help at the top right of any page?&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;0&quot; cellspacing=&quot;0&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td bgcolor=&quot;#cccccc&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/Home%20Tab%20Content%20%28master%29_files/s.html&quot; border=&quot;0&quot; height=&quot;1&quot; width=&quot;1&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td bgcolor=&quot;#ffffff&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/Home%20Tab%20Content%20%28master%29_files/s.html&quot; border=&quot;0&quot; height=&quot;1&quot; width=&quot;1&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr height=&quot;15&quot; valign=&quot;center&quot;&gt;
+&lt;td bgcolor=&quot;#000000&quot;&gt;
+&lt;div style=&quot;color: rgb(255, 255, 255);&quot; align=&quot;left&quot;&gt;&lt;font size=&quot;3&quot;&gt;&amp;nbsp;&lt;/font&gt;&lt;font size=&quot;3&quot;&gt;&amp;nbsp;&lt;b&gt;News&lt;/b&gt;&amp;nbsp;&amp;nbsp;&lt;/font&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td bgcolor=&quot;#ffffff&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/Home%20Tab%20Content%20%28master%29_files/s.html&quot; border=&quot;0&quot; height=&quot;1&quot; width=&quot;1&quot;&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td bgcolor=&quot;#cccccc&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/Home%20Tab%20Content%20%28master%29_files/s.html&quot; border=&quot;0&quot; height=&quot;1&quot; width=&quot;1&quot;&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;table border=&quot;0&quot; cellpadding=&quot;2&quot; cellspacing=&quot;1&quot; width=&quot;100%&quot;&gt;
+&lt;tbody&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; nowrap=&quot;nowrap&quot; valign=&quot;top&quot;&gt;&lt;font size=&quot;2&quot;&gt;2008-09-10&lt;/font&gt;&lt;/td&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; align=&quot;left&quot;&gt;&lt;font size=&quot;2&quot;&gt;&lt;a class=&quot;actionLink&quot; href=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/PageComponentStageManager?id=02V46000000Eyky&amp;amp;jump=1&amp;amp;setupid=CompanyMessage#&quot;&gt;Our Company Deals First Combo&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; nowrap=&quot;nowrap&quot; valign=&quot;top&quot;&gt;&lt;font size=&quot;2&quot;&gt;2008-09-08&lt;/font&gt;&lt;/td&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; align=&quot;left&quot;&gt;&lt;font size=&quot;2&quot;&gt;&lt;a class=&quot;actionLink&quot; href=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/PageComponentStageManager?id=02V46000000Eyky&amp;amp;jump=1&amp;amp;setupid=CompanyMessage#&quot;&gt;Our Company to Roll Out New Program Rewarding Value&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; nowrap=&quot;nowrap&quot; valign=&quot;top&quot;&gt;&lt;font size=&quot;2&quot;&gt;2008-08-29&lt;/font&gt;&lt;/td&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; align=&quot;left&quot;&gt;&lt;font size=&quot;2&quot;&gt;&lt;a class=&quot;actionLink&quot; href=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/PageComponentStageManager?id=02V46000000Eyky&amp;amp;jump=1&amp;amp;setupid=CompanyMessage#&quot;&gt;Our Company Earns Five-Star Rating From VARBUSINESS Magazine&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr align=&quot;left&quot;&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; valign=&quot;top&quot;&gt;&lt;font size=&quot;2&quot;&gt;2008-08-13&lt;/font&gt;&lt;/td&gt;
+&lt;td style=&quot;font-family: Geneva,Arial,Sans-Serif;&quot; align=&quot;left&quot;&gt;&lt;font size=&quot;2&quot;&gt;&lt;a class=&quot;actionLink&quot; href=&quot;http://na1-blitz03.soma.salesforce.com/_ui/common/page/custom/PageComponentStageManager?id=02V46000000Eyky&amp;amp;jump=1&amp;amp;setupid=CompanyMessage#&quot;&gt;Our Company Named CRN Channel Champion For Fourth Consecutive Year&lt;/a&gt;&lt;/font&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>wide</width>
+</HomePageComponent>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <description>Mark Kingston from United Partners username&gt;&gt;mk@united.com/pw&gt;&gt;password - Project Collaboration Example Project Collab. Example(Projects,Milestones,Training)</description>
+    <emailSenderAddress>cchauhan@salesforce.com</emailSenderAddress>
+    <emailSenderName>portal@simple.com</emailSenderName>
+    <enableSelfCloseCase>true</enableSelfCloseCase>
+    <footerDocument>CustomerPortalImages/CustomerPortalFooterHTML.html</footerDocument>
+    <forgotPassTemplate>unfiled$public/CustomerPortalCustomerPortalResetPasswordSAMPLE</forgotPassTemplate>
+    <headerDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</headerDocument>
+    <isSelfRegistrationActivated>false</isSelfRegistrationActivated>
+    <loginHeaderDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</loginHeaderDocument>
+    <newPassTemplate>unfiled$public/CustomerPortalCustomerPortalResetPasswordSAMPLE</newPassTemplate>
+    <newUserTemplate>unfiled$public/CustomerPortalCustomerPortalNewUserLoginInformationSAMPLE</newUserTemplate>
+    <showActionConfirmation>true</showActionConfirmation>
+    <type>CustomerSuccess</type>
+</Portal>

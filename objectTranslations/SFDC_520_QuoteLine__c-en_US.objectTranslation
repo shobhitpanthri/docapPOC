@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Quote Line_OLD</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Quote Lines_OLD</value>
+    </caseValues>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ext Net Price --></label>
+        <name>Ext_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Ext Price --></label>
+        <name>Ext_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Product --></label>
+        <name>Product2__c</name>
+        <relationshipLabel><!-- Quote Lines_OLD --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Qty_Ordered__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Quote Lines_OLD --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sales Discount --></label>
+        <name>Sales_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Date --></label>
+        <name>ServiceDate__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Net Price --></label>
+        <name>Unit_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Price --></label>
+        <name>Unit_Price__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

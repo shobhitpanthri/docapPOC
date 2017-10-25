@@ -1,0 +1,30 @@
+<!-- Jonathan Hersh - jhersh@salesforce.com, November 20 2008 --> 
+
+<apex:page controller="leadCallDownController" > 
+<div style="width:800px"> 
+<apex:form > 
+<apex:pageblock title="Lead Call Down"> 
+<apex:pageblocktable value="{!ls}" var="l"> 
+<apex:column headervalue="Name"> 
+<apex:outputlink value="/{!l.id}">{!l.name}</apex:outputlink> 
+</apex:column> 
+<apex:column value="{!l.company}" /> 
+<apex:column headervalue="Phone" > 
+<span style="display:none"> 
+<img src="/s.gif" alt="" width="1" height="1" title="" onload="if (self.registerClickToDial) registerClickToDial(this.parentNode, false);" /> 
+{!l.phone} 
+<a href="javascript:sendCTIMessage('http://localhost:7332/CLICK_TO_DIAL?DN={!l.phone}&ID={!l.id}&ENTITY_NAME=Lead');"> 
+<img src="/img/btn_dial_inline.gif" /></a> 
+</span> 
+</apex:column> 
+<apex:column > 
+<apex:outputlink value="/00T/e?title=Call&who_id={!l.id}&followup=1&tsk5=Call&retURL=/{!l.id}">Log Call</apex:outputlink>   
+</apex:column> 
+<apex:column > 
+<apex:outputlink value="/00T/e?title=Voicemail&who_id={!l.id}&status=Completed&followup=1&tsk5=Voicemail&retURL=/apex/leadCallDown&save=save">Voice Mail</apex:outputlink> 
+</apex:column> 
+</apex:pageblocktable> 
+</apex:pageblock> 
+</apex:form> 
+</div> 
+</apex:page>

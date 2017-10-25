@@ -1,0 +1,15 @@
+<apex:page showHeader="false" sidebar="false">
+<html>
+<body>
+
+<script type="text/javascript">
+setTimeout('Redirect()',100);
+function Redirect()
+{
+  
+  top.location.href = 'https://na1.salesforce.com/500/o';
+}
+</script>
+</body>
+</html>
+</apex:page>

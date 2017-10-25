@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Order Line Item</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Order Line Items</value>
+    </caseValues>
+    <fields>
+        <label><!-- Extended Net Price --></label>
+        <name>Extended_Net_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Item Discount --></label>
+        <name>Line_Item_Discount__c</name>
+    </fields>
+    <fields>
+        <label><!-- Line Item Product --></label>
+        <name>Line_Item_Product__c</name>
+        <relationshipLabel><!-- Order Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Order Number --></label>
+        <name>Order_Number__c</name>
+        <relationshipLabel><!-- Order Line Items --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Standard Price --></label>
+        <name>Standard_Price__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Net Price --></label>
+        <name>Unit_Net_Price__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

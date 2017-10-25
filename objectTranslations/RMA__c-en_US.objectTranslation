@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>RMA</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>RMAs</value>
+    </caseValues>
+    <fields>
+        <label><!-- Account --></label>
+        <name>Account__c</name>
+        <relationshipLabel><!-- RMAs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Case Number --></label>
+        <name>Case_Number__c</name>
+        <relationshipLabel><!-- RMAs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Coverage Level --></label>
+        <name>Coverage_Level__c</name>
+        <picklistValues>
+            <masterLabel>0-5%</masterLabel>
+            <translation><!-- 0-5% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>16-30%</masterLabel>
+            <translation><!-- 16-30% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>31-60%</masterLabel>
+            <translation><!-- 31-60% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>6-15%</masterLabel>
+            <translation><!-- 6-15% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>70%+</masterLabel>
+            <translation><!-- 70%+ --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Covered by SLA --></label>
+        <name>Covered_by_SLA__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Replacement Ship Date --></label>
+        <name>Expected_Replacement_Ship_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- PO Number (Billable Repairs) --></label>
+        <name>PO_Number_Billable_Repairs__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quantity Returned --></label>
+        <name>Quantity_Returned__c</name>
+    </fields>
+    <fields>
+        <label><!-- RMA Asset --></label>
+        <name>RMA_Asset__c</name>
+        <relationshipLabel><!-- RMAs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RMA Contact --></label>
+        <name>RMA_Contact__c</name>
+        <relationshipLabel><!-- RMAs --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- RMA Description --></label>
+        <name>RMA_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- RMA Serial Number --></label>
+        <name>RMA_Serial_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- RMA Status --></label>
+        <name>RMA_Status__c</name>
+        <picklistValues>
+            <masterLabel>Assembly / Test</masterLabel>
+            <translation><!-- Assembly / Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Canceled</masterLabel>
+            <translation><!-- Canceled --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Delivered</masterLabel>
+            <translation><!-- Delivered --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Disassembly</masterLabel>
+            <translation><!-- Disassembly --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending Receipt</masterLabel>
+            <translation><!-- Pending Receipt --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Product Inspection</masterLabel>
+            <translation><!-- Product Inspection --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Received</masterLabel>
+            <translation><!-- Received --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Replacement Issued? --></label>
+        <name>Replacement_Issued__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Required? --></label>
+        <name>Replacement_Required__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Serial Number --></label>
+        <name>Replacement_Serial_Number__c</name>
+    </fields>
+    <fields>
+        <label><!-- Replacement Ship-To Address --></label>
+        <name>Replacement_Ship_To_Address__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request Date --></label>
+        <name>Request_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return Date --></label>
+        <name>Return_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Return Facility --></label>
+        <name>Return_Facility__c</name>
+        <picklistValues>
+            <masterLabel>Los Angeles</masterLabel>
+            <translation><!-- Los Angeles --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Oakland</masterLabel>
+            <translation><!-- Oakland --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>San Francisco</masterLabel>
+            <translation><!-- San Francisco --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Use Primary &quot;Ship To&quot; for Replacement --></label>
+        <name>Use_Primary_Ship_To_for_Replacement__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

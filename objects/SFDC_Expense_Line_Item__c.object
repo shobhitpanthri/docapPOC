@@ -1,0 +1,507 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>InDevelopment</deploymentStatus>
+    <description>Each line item can be recorded.</description>
+    <enableActivities>false</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Accounts_Payable_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Accounts Payable Comments</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Airline_Ticket_Number__c</fullName>
+        <externalId>false</externalId>
+        <label>Airline Ticket Number</label>
+        <length>50</length>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Approved_AP_Amount__c</fullName>
+        <description>AP Profiles Only – Users read-only</description>
+        <externalId>false</externalId>
+        <label>AP Adjusted Audit Amount</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Approver_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Approver Comments</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Billable__c</fullName>
+        <defaultValue>false</defaultValue>
+        <externalId>false</externalId>
+        <label>Billable</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Date</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Include information such as attendees, etc</description>
+        <externalId>false</externalId>
+        <label>Line Item Description</label>
+        <length>32000</length>
+        <trackTrending>false</trackTrending>
+        <type>LongTextArea</type>
+        <visibleLines>6</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Exp_Line_Item__c</fullName>
+        <externalId>false</externalId>
+        <label>Expense Line Item #</label>
+        <precision>3</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Expenditure_Type__c</fullName>
+        <externalId>false</externalId>
+        <label>Expenditure Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Airfare</fullName>
+                    <default>false</default>
+                    <label>Airfare</label>
+                </value>
+                <value>
+                    <fullName>Dues</fullName>
+                    <default>false</default>
+                    <label>Dues</label>
+                </value>
+                <value>
+                    <fullName>Gas-Rental Car</fullName>
+                    <default>false</default>
+                    <label>Gas-Rental Car</label>
+                </value>
+                <value>
+                    <fullName>Hotel</fullName>
+                    <default>false</default>
+                    <label>Hotel</label>
+                </value>
+                <value>
+                    <fullName>Meals</fullName>
+                    <default>false</default>
+                    <label>Meals</label>
+                </value>
+                <value>
+                    <fullName>Mileage</fullName>
+                    <default>false</default>
+                    <label>Mileage</label>
+                </value>
+                <value>
+                    <fullName>Miscellaneous</fullName>
+                    <default>false</default>
+                    <label>Miscellaneous</label>
+                </value>
+                <value>
+                    <fullName>Office Supplies</fullName>
+                    <default>false</default>
+                    <label>Office Supplies</label>
+                </value>
+                <value>
+                    <fullName>Parking/Tolls</fullName>
+                    <default>false</default>
+                    <label>Parking/Tolls</label>
+                </value>
+                <value>
+                    <fullName>Phone/Fax</fullName>
+                    <default>false</default>
+                    <label>Phone/Fax</label>
+                </value>
+                <value>
+                    <fullName>Rental Car</fullName>
+                    <default>false</default>
+                    <label>Rental Car</label>
+                </value>
+                <value>
+                    <fullName>Software</fullName>
+                    <default>false</default>
+                    <label>Software</label>
+                </value>
+                <value>
+                    <fullName>Taxi</fullName>
+                    <default>false</default>
+                    <label>Taxi</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Expense_Header__c</fullName>
+        <externalId>false</externalId>
+        <label>Expense Report</label>
+        <referenceTo>SFDC_Expense_Header__c</referenceTo>
+        <relationshipName>R00N46000003QckZEAS</relationshipName>
+        <relationshipOrder>0</relationshipOrder>
+        <reparentableMasterDetail>false</reparentableMasterDetail>
+        <trackTrending>false</trackTrending>
+        <type>MasterDetail</type>
+        <writeRequiresMasterRead>false</writeRequiresMasterRead>
+    </fields>
+    <fields>
+        <fullName>If_Airline_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <label>Airline Detail</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Air Canada</fullName>
+                    <default>false</default>
+                    <label>Air Canada</label>
+                </value>
+                <value>
+                    <fullName>Air France</fullName>
+                    <default>false</default>
+                    <label>Air France</label>
+                </value>
+                <value>
+                    <fullName>Alaska Airlines</fullName>
+                    <default>false</default>
+                    <label>Alaska Airlines</label>
+                </value>
+                <value>
+                    <fullName>American Airlines</fullName>
+                    <default>false</default>
+                    <label>American Airlines</label>
+                </value>
+                <value>
+                    <fullName>American West</fullName>
+                    <default>false</default>
+                    <label>American West</label>
+                </value>
+                <value>
+                    <fullName>ATA</fullName>
+                    <default>false</default>
+                    <label>ATA</label>
+                </value>
+                <value>
+                    <fullName>British Airways</fullName>
+                    <default>false</default>
+                    <label>British Airways</label>
+                </value>
+                <value>
+                    <fullName>Continental</fullName>
+                    <default>false</default>
+                    <label>Continental</label>
+                </value>
+                <value>
+                    <fullName>Delta</fullName>
+                    <default>false</default>
+                    <label>Delta</label>
+                </value>
+                <value>
+                    <fullName>Midwest Airlines</fullName>
+                    <default>false</default>
+                    <label>Midwest Airlines</label>
+                </value>
+                <value>
+                    <fullName>Northwest</fullName>
+                    <default>false</default>
+                    <label>Northwest</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>SAS</fullName>
+                    <default>false</default>
+                    <label>SAS</label>
+                </value>
+                <value>
+                    <fullName>United Airlines</fullName>
+                    <default>false</default>
+                    <label>United Airlines</label>
+                </value>
+                <value>
+                    <fullName>US Airways</fullName>
+                    <default>false</default>
+                    <label>US Airways</label>
+                </value>
+                <value>
+                    <fullName>Virgin Atlantic</fullName>
+                    <default>false</default>
+                    <label>Virgin Atlantic</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>If_Car_Rental_Vendor__c</fullName>
+        <externalId>false</externalId>
+        <label>Car Rental Detail</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>true</sorted>
+                <value>
+                    <fullName>Alamo</fullName>
+                    <default>false</default>
+                    <label>Alamo</label>
+                </value>
+                <value>
+                    <fullName>Avis</fullName>
+                    <default>false</default>
+                    <label>Avis</label>
+                </value>
+                <value>
+                    <fullName>Budget</fullName>
+                    <default>false</default>
+                    <label>Budget</label>
+                </value>
+                <value>
+                    <fullName>Dollar</fullName>
+                    <default>false</default>
+                    <label>Dollar</label>
+                </value>
+                <value>
+                    <fullName>Enterprise</fullName>
+                    <default>false</default>
+                    <label>Enterprise</label>
+                </value>
+                <value>
+                    <fullName>Europcar</fullName>
+                    <default>false</default>
+                    <label>Europcar</label>
+                </value>
+                <value>
+                    <fullName>Hertz</fullName>
+                    <default>false</default>
+                    <label>Hertz</label>
+                </value>
+                <value>
+                    <fullName>National</fullName>
+                    <default>false</default>
+                    <label>National</label>
+                </value>
+                <value>
+                    <fullName>Other</fullName>
+                    <default>false</default>
+                    <label>Other</label>
+                </value>
+                <value>
+                    <fullName>Thrifty</fullName>
+                    <default>false</default>
+                    <label>Thrifty</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Line_Item_Counter__c</fullName>
+        <externalId>false</externalId>
+        <formula>+1</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Line Item Counter</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Mileage_Rate__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(  ISPICKVAL( Expenditure_Type__c, &quot;Mileage&quot;), 0.405, 1)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mileage Rate</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Miles_Amount__c</fullName>
+        <externalId>false</externalId>
+        <formula>Miles__c *  Mileage_Rate__c</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Mileage Total</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Miles__c</fullName>
+        <externalId>false</externalId>
+        <label>Miles Driven</label>
+        <precision>10</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Pay_Code__c</fullName>
+        <externalId>false</externalId>
+        <label>Payment Type</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Employee Paid</fullName>
+                    <default>false</default>
+                    <label>Employee Paid</label>
+                </value>
+                <value>
+                    <fullName>Company Paid</fullName>
+                    <default>false</default>
+                    <label>Company Paid</label>
+                </value>
+                <value>
+                    <fullName>Company Paid Credit Card</fullName>
+                    <default>false</default>
+                    <label>Company Paid Credit Card</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Rejected_Reason__c</fullName>
+        <externalId>false</externalId>
+        <label>Rejected Reason</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Out of Policy</fullName>
+                    <default>false</default>
+                    <label>Out of Policy</label>
+                </value>
+                <value>
+                    <fullName>No Receipt</fullName>
+                    <default>false</default>
+                    <label>No Receipt</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Total__c</fullName>
+        <externalId>false</externalId>
+        <label>Total</label>
+        <precision>15</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <label>Expense Line Item</label>
+    <nameField>
+        <displayFormat>EXP-LN-ITM {0000}</displayFormat>
+        <label>Line Item #</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Expense Line Items</pluralLabel>
+    <searchLayouts>
+        <lookupDialogsAdditionalFields>Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Expenditure_Type__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Exp_Line_Item__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Expense_Header__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Expenditure_Type__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Exp_Line_Item__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Expense_Header__c</lookupPhoneDialogsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ControlledByParent</sharingModel>
+    <visibility>Public</visibility>
+</CustomObject>

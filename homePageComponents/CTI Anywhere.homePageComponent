@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;script type=&quot;text/javascript&quot; src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js&quot;&gt;&lt;/script&gt;&lt;script type=&quot;text/javascript&quot; src=&quot;https://na1.salesforce.com/resource/1299053187000/cirrus_cti_hotkeys&quot;&gt;&lt;/script&gt;&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;/apex/cirrus_cti_css&quot;&gt;&lt;div id=&quot;cirrus_cti&quot;&gt;&lt;div id=&quot;cti_1&quot;&gt;&lt;/div&gt;&lt;div id=&quot;cti_2&quot;&gt;&lt;/div&gt;&lt;div id=&quot;cti_3&quot;&gt;&lt;/div&gt;&lt;/div&gt;&lt;script src=&quot;/apex/cirrus_cti&quot;&gt;&lt;/script&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

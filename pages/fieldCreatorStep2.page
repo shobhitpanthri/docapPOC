@@ -1,0 +1,4 @@
+<apex:page controller="fieldCreatorController">
+<iframe src="{!createURL}" frameborder="0" height="700px" width="100%" scrolling="auto">
+</iframe>
+</apex:page>

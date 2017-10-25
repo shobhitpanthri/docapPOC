@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Demo Overview</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Demo Overview</value>
+    </caseValues>
+    <fields>
+        <label><!-- Chatter Flow --></label>
+        <name>Chatter_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- DEMO ORG SETUP --></label>
+        <name>DEMO_ORG_SETUP__c</name>
+    </fields>
+    <fields>
+        <label><!-- Force.com Flow --></label>
+        <name>Force_com_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Jigsaw Flow --></label>
+        <name>Jigsaw_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sales Cloud Flow --></label>
+        <name>Sales_Cloud_Flow__c</name>
+    </fields>
+    <fields>
+        <label><!-- Service Cloud Flow --></label>
+        <name>Service_Cloud_Flow__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

@@ -1,0 +1,7 @@
+<apex:page controller="demoReset">
+    <apex:form >
+        <apex:commandButton action="{!go}" value="Reset Demo" />
+    </apex:form>
+    
+    <apex:outputText rendered="{!demoReset}">Demo Reset Successful</apex:outputText>
+</apex:page>

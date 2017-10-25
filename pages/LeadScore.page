@@ -1,0 +1,14 @@
+<apex:page showHeader="true" sidebar="true" standardController="Lead">
+    
+    
+    <flow:interview name="LeadScoringFlow" finishLocation="{!URLFOR('/' + $CurrentPage.parameters.id)}">
+   
+        <apex:param name="vaLeadId" value="{!Lead.Id}"/>
+        <apex:param name="vaLeadProductInterest" value="{!Lead.Product_Interest__c}"/>
+        <apex:param name="vaLeadFirstName" value="{!Lead.FirstName}"/>
+        <apex:param name="vaLeadLastName" value="{!Lead.LastName}"/>
+    
+    </flow:interview>
+    
+
+</apex:page>

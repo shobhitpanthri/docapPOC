@@ -1,0 +1,34 @@
+<!-- Jonathan Hersh - jhersh@salesforce.com - 2/24/2010 -->
+
+<apex:component allowDML="true" controller="followObject">
+    <apex:attribute name="oid" type="string" description="ID of user or object to follow" required="true" assignto="{!toFollow}" />
+    
+    <apex:includescript value="http://ajax.googleapis.com/ajax/libs/jquery/1.3.2/jquery.min.js" />
+    <apex:stylesheet value="{!$Resource.followObject}" />
+    
+    <!-- You can't follow yourself. No, really. Like, don't even try it, man. -->
+    <apex:outputpanel id="followPanel" rendered="{!!CONTAINS( toFollow, $User.Id )}">
+        <div id="unfollow{!toFollow}" style="display:none;">
+           <div class="unfollowIcon"></div>
+           <apex:commandlink value="Unfollow" action="{!toggleFollow}" rerender="followPanel"
+               oncomplete="$('#unfollow{!toFollow}').hide(); $('#follow{!toFollow}').show();" />
+        </div>             
+        <div id="follow{!toFollow}" style="display:none;">
+           <div class="followIcon"></div>
+           <apex:commandlink value="Follow" action="{!toggleFollow}" rerender="followPanel" 
+               oncomplete="$('#follow{!toFollow}').hide(); $('#unfollow{!toFollow}').show();"/>
+        </div>
+    </apex:outputpanel>
+    
+    <script type="text/javascript">
+       $(document).ready(function() {
+        var doesFollow{!toFollow} = {!Follow};
+        
+        if( doesFollow{!toFollow} )
+            $('#unfollow{!toFollow}').show();
+        else
+            $('#follow{!toFollow}').show();
+       });
+    </script>
+    
+</apex:component>

@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <script src="/soap/ajax/10.0/connection.js"></script>
+    <style type="text/css">
+    	#cmComponent {
+    		font-family: arial;
+    		font-size: 11px;
+    	}
+    	a {
+			color: #333333;
+			font-size:11px;
+		}
+		a:hover {
+			text-decoration: underline;
+			font-size:11px;
+		}
+    </style>
+
+    
+</head>
+
+<body style="margin:0;padding:3px 0 0 5px;">
+	
+	<script>
+		var result, records, accountId, contactId, contactName, accountName, channelMgrName, channelMgrEmail;
+		
+		result=sforce.connection.query("Select u.ContactId, u.Contact.AccountId, u.Contact.Name, u.Contact.Account.Name, u.Contact.Account.Owner.Name,u.Contact.Account.Owner.Email from User u where u.Id='{!User.Id}'");
+		records=result.getArray("records");
+		
+		accountId=records[0].Contact.AccountId;
+		contactName=records[0].Contact.Name;
+		accountName=records[0].Contact.Account.Name;
+		channelMgrName=records[0].Contact.Account.Owner.Name;
+		channelMgrEmail=records[0].Contact.Account.Owner.Email;
+		
+	</script>
+	<div id="cmComponent">
+		<strong>{!User.Name}</strong> <br>
+		<script>document.write("<a href='/"+accountId+ "' target='_top' class='sidebarModulePortalWelcome'>My Company Profile</a>")</script><br>
+		<a href="/_ui/core/portal/PortalUserMyProfilePage/d" target="_top" class=''sidebarModulePortalWelcome''>My Profile</a>
+		<br><br>
+		<strong>Channel Manager:</strong> <br>
+		<script>document.write("<a href='mailto:"+ channelMgrEmail + "' title='" + channelMgrEmail + "'>"+channelMgrName);</script>
+<br>
+<a href="/00Q/e?" target='_top'>Register New Deal</a>
+	</div>
+	
+</body>
+</html>

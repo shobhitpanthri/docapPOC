@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>10</minutesToComplete>
+        <timeTriggers>
+            <actions>
+                <name>Pending_Case_Escalation</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Case_ownership_Needed_High_Priority_Alert</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>-5</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <timeTriggers>
+            <actions>
+                <name>Customer_Case_Escalation_Notification</name>
+                <type>Alert</type>
+            </actions>
+            <actions>
+                <name>Escalated_Case</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>High_Priority_Queue_reassignment</name>
+                <type>FieldUpdate</type>
+            </actions>
+            <actions>
+                <name>Case_Ownership_Assignment_SLA_Violation_Review</name>
+                <type>Task</type>
+            </actions>
+            <timeLength>5</timeLength>
+            <workflowTimeTriggerUnit>Minutes</workflowTimeTriggerUnit>
+        </timeTriggers>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Acknowledge Ownership</milestoneName>
+        <minutesToComplete>15</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Update Case Comment</milestoneName>
+        <minutesToComplete>20</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Escalate if Resolution Unknown</milestoneName>
+        <minutesToComplete>30</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Final Resolution</milestoneName>
+        <minutesToComplete>90</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

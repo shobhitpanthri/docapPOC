@@ -1,0 +1,8 @@
+<table width="550" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P>{!Contact.Name}, <BR><BR>{!Organization.Name} Customer Support has recieved your case for: {!Case.Subject} <BR><BR>Your case number is {!Case.CaseNumber}. Your case is currently being routed to appropriate service team member(s). <BR>Your expected resolution time is {!Case_Due_Date} <BR><BR>To view updates to your case or submit additional comments, please visit the {!Organization.Name} Self-Service Site by clicking the link below:</P>
+<P>&nbsp;</P>
+<P><A href="http://www.{!Organization.Name}.com/SSP">www.{!Organization.Name}.com/SSP</A> </P>]]></td>
+</tr>
+</table>

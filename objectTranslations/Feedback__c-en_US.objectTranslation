@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Feedback</value>
+    </caseValues>
+    <fields>
+        <label><!-- Feedback --></label>
+        <name>Feedback__c</name>
+    </fields>
+    <fields>
+        <label><!-- Interview --></label>
+        <name>Interview__c</name>
+        <relationshipLabel><!-- Feedback --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Fit for role --></label>
+        <name>Rating__c</name>
+        <picklistValues>
+            <masterLabel>Bad Fit</masterLabel>
+            <translation><!-- Bad Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Good Fit</masterLabel>
+            <translation><!-- Good Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Great Fit</masterLabel>
+            <translation><!-- Great Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>OK Fit</masterLabel>
+            <translation><!-- OK Fit --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Perfect Fit</masterLabel>
+            <translation><!-- Perfect Fit --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Rating out of 10 --></label>
+        <name>Rating_out_of_10__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

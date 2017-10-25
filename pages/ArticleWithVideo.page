@@ -1,0 +1,367 @@
+<apex:page standardController="Standard_How_To__kav" showHeader="false" title="Knowledge Article" cache="false" standardStylesheets="true">
+<head>
+    <script src="/faces/a4j/g/3_3_0.GAorg.ajax4jsf.javascript.AjaxScript" type="text/javascript"></script>
+    <script src="/EXT/ext-2.1/ext.js" type="text/javascript"></script>
+    <script src="/jslibrary/1257456714000/Knowledge.js" type="text/javascript"></script>
+    <script src="/static/041509/js/scriptaculous/prototype.js" type="text/javascript"></script>
+    <script src="/static/041509/js/scriptaculous/effects.js" type="text/javascript"></script><script src="/jslibrary/1257456714000/Vote.js" type="text/javascript"></script>
+    
+    <!--
+    <link class="user" href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/elements.css" rel="stylesheet" type="text/css" />
+    <link class="user" href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/common.css" rel="stylesheet" type="text/css" />
+    <link class="user" href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/CTI.css" rel="stylesheet" type="text/css" />
+    <link class="user" href="/sCSS/17.0/sprites/1264106887000/Theme2/sf/dStandard.css" rel="stylesheet" type="text/css" />
+    <link class="user" href="/sCSS/17.0/sprites/1264106887000/Theme2/00D46000000aU4b/005460000012H56/sf/dCustom0.css" rel="stylesheet" type="text/css" />
+    <link class="user" href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/setup.css" rel="stylesheet" type="text/css" />
+    -->
+    
+    <!-- Voting bar buttons -->
+    <link class="user" href="/EXT/ext-2.1/resources/css/ext-all.css" rel="stylesheet" type="text/css" />
+
+    <!-- Article body -->
+    <link class="user" href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/knowledge.css" rel="stylesheet" type="text/css" />
+
+    <!--
+    <link class="user" href="/knowledge/knowledgehome.css" rel="stylesheet" type="text/css" />
+    -->
+
+    <!-- Voting bar stars -->
+    <link class="user" href="/static/100908/css/vote.css" rel="stylesheet" type="text/css" />
+
+    <script type="text/javascript" src="/static/041509/js/functions.js"></script>
+    <script  src="/jslibrary/1263435193000/main.js" type="text/javascript"></script><script  src="/jslibrary/labels/1264029688000/en_US.js" type="text/javascript"></script><script  type="text/javascript">window.sfdcPage = new GenericSfdcPage();
+    UserContext.initialize({'locale':'en_US','timeFormat':'h:mm a','today':'1\/25\/2010 2:06 PM','userPreferences':[{'value':true,'index':112,'name':'HideInlineEditSplash'}
+    ,{'value':false,'index':114,'name':'OverrideTaskSendNotification'}
+    ,{'value':false,'index':115,'name':'DefaultTaskSendNotification'}
+    ,{'value':false,'index':119,'name':'HideUserLayoutStdFieldInfo'}
+    ,{'value':false,'index':116,'name':'HideRPPWarning'}
+    ,{'value':true,'index':87,'name':'HideInlineSchedulingSplash'}
+    ,{'value':false,'index':88,'name':'HideCRUCNotification'}
+    ,{'value':true,'index':89,'name':'HideNewPLESplash'}
+    ,{'value':false,'index':90,'name':'HideNewPLEWarnIE6'}
+    ,{'value':false,'index':122,'name':'HideOverrideSharingMessage'}
+    ,{'value':false,'index':91,'name':'HideProfileILEWarn'}
+    ,{'value':false,'index':93,'name':'HideProfileElvVideo'}
+    ,{'value':true,'index':97,'name':'ShowPicklistEditSplash'}
+    ,{'value':true,'index':92,'name':'HideDataCategorySplash'}
+    ],'startOfWeek':'1','isAccessibleMode':false,'ampm':['AM','PM'],'userId':'005460000012H56','dateTimeFormat':'M\/d\/yyyy h:mm a','dateFormat':'M\/d\/yyyy','language':'en_US','siteUrlPrefix':''}
+    );
+    </script><link  href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/elements.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" /><script  type="text/javascript">try { DynamicCss.addCssUrl('\/sCSS\/17.0\/sprites\/1260407143000\/Theme2\/default\/sf\/elements.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script><link  href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/common.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" /><script  type="text/javascript">try { DynamicCss.addCssUrl('\/sCSS\/17.0\/sprites\/1260407143000\/Theme2\/default\/sf\/common.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script><link  href="/sCSS/17.0/sprites/1260407143000/Theme2/default/sf/CTI.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" /><script  type="text/javascript">try { DynamicCss.addCssUrl('\/sCSS\/17.0\/sprites\/1260407143000\/Theme2\/default\/sf\/CTI.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script><link  href="/sCSS/17.0/sprites/1264106887000/Theme2/sf/dStandard.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" /><script  type="text/javascript">try { DynamicCss.addCssUrl('\/sCSS\/17.0\/sprites\/1264106887000\/Theme2\/sf\/dStandard.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script><link  href="/sCSS/17.0/sprites/1264106887000/Theme2/00D46000000aU4b/005460000012H56/sf/dCustom0.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" /><script  type="text/javascript">try { DynamicCss.addCssUrl('\/sCSS\/17.0\/sprites\/1264106887000\/Theme2\/00D46000000aU4b\/005460000012H56\/sf\/dCustom0.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script><link rel="shortcut icon" href="http://na1.salesforce.com/favicon.ico" />
+    <script  src="/static/041509/js/ClientHash.js" type="text/javascript"></script><script  type="text/javascript">ClientHash.prototype.needsClientHash('sid_Client', '0000002ROrB0000000YDOL', '204.14.239.210', '/servlet/servlet.ClientHashValidator?ResponseRequestedURL=%2Farticles%2FStandard_Solution%2FStandard-Product-Configuration-Control-Reset-Process%3Fpopup%3Dtrue');
+    </script>
+</head>
+<body onLoad="if (this.bodyOnLoad) bodyOnLoad();" onBeforeUnload="if (this.bodyOnBeforeUnload) bodyOnBeforeUnload();" onUnload="if (this.bodyOnUnload) bodyOnUnload();" onFocus="if (this.bodyOnFocus) bodyOnFocus();" class="knowledgeTab popup">
+
+
+<apex:sectionHeader title="{!Standard_How_To__kav.Title}" help="/help/doc/user_ed.jsp?loc=help&target=knowledge_article_view.htm&section=Salesforce_Knowledge&showSplash=true"/>
+
+
+<span id="j_id0:j_id7:j_id8:articleRendererToolbar"><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:toolbar"></div><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:votingComponent" style="display: none;">
+
+<form id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm" name="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm" method="post" action="/knowledge/TOCArticleRenderer.apexp" enctype="application/x-www-form-urlencoded">
+<input type="hidden" name="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm" value="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm" />
+<table style="padding: 0; margin: 0; border-spacing: 0">
+<tbody>
+<tr>
+<td><span class="averageRatingPanel">Rate This Article</span></td>
+<td><span id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote"><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:voteRankRenderer" class="starRatingPanel"><span id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:currentUserVote" style="display: none;">|vote=None|</span><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingStatus"><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingStatus.start" style="display: none"></div><script type="text/javascript">
+window.document.getElementById('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingStatus.start').onstart=function(){document.getElementById('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingProcessing').style.visibility='visible';;};
+</script><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingStatus.stop"></div><script type="text/javascript">
+window.document.getElementById('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingStatus.stop').onstop=function(){document.getElementById('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingProcessing').style.visibility='hidden';;};
+</script></div><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingProcessing" style="position: absolute; visibility:hidden;">
+                Processing...</div><script id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:j_id47" type="text/javascript">starVote=function(starNumber){A4J.AJAX.Submit('_viewRoot','j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm',null,{'status':'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:starVotingStatus','similarityGroupingId':'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:j_id47','parameters':{'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:j_id47':'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:j_id47','starNumber':starNumber||''} ,'actionUrl':'/knowledge/TOCArticleRenderer.apexp'} )};
+</script><table class="stars mouseOut" onmouseout="mouseoutStarsPanel(this)" onmouseover="mouseoverStarsPanel(this)">
+<tbody>
+<tr>
+<td><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:votingStar1" onclick="starVote(1)" onmouseout="mouseoutStar(this)" onmouseover="mouseoverStar(this)" class="idleStar"></div></td>
+<td><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:votingStar2" onclick="starVote(2)" onmouseout="mouseoutStar(this)" onmouseover="mouseoverStar(this)" class="idleStar"></div></td>
+<td><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:votingStar3" onclick="starVote(3)" onmouseout="mouseoutStar(this)" onmouseover="mouseoverStar(this)" class="idleStar"></div></td>
+<td><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:votingStar4" onclick="starVote(4)" onmouseout="mouseoutStar(this)" onmouseover="mouseoverStar(this)" class="idleStar"></div></td>
+<td><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:buttonVote:vote:votingStar5" onclick="starVote(5)" onmouseout="mouseoutStar(this)" onmouseover="mouseoverStar(this)" class="idleStar"></div></td>
+</tr>
+</tbody>
+</table>
+</div></span></td>
+<td><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm:j_id50" class="averageRatingPanel">(Average Rating: 5)</div></td>
+</tr>
+</tbody>
+</table>
+<!--
+<input type="hidden"  id="com.salesforce.visualforce.ViewState" name="com.salesforce.visualforce.ViewState" value="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" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateMAC" name="com.salesforce.visualforce.ViewStateMAC" value="AEM/zgm3wk4RUYKTyhvXZVe4Czqt" /><input type="hidden"  id="com.salesforce.visualforce.ViewStateCSRF" name="com.salesforce.visualforce.ViewStateCSRF" value="YCCuPPpjI1jHbkBEI5aTgVNlO0Jjs2B0DbFCKSHOCQIMdem5RZwziPu4AkhJTYL7hyfiKVtDxXFlZN2DPfUae1KhPf5ryQkzypJMCRVhLCPhdM9NH5wq4e6AcAElPJ71yjL8s_5u3mWPM9p75yHlEmE9.Sy15Lhd8zPodMdJCFBr8vSl" />
+-->
+</form></div><span id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:propertiesPanelHidden" style="display: none;"><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:j_id52" class="propertiesPanel"><table class="propertiesTable">
+<tbody>
+<tr>
+<td class="propertiesTableColumn propertiesTableColumn1"><table>
+<tbody>
+<tr>
+<td class="labelColumn"><label for="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:firstPublicationDate">
+First Published</label></td>
+<td class="dataColumn"><span id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:firstPublicationDate">{!Standard_How_To__kav.FirstPublishedDate}</span></td>
+</tr>
+<tr>
+<td class="labelColumn"><label for="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:lastModifiedDate">
+Last Modified</label></td>
+<td class="dataColumn"><span id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:lastModifiedDate">{!Standard_How_To__kav.LastModifiedDate}</span></td>
+</tr>
+<tr>
+<td class="labelColumn"><label for="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:publicationDate">
+Last Published</label></td>
+<td class="dataColumn"><span id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:publicationDate">{!Standard_How_To__kav.LastPublishedDate}</span></td>
+</tr>
+</tbody>
+</table>
+</td>
+<td class="propertiesTableColumn"><table>
+<tbody>
+<tr>
+<td class="labelColumn"><label for="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:abstract">
+Abstract</label></td>
+<td class="dataColumn">
+    <span id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:abstract">Abstract...</span>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+</tbody>
+</table>
+
+    <table class="propertiesBottomBorder" width="100%">
+        <tr>
+            <td class="propertiesBottomBorderSide"><div></div></td>
+            <td class="propertiesBottomBorderCenter">
+                <div onclick="Ext.ComponentMgr.get('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:toolbar:propertiesButton').toggle();"></div>
+            </td>
+            <td class="propertiesBottomBorderSide"><div></div></td>
+        </tr>
+    </table></div></span><div id="j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:propertiesPanel"></div>
+
+    <script>
+        Ext.onReady(function() {
+            //the collapsible panel
+            new Ext.Panel({
+                header: false,
+                collapsible: true,
+                collapsed: true,
+                bodyBorder: false,
+                border: false,
+                id: 'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:propertiesPanel:extPanel',
+                renderTo: 'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:propertiesPanel',
+                width: '100%',
+                html: Ext.fly('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:propertiesPanelHidden').dom.innerHTML
+            });
+
+            //the toolbar
+            var toolbar = new Ext.Toolbar({
+                renderTo: 'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:toolbar',
+                height: 33,
+                cls: 'toolbar'
+            });
+                toolbar.addElement(Ext.fly('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:voteForm'));
+            toolbar.addFill();
+
+            var propertiesButton = new Ext.Toolbar.Button({
+                id: 'j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:toolbar:propertiesButton',
+                text: 'Properties',
+                enableToggle: true,
+                toggleHandler: function() {
+                    Ext.ComponentMgr.get('j_id0:j_id7:j_id8:articleRendererToolbar:j_id13:propertiesPanel:extPanel').toggleCollapse(true);
+                }
+            });
+            toolbar.addButton(propertiesButton);
+        });
+    </script></span><div id="j_id0:j_id7:j_id8:j_id74">
+        <div class="knowledgeTOCRenderer" id="knowledgeTOCRenderer">
+            
+                <div class="knowledgeTOCRendererSections" id="menu">
+                    
+                        <div class="knowledgeTOCRendererSection" sectionIndex="0.0">Information</div>
+                        
+                        <div class="knowledgeTOCRendererSection" sectionIndex="1.0">Procedures</div>
+                        
+                        <div class="knowledgeTOCRendererSection" sectionIndex="2.0">Additional Information</div>
+                        
+                </div>
+            
+            <div class="knowledgeTOCRendererContent" id="knowledgeTOCRendererContent">
+                
+                        <div class="sectionName" sectionIndex="0.0">
+                            <table><tr><td> <!--***************************************************-->
+                                Information
+                            </td></tr></table>
+                        </div>
+                        <div class="sectionContent">
+                           <table>
+                           
+                               <tr style="width:30px">
+                                   <td class="fieldName">
+                                       <label>
+Short Problem Description</label>
+                                   </td>
+                                   <td class="fieldValue">
+                                       <span id="j_id0:j_id7:j_id8:j_id87:j_id88:0:j_id95:0:j_id102">
+                                           <apex:outputText escape="false" value="{!Standard_How_To__kav.Short_Problem_Description__c}"></apex:outputText>
+                                       </span>
+                                   </td>
+                               </tr>
+                           
+                                    <tr>
+                                        <td colspan="2"><div class="fieldSeparator"><!--**************************--></td>
+                                    </tr>
+                                
+                               <tr style="width:30px">
+                                   <td class="fieldName">
+                                       <label>
+Additional Information</label>
+                                   </td>
+                                   <td class="fieldValue">
+                                       <span id="j_id0:j_id7:j_id8:j_id87:j_id88:0:j_id95:1:j_id102">
+                                           <apex:outputText escape="false" value="{!Standard_How_To__kav.Additional_Information__c}"></apex:outputText>
+                                        </span>
+                                   </td>
+                               </tr>
+                           
+                           </table>
+                        </div>
+                        
+                        <div class="sectionName" sectionIndex="1.0">
+                            <table><tr><td> <!--***************************************************-->
+                                Procedures
+                            </td></tr></table>
+                        </div>
+                        <div class="sectionContent">
+                           <table>
+                           
+                               <tr style="width:30px">
+                                   <td class="fieldName">
+                                       <label>
+Resolution Procedures</label>
+                                   </td>
+                                   <td class="fieldValue">
+                                       <span id="j_id0:j_id7:j_id8:j_id87:j_id88:1:j_id95:0:j_id102">
+                                           <apex:outputText escape="false" value="{!Standard_How_To__kav.Resolution_Procedures__c}"></apex:outputText>
+                                       </span>
+                                   </td>
+                               </tr>
+                           
+                                    <tr>
+                                        <td colspan="2"><div class="fieldSeparator"><!--**************************--></td>
+                                    </tr>
+                                
+                               <tr style="width:30px">
+                                   <td class="fieldName">
+                                       <label>Video (optional)</label>
+                                   </td>
+                                   <td class="fieldValue">
+                                       <span id="j_id0:j_id7:j_id8:j_id87:j_id88:1:j_id95:1:j_id102">
+                                           <apex:outputText escape="false" value="{!Standard_How_To__kav.Video_optional__c}"/>
+                                       </span>
+                                   </td>
+                               </tr>
+                           
+                           </table>
+                        </div>
+                        
+                        <div class="sectionName" sectionIndex="2.0">
+                            <table><tr><td> <!--***************************************************-->
+                                Additional Information
+                            </td></tr></table>
+                        </div>
+                        <div class="sectionContent">
+                           <table>
+                           
+                               <tr style="width:30px">
+                                   <td class="fieldName">
+                                       <label>Additional Comments</label>
+                                   </td>
+                                   <td class="fieldValue">
+                                       <span id="j_id0:j_id7:j_id8:j_id87:j_id88:2:j_id95:0:j_id102">
+                                           <apex:outputText escape="false" value="{!Standard_How_To__kav.Additional_Comments__c}"></apex:outputText>
+                                       </span>
+                                   </td>
+                               </tr>
+                           
+                                    <tr>
+                                        <td colspan="2"><div class="fieldSeparator"><!--**************************--></td>
+                                    </tr>
+                                
+                               <tr style="width:30px">
+                                   <td class="fieldName">
+                                       <label>
+Findings and Resolution</label>
+                                   </td>
+                                   <td class="fieldValue">
+                                       <span id="j_id0:j_id7:j_id8:j_id87:j_id88:2:j_id95:1:j_id102">
+                                           <apex:outputText escape="false" value="{!Standard_How_To__kav.Findings_and_Resolution__c}"></apex:outputText>
+                                       </span>
+                                   </td>
+                               </tr>
+                           
+                                    <tr>
+                                        <td colspan="2"><div class="fieldSeparator"><!--**************************--></td>
+                                    </tr>
+                                
+                               <tr style="width:30px">
+                                   <td class="fieldName">
+                                       <label>
+Supporting Attachments</label>
+                                   </td>
+                                   <td class="fieldValue">
+                                       <span id="j_id0:j_id7:j_id8:j_id87:j_id88:2:j_id95:2:j_id102">
+                                           <!--
+                                           Need Related list for Attachments?
+                                           <apex:outputText escape="false" value="{!Standard_Solution__kav.Supporting_Attachments__c}"></apex:outputText>
+                                           -->
+                                       </span>
+                                   </td>
+                               </tr>
+                           
+                           </table>
+                        </div>
+                        
+            </div>
+        </div>
+        </div>
+        <script>
+            Ext.onReady(function() {
+                var renderer = new TOCDetailRenderer({elemId:"knowledgeTOCRenderer", height:-110});
+                var propertiesPanel = Ext.query('*[id=j_id0:j_id7:j_id8:articleRendererToolbar] *[id $= :extPanel]')[0];
+                if (propertiesPanel) {
+                    Ext.ComponentMgr.get(propertiesPanel.id).addListener('beforeExpand', function() {
+                       renderer.height = -190;
+                       renderer.resize();
+                    });
+                    Ext.ComponentMgr.get(propertiesPanel.id).addListener('collapse', function() {
+                       renderer.height = -110;
+                       renderer.resize();
+                    });
+                }
+
+                new TOCSectionSelector({menuId:'menu', contentId:'knowledgeTOCRendererContent'});
+            });
+        </script>
+    </span>
+
+
+<!-- Body events -->
+<script type="text/javascript">
+function bodyOnLoad() {
+    setFocusOnLoad();
+    HtmlDetailElement.populateIframeFromDiv('j_id0:j_id7:j_id8:j_id87:j_id88:0:j_id95:1:j_id102_00N46000003QcuU_frame', 'j_id0:j_id7:j_id8:j_id87:j_id88:0:j_id95:1:j_id102_00N46000003QcuU_div');HtmlDetailElement.adjustSfdcSpaceSize('j_id0:j_id7:j_id8:j_id87:j_id88:0:j_id95:1:j_id102_00N46000003QcuU');
+    HtmlDetailElement.populateIframeFromDiv('j_id0:j_id7:j_id8:j_id87:j_id88:1:j_id95:0:j_id102_00N46000003QcuT_frame', 'j_id0:j_id7:j_id8:j_id87:j_id88:1:j_id95:0:j_id102_00N46000003QcuT_div');HtmlDetailElement.adjustSfdcSpaceSize('j_id0:j_id7:j_id8:j_id87:j_id88:1:j_id95:0:j_id102_00N46000003QcuT');
+}
+
+function bodyOnBeforeUnload() {
+}
+
+function bodyOnFocus() {
+}
+
+function bodyOnUnload() {
+}
+</script>
+
+</body>
+</apex:page>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Idea$Title</field>
+    </columns>
+    <columns>
+        <field>Idea$Body</field>
+    </columns>
+    <columns>
+        <field>Idea$Category</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Idea$CreatedBy.Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Ideas by User</name>
+    <reportType>IdeasUserInformation__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Idea$CreatedDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

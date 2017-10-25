@@ -1,0 +1,26 @@
+<!-- Jonathan Hersh - jhersh@salesforce.com - 9/21/2009 -->
+<apex:page standardcontroller="Account" extensions="activityView" showheader="false" >
+	<apex:pageblock tabstyle="Account" title="Users with Closed Activities on this Account">
+		<apex:outputtext value="No closed activities on this account." rendered="{!actValues.size = 0 }" />
+		<apex:pageblocktable value="{!actValues}" var="am" rendered="{!actValues.size > 0}">
+			<apex:column >
+				<apex:image value="{!$Resource.greencheck}" rendered="{!am.max}" />
+			</apex:column>
+			<apex:column headervalue="User">
+				<apex:outputlink value="/{!am.lastact.ownerid}" target="_blank">{!am.lastact.owner.name}</apex:outputlink>
+			</apex:column>
+			<apex:column headervalue="Total Closed Activities">
+				{!am.acts}
+			</apex:column>
+			<apex:column headervalue="Most Recent Closed Activity">
+				<apex:outputlink value="/{!am.lastact.id}" target="_blank">{!am.lastact.subject}</apex:outputlink>
+			</apex:column>
+			<apex:column headervalue="Related To">
+				<apex:outputlink value="/{!am.lastact.whatid}" target="_blank">{!am.lastact.what.name}</apex:outputlink>
+			</apex:column>
+			<apex:column headervalue="Name">
+				<apex:outputlink value="/{!am.lastact.whoid}" target="_blank">{!am.lastact.who.name}</apex:outputlink>
+			</apex:column>
+		</apex:pageblocktable>
+	</apex:pageblock>
+</apex:page>

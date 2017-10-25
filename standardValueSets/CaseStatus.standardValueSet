@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>New</fullName>
+        <default>true</default>
+        <label>New</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Submitting Feature</fullName>
+        <default>false</default>
+        <label>Submitting Feature</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Contacting PM</fullName>
+        <default>false</default>
+        <label>Contacting PM</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Working</fullName>
+        <default>false</default>
+        <label>Working</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>On Hold</fullName>
+        <default>false</default>
+        <label>On Hold</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Waiting on customer</fullName>
+        <default>false</default>
+        <label>Waiting on customer</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Researching</fullName>
+        <default>false</default>
+        <label>Researching</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Escalated</fullName>
+        <default>false</default>
+        <label>Escalated</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed in Portal</fullName>
+        <default>false</default>
+        <label>Closed in Portal</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed</fullName>
+        <default>false</default>
+        <label>Closed</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Closed - First Call</fullName>
+        <default>false</default>
+        <label>Closed - First Call</label>
+        <closed>true</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Fraud Investigation</fullName>
+        <default>false</default>
+        <label>Fraud Investigation</label>
+        <closed>false</closed>
+    </standardValue>
+    <standardValue>
+        <fullName>Dispute Resolution</fullName>
+        <default>false</default>
+        <label>Dispute Resolution</label>
+        <closed>false</closed>
+    </standardValue>
+</StandardValueSet>

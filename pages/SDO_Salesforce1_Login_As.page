@@ -1,0 +1,10 @@
+<apex:page controller="SDO_Salesforce1" action="{!loginS1}">
+    <apex:outputPanel id="userFound" rendered="{!founduser}">
+        <script>
+            window.location='{!loginString}';
+        </script>
+    </apex:outputPanel>
+    <apex:outputPanel id="userNotFound" rendered="{!!founduser}">
+        <apex:image value="{!$Resource.Salesforce1ErrorMessage}"/>
+    </apex:outputPanel>
+</apex:page>

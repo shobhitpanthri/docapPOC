@@ -1,0 +1,124 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+    <script type="text/javascript" src="/js/functions.js"></script>
+    <script src="/soap/ajax/10.0/connection.js"></script>
+    <script>{!INCLUDE($SControl.Date_Helper_Functions)}</script>
+    <script>{!INCLUDE($SControl.Prototype_Libraries)}</script>
+
+<link  href="/sCSS/12.0/1201654095000/PortalDefault/default/elements.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<script  type="text/javascript">try { DynamicCss.addCssUrl('/sCSS/12.0/1201654095000/PortalDefault/default/elements.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script>
+<link  href="/sCSS/12.0/1201654095000/PortalDefault/default/common.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<script  type="text/javascript">try { DynamicCss.addCssUrl('/sCSS/12.0/1201654095000/PortalDefault/default/common.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script>
+<link  href="/sCSS/12.0/1201654095000/PortalDefault/default/homeCalendar.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<script  type="text/javascript">try { DynamicCss.addCssUrl('/sCSS/12.0/1201654095000/PortalDefault/default/homeCalendar.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script>
+<link  href="/sCSS/12.0/1201654095000/PortalDefault/default/dashboard.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<script  type="text/javascript">try { DynamicCss.addCssUrl('/sCSS/12.0/1201654095000/PortalDefault/default/dashboard.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script>
+<link  href="/sCSS/12.0/1201795999000/PortalDefault/dStandard.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<script  type="text/javascript">try { DynamicCss.addCssUrl('/sCSS/12.0/1201795999000/PortalDefault/dStandard.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script>
+<link  href="/sCSS/12.0/1201795999000/PortalDefault/00D46000000aU4b/005460000012H5K/dCustom0.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<script  type="text/javascript">try { DynamicCss.addCssUrl('/sCSS/12.0/1201795999000/PortalDefault/00D46000000aU4b/005460000012H5K/dCustom0.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script>
+<link  href="/sCSS/12.0/1201654095000/PortalDefault/default/extended.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+<script  type="text/javascript">try { DynamicCss.addCssUrl('/sCSS/12.0/1201654095000/PortalDefault/default/extended.css', 'handheld,print,projection,screen,tty,tv');} catch(e) {}</script>
+
+<!-- You need to update the two numbers in this link below.  The format is "/sCSS/12.0/PortalDefault/<ORGID>/<PortalId>/portal.css" */ -->
+<link  href="/sCSS/12.0/PortalDefault/{!$Organization.Id}/06046000000kh8z/portal.css" media="handheld,print,projection,screen,tty,tv" rel="stylesheet" type="text/css" />
+
+
+	<style>
+		html {
+			/*background-color: #c8d7e3;*/
+		}
+		th {
+			font-size: 11px;
+		}	
+	 	td {
+	 		font-size: 11px;
+	 	}
+	 	.pbTitle h3 {
+	 		font-size: 10px;
+	 		height: 18px;
+	 	}
+	 	.pbTitle {
+	 		vertical-align: middle;
+	 		padding-top: 5px;
+	 	}
+	 	.bodyDiv {
+			border-bottom-width: 0px;
+			border-bottom-style: none;
+			border-bottom-color: #000000;
+			padding-top: 0px;
+			margin-top: 0px;
+			padding-bottom: 0px;
+		}
+	</style>
+
+</head>
+<body onLoad="resize()" class="bodyDiv">
+
+<div class="relatedListHeader">
+
+<div class="bPageBlock secondaryPalette">
+	<div class="pbHeader"><table  border="0" cellpadding="0" cellspacing="0">
+	<tr><td class="pbTitle"><img src="/s.gif" alt="" width="1" height="1" class="minWidth" title="" /><h3>Approval Requests</h3></td></tr>
+	</table></div>
+	<div class="pbBody">
+	<table class="list" border="0" cellspacing="0" cellpadding="0">
+	<tr class="headerRow"><th class="" scope="col">Related To</th><th scope="col" class="">Type</th><th scope="col" class="">Status</th><th scope="col" class="DateElement">Date Submitted</th></tr>
+	<script>
+	
+
+
+	
+		function resize() {
+			var frameId=parent.window.document.getElementById("approvalRequests");
+			frameId.height = window.document.body.scrollHeight; 
+		}
+	
+		function formatDateTime(unformattedDate) {
+			var d=getDateFromFormat(unformattedDate,  "yyyy-MM-ddTHH:mm:ss.000Z");
+
+			var Hours = d.getHours();
+			var ampm = "AM";
+			if (Hours == 0) Hours = 12;
+			if (Hours > 11)
+				ampm = "PM";
+			if (Hours > 12)
+				Hours -= 12;
+			
+			var formattedDate = (d.getMonth()+1) + "/" + d.getDate() + "/" + d.getFullYear()+ " " + Hours + ":"+ d.getMinutes()+":" + d.getSeconds()+ " " + ampm;
+			return formattedDate;
+			/*return unformattedDate;*/
+		}
+	
+		var result, records, result2, records, relatedTo, type, stat, submittedDate,id;
+		result=sforce.connection.query("SELECT Id, ProcessInstance.TargetObject.Name, ProcessInstance.TargetObject.Type, ProcessInstance.Status, CreatedDate, ProcessInstance.Id, ProcessInstance.TargetObjectId FROM ProcessInstanceStep WHERE (StepStatus = 'Started') AND (ActorId='{!User.Id}') ORDER BY CreatedDate DESC LIMIT 20");
+		records=result.getArray("records");
+		
+		for (var i=0; i< records.length; i++) {
+			id=records[i].ProcessInstance.TargetObjectId;
+			stat=records[i].ProcessInstance.Status;
+			submittedDate=formatDateTime(records[i].CreatedDate);
+			try {
+				relatedTo=records[i].ProcessInstance.TargetObject.Name;
+				type=records[i].ProcessInstance.TargetObject.Type;
+			} catch (err) {
+				//This is a lead that has been converted
+				result2=sforce.connection.query("SELECT Id, Name, ConvertedOpportunityId FROM Lead WHERE Id='" + id + "'");
+				records2=result2.getArray("records");
+				relatedTo=records2[0].Name;
+				type = "Lead";
+				id = records2[0].ConvertedOpportunityId;
+			} finally {
+				document.write("<tr onblur=\"if (window.hiOff){hiOff(this);}\" onfocus=\"if (window.hiOn){hiOn(this);}\" onmouseout=\"if (window.hiOff){hiOff(this);}\" onmouseover=\"if (window.hiOn){hiOn(this);}\"><td><a href='/"+ id +"' target='_top');\">" + relatedTo + "</td><td>" +type + "</td><td>" + stat + "</td><td>" + submittedDate + "</td></tr>");
+			}
+		}
+	</script>
+	</table>
+	</div>
+	<!-- End pbBody -->
+	</div>
+	<!-- End relatedListHeader -->
+</div>
+</body>
+</html>

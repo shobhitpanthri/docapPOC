@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <links>EDY_ORGCUSTOM__OrgCustomizer</links>
+    <links>Replace_Company_Logo</links>
+    <links>Date_Shifter</links>
+    <links>Task_Event_Generator</links>
+    <links>User_Setup</links>
+    <links>Forecast_Generator</links>
+    <links>Edit_Homepage_Layout</links>
+    <pageComponentType>links</pageComponentType>
+</HomePageComponent>

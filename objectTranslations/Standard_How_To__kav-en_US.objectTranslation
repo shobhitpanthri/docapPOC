@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Standard How To</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Standard How To</value>
+    </caseValues>
+    <fields>
+        <label><!-- Additional Comments --></label>
+        <name>Additional_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Additional Information --></label>
+        <name>Additional_Information__c</name>
+    </fields>
+    <fields>
+        <label><!-- Chat Answer --></label>
+        <name>Chat_Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Findings and Resolution --></label>
+        <name>Findings_and_Resolution__c</name>
+    </fields>
+    <fields>
+        <label><!-- Internal Comments and Findings --></label>
+        <name>Internal_Comments_and_Findings__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release Information and Roadmap Details --></label>
+        <name>Release_Information_and_Roadmap_Details__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution Procedures --></label>
+        <name>Resolution_Procedures__c</name>
+    </fields>
+    <fields>
+        <label><!-- Short Problem Description --></label>
+        <name>Short_Problem_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Supporting Attachments --></label>
+        <name>Supporting_Attachments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Video (optional) --></label>
+        <name>Video_optional__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

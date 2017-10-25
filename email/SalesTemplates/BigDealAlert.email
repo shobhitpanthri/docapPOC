@@ -1,0 +1,14 @@
+<table width="600" cellpadding="5" height="400" border="0" cellspacing="5" >
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[Congratulations all!]]></td>
+</tr>
+<tr height="300" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r2" tEditID="c1r2" >
+<![CDATA[{!Opportunity.OwnerFullName} has just closed {!Account.Name}, for {!Opportunity.Amount}.<BR><BR>Please email {!Opportunity.OwnerFirstName} to congratulate them !<BR><BR>Mr {!Organization.Name}<BR>The founder]]></td>
+</tr>
+<tr height="50" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r3" tEditID="c1r3" >
+<![CDATA[]]></td>
+</tr>
+</table>

@@ -1,0 +1,8 @@
+Dear {!Asset.Contact},
+This is an automated email reminder that your {!Asset.Name} will expire on {!Asset.UsageEndDate}.
+
+Please contact us at 800-renewal to renew with UCI.
+
+Thanks,
+Bob Gerston
+CEO

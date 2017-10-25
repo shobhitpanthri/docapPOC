@@ -1,0 +1,38 @@
+<apex:page cache="false" showHeader="false" contentType="text/css">
+
+.cti_special .sidebarModuleHeader, .softphoneModule{
+  display: none;
+}
+
+.cti_special .sidebarModuleBody, .cti_special{
+  background: transparent !important;
+  padding: 0 !important;
+}
+
+#cti_1, #cti_2, #cti_3{
+  cursor: pointer;
+}
+
+#cti_1{
+  background: url("{!URLFOR($Resource.cirrus_cti, 'cti_1.png')}") no-repeat;
+  height: 108px;
+  width: 200px;
+}
+
+#cti_2{
+  background: url("{!URLFOR($Resource.cirrus_cti, 'cti_2.png')}") no-repeat;
+  height: 268px;
+  width: 200px;
+}
+
+#cti_3{
+  background: url("{!URLFOR($Resource.cirrus_cti, 'cti_3.png')}") no-repeat;
+  height: 326px;
+  width: 200px;
+}
+
+#cti_2, #cti_3{
+  display: none;
+}
+
+</apex:page>

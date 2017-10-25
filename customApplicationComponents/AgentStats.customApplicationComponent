@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomApplicationComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <buttonIconUrl>https://na1.salesforce.com/resource/1342553731000/ConsoleChartIcon</buttonIconUrl>
+    <buttonStyle>padding:2px;</buttonStyle>
+    <height>500</height>
+    <isHeightFixed>false</isHeightFixed>
+    <isHidden>false</isHidden>
+    <isWidthFixed>false</isWidthFixed>
+    <visualforcePage>Custom_Console_Dashboards</visualforcePage>
+    <width>500</width>
+</CustomApplicationComponent>

@@ -1,0 +1,30 @@
+<apex:page action="{!go}" StandardController="Issue__c" extensions="geoLocate2">
+  <script>
+      $(document).ready(function(){
+          get_location();
+      });
+      
+      function get_location() {
+          navigator.geolocation.getCurrentPosition(showPosition);
+          var latitude = position.coords.latitude;
+          var longitude = position.coords.longitude;      
+          setValues(latitude, longitude);    
+      }
+      
+      function showPosition(){
+          
+      }
+  
+  </script>
+  <apex:form >
+          <apex:actionFunction name="setValues" action="{!go}" reRender="form">
+            <apex:param name="latValue" value=""/>
+            <apex:param name="lonValue" value=""/>         
+        </apex:actionFunction>
+        
+        <button onclick="get_location(); return false;">Get Location</button>
+        {!lat}
+        {!lon}
+  </apex:form>
+  
+</apex:page>

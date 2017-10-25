@@ -1,0 +1,2 @@
+<apex:page controller="updateAccountTallies" cache="false" sidebar="false" showheader="false" action="{!myMethod}">
+</apex:page>

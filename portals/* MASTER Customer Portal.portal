@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Portal xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <admin>spanthri@demo.com</admin>
+    <description>Lauren Boyle from United Partners - username&gt;&gt; lb@&lt;yourdemo&gt; / pw&gt;&gt;password - (cases, solutions, training, community, content, ideas)</description>
+    <emailSenderAddress>support@ubt.com</emailSenderAddress>
+    <emailSenderName>SUPPORT@UBT.COM</emailSenderName>
+    <enableSelfCloseCase>true</enableSelfCloseCase>
+    <footerDocument>CustomerPortalImages/CustomerPortalFooterHTML.html</footerDocument>
+    <forgotPassTemplate>unfiled$public/CustomerPortalCustomerPortalResetPasswordSAMPLE</forgotPassTemplate>
+    <headerDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</headerDocument>
+    <isSelfRegistrationActivated>true</isSelfRegistrationActivated>
+    <loginHeaderDocument>CustomerPortalImages/CustomerPortalHeaderHTML.htm</loginHeaderDocument>
+    <newPassTemplate>unfiled$public/CustomerPortalCustomerPortalResetPasswordSAMPLE</newPassTemplate>
+    <newUserTemplate>unfiled$public/CustomerPortalCustomerPortalNewUserLoginInformationSAMPLE</newUserTemplate>
+    <selfRegUserDefaultProfile>customer portal - custom (lb@)</selfRegUserDefaultProfile>
+    <selfRegUserDefaultRole>Worker</selfRegUserDefaultRole>
+    <selfRegUserTemplate>unfiled$public/CustomerPortalSelfRegistrationErrorSAMPLE</selfRegUserTemplate>
+    <showActionConfirmation>true</showActionConfirmation>
+    <type>CustomerSuccess</type>
+</Portal>

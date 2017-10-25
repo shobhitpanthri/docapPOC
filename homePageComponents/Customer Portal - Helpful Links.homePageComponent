@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageComponent xmlns="http://soap.sforce.com/2006/04/metadata">
+    <body>&lt;table border=&quot;0&quot; cellpadding=&quot;1&quot; cellspacing=&quot;5&quot;&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://na1.salesforce.com/servlet/servlet.FileDownload?file=01546000000tfiu&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;a href=&quot;https://na1.salesforce.com/apex/pages/CaseDeflection&quot;&gt;Log a &lt;span style=&quot;font-weight: bold;&quot;&gt;case&lt;/span&gt; for customer support&lt;/a&gt;&lt;a href=&quot;https://na1.salesforce.com/servlet/servlet.FileDownload?file=01546000000ooHy&quot;&gt;&lt;br&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://na1.salesforce.com/servlet/servlet.FileDownload?file=01546000000tfio&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;a href=&quot;https://na1.salesforce.com/500?fcf=00B460000028Qfo&quot;&gt;View &lt;span style=&quot;font-weight: bold;&quot;&gt;cases&lt;/span&gt;&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td style=&quot;color: rgb(255, 0, 0);&quot;&gt;&lt;img alt=&quot;&quot; src=&quot;https://na1.salesforce.com/servlet/servlet.FileDownload?file=01546000000tfiv&quot;&gt;&lt;/td&gt;
+&lt;td style=&quot;color: rgb(102, 0, 204);&quot;&gt;&lt;a href=&quot;/sfc/#workspaces&quot;&gt;Download Documentation&lt;/a&gt;&lt;br&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;
+&lt;div style=&quot;z-index: 1000; visibility: hidden; width: 0pt; position: absolute; height: 0pt;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;z-index: 1000; visibility: hidden; width: 0pt; position: absolute; height: 0pt;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;z-index: 1000; visibility: hidden; width: 0pt; position: absolute; height: 0pt;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;z-index: 1000; visibility: hidden; width: 0pt; position: absolute; height: 0pt;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;z-index: 1000; visibility: hidden; width: 0pt; position: absolute; height: 0pt;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;z-index: 1000; visibility: hidden; width: 0pt; position: absolute; height: 0pt;&quot;&gt;&lt;/div&gt;
+&lt;div style=&quot;z-index: 1000; visibility: hidden; width: 0pt; position: absolute; height: 0pt;&quot;&gt;&lt;/div&gt;</body>
+    <pageComponentType>htmlArea</pageComponentType>
+    <width>narrow</width>
+</HomePageComponent>

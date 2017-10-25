@@ -1,0 +1,51 @@
+<apex:page contentType="text/javascript" showheader="false" controller="CTIAnywhereExtension">
+
+  $('#cirrus_cti').parent().parent().addClass('cti_special');
+
+  $('#cirrus_cti').html('<div id="cti_1" />'+
+    '<div id="cti_2" />'+
+    '<div id="cti_3" />');
+    
+  if (localStorage.cti_called === "yes"){
+    $('#cti_1').hide();
+    $('#cti_2').show();
+  } else if (localStorage.cti_called === "answered"){
+    $('#cti_1').hide();
+    $('#cti_3').show();
+  }
+  
+  var snd_phone = new Audio("{!$Resource.cirrus_cti_phone}");
+    
+  $(document).bind('keydown', 'shift+z', function(evt){$('#cti_1').click()});
+
+    $(function(){
+
+      $('#cti_1').click(function(){
+      snd_phone.play();
+      localStorage.cti_called = 'yes';
+      
+        $('#cti_1').hide();
+        $('#cti_2').show();
+        
+        setTimeout( function(){                                                
+          window.location = "{!PopUrl}"}, 900);                            
+      });
+      
+      $('#cti_2').click(function(){
+        $('#cti_2').hide();
+        $('#cti_3').show();
+        
+        localStorage.cti_called = 'answered';
+        
+      });
+      
+      $('#cti_3').click(function(){
+        $('#cti_3').hide();
+      $('#cti_1').show();
+      
+        localStorage.cti_called = 'no';
+      });
+
+    });
+
+</apex:page>

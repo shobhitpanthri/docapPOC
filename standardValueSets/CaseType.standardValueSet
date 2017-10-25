@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StandardValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <sorted>false</sorted>
+    <standardValue>
+        <fullName>Technical Issue</fullName>
+        <default>true</default>
+        <label>Technical Issue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Usage</fullName>
+        <default>false</default>
+        <label>Usage</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Installation</fullName>
+        <default>false</default>
+        <label>Installation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Documentation</fullName>
+        <default>false</default>
+        <label>Documentation</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Question</fullName>
+        <default>false</default>
+        <label>Question</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Feature Request</fullName>
+        <default>false</default>
+        <label>Feature Request</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Connection Issue</fullName>
+        <default>false</default>
+        <label>Connection Issue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing Issue</fullName>
+        <default>false</default>
+        <label>Billing Issue</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Technical Issue - Advanced</fullName>
+        <default>false</default>
+        <label>Technical Issue - Advanced</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Balance Inquiry</fullName>
+        <default>false</default>
+        <label>Balance Inquiry</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Billing Dispute</fullName>
+        <default>false</default>
+        <label>Billing Dispute</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bill Reprint - Email</fullName>
+        <default>false</default>
+        <label>Bill Reprint - Email</label>
+    </standardValue>
+    <standardValue>
+        <fullName>Bill Reprint - Paper</fullName>
+        <default>false</default>
+        <label>Bill Reprint - Paper</label>
+    </standardValue>
+</StandardValueSet>

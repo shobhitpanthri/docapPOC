@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Approval Request</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Approval Requests</value>
+    </caseValues>
+    <fields>
+        <label><!-- Approval Action --></label>
+        <name>Approval_Action__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Quote --></label>
+        <name>Quote__c</name>
+        <relationshipLabel><!-- Approval Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Requested Date --></label>
+        <name>Requested_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Result Date --></label>
+        <name>Result_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Add&apos;l Info Needed</masterLabel>
+            <translation><!-- Add&apos;l Info Needed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Denied</masterLabel>
+            <translation><!-- Denied --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Submitted</masterLabel>
+            <translation><!-- Submitted --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Approved / Denied By --></label>
+        <name>User__c</name>
+        <relationshipLabel><!-- Approval Requests --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- s_Document Directory --></label>
+        <name>s_Document_Directory__c</name>
+    </fields>
+    <fields>
+        <label><!-- s_Servlet Directory --></label>
+        <name>s_Servlet_Directory__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

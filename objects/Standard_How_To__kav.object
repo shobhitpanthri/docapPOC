@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <articleTypeChannelDisplay>
+        <articleTypeTemplates>
+            <channel>App</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Prm</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Csp</channel>
+            <template>Toc</template>
+        </articleTypeTemplates>
+        <articleTypeTemplates>
+            <channel>Pkb</channel>
+            <template>Tab</template>
+        </articleTypeTemplates>
+    </articleTypeChannelDisplay>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <fields>
+        <fullName>Additional_Comments__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Comments</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Additional_Information__c</fullName>
+        <externalId>false</externalId>
+        <label>Additional Information</label>
+        <length>32000</length>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Chat_Answer__c</fullName>
+        <externalId>false</externalId>
+        <label>Chat Answer</label>
+        <length>500</length>
+        <type>LongTextArea</type>
+        <visibleLines>10</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Findings_and_Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Findings and Resolution</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Internal_Comments_and_Findings__c</fullName>
+        <externalId>false</externalId>
+        <label>Internal Comments and Findings</label>
+        <length>5000</length>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Release_Information_and_Roadmap_Details__c</fullName>
+        <externalId>false</externalId>
+        <label>Release Information and Roadmap Details</label>
+        <length>5000</length>
+        <type>Html</type>
+        <visibleLines>25</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resolution_Procedures__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution Procedures</label>
+        <length>32000</length>
+        <type>Html</type>
+        <visibleLines>50</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Short_Problem_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Short Problem Description</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Supporting_Attachments__c</fullName>
+        <externalId>false</externalId>
+        <label>Supporting Attachments</label>
+        <required>false</required>
+        <type>File</type>
+    </fields>
+    <fields>
+        <fullName>Video_optional__c</fullName>
+        <externalId>false</externalId>
+        <label>Video (optional)</label>
+        <length>5000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <label>Standard How To</label>
+    <pluralLabel>Standard How To</pluralLabel>
+</CustomObject>

@@ -1,0 +1,331 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>CancelEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>SaveEdit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <allowInChatterGroups>false</allowInChatterGroups>
+    <compactLayoutAssignment>SYSTEM</compactLayoutAssignment>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>Simple Quote object which holds dates and line items, many quotes may be related to a single opportunity, a quote may have many detail lines.</description>
+    <enableActivities>true</enableActivities>
+    <enableBulkApi>true</enableBulkApi>
+    <enableChangeDataCapture>false</enableChangeDataCapture>
+    <enableEnhancedLookup>true</enableEnhancedLookup>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <enableSearch>true</enableSearch>
+    <enableSharing>true</enableSharing>
+    <enableStreamingApi>true</enableStreamingApi>
+    <fields>
+        <fullName>Approval_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Stage</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Picklist</type>
+        <valueSet>
+            <valueSetDefinition>
+                <sorted>false</sorted>
+                <value>
+                    <fullName>Draft</fullName>
+                    <default>true</default>
+                    <label>Draft</label>
+                </value>
+                <value>
+                    <fullName>In Review</fullName>
+                    <default>false</default>
+                    <label>In Review</label>
+                </value>
+                <value>
+                    <fullName>Internally Approved</fullName>
+                    <default>false</default>
+                    <label>Internally Approved</label>
+                </value>
+                <value>
+                    <fullName>Presented to Customer</fullName>
+                    <default>false</default>
+                    <label>Presented to Customer</label>
+                </value>
+                <value>
+                    <fullName>Customer Accepted</fullName>
+                    <default>false</default>
+                    <label>Customer Accepted</label>
+                </value>
+                <value>
+                    <fullName>Denied by Customer</fullName>
+                    <default>false</default>
+                    <label>Denied by Customer</label>
+                </value>
+                <value>
+                    <fullName>*Convert to Order*</fullName>
+                    <default>false</default>
+                    <label>*Convert to Order*</label>
+                </value>
+            </valueSetDefinition>
+        </valueSet>
+    </fields>
+    <fields>
+        <fullName>Opportunity__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Opportunity</label>
+        <referenceTo>Opportunity</referenceTo>
+        <relationshipName>R00N46000003QckYEAS</relationshipName>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Presented_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Presented</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Primary__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>Checked if quote is the primary quote to update the opportunity amount</description>
+        <externalId>false</externalId>
+        <label>Primary</label>
+        <trackTrending>false</trackTrending>
+        <type>Checkbox</type>
+    </fields>
+    <fields>
+        <fullName>Quote_Amount__c</fullName>
+        <externalId>false</externalId>
+        <label>Quote Amount</label>
+        <precision>12</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <trackTrending>false</trackTrending>
+        <type>Currency</type>
+    </fields>
+    <fields>
+        <fullName>Request_Approval__c</fullName>
+        <externalId>false</externalId>
+        <formula>HYPERLINK(&quot;/servlet/servlet.Integration?lid=01N46000000UCu4&amp;eid=&quot;&amp;Id, IMAGE(&quot;/servlet/servlet.ImageServer?oid=00D46000000aU4b&amp;id=01546000000tfi0&quot;, &quot;Submit&quot;) )</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Request Approval</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Valid_Until__c</fullName>
+        <externalId>false</externalId>
+        <label>Valid Until</label>
+        <required>false</required>
+        <trackTrending>false</trackTrending>
+        <type>Date</type>
+    </fields>
+    <label>Quote_OLD</label>
+    <nameField>
+        <displayFormat>Q-{00000}</displayFormat>
+        <label>Quote Number</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Quotes_OLD</pluralLabel>
+    <searchLayouts>
+        <customTabListAdditionalFields>Opportunity__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Quote_Amount__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Approval_Stage__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Valid_Until__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>CREATED_DATE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.ALIAS</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Opportunity__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Quote_Amount__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Valid_Until__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Approval_Stage__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>CREATED_DATE</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Opportunity__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Quote_Amount__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Valid_Until__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Primary__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>CREATED_DATE</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <visibility>Public</visibility>
+    <webLinks>
+        <fullName>Attach_Quote</fullName>
+        <availability>online</availability>
+        <description>Attaches the Quote to the opportunity</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Attach Quote</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/Quote?qid={!SFDC_520_Quote__c.Id}&amp;a=t</url>
+    </webLinks>
+    <webLinks>
+        <fullName>CloneQuotewithDetails</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>600</height>
+        <linkType>sControl</linkType>
+        <masterLabel>Clone Quote with Details</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <scontrol>quoteLineItemCloneV3htm</scontrol>
+    </webLinks>
+    <webLinks>
+        <fullName>Email_Quote_as_PDF</fullName>
+        <availability>online</availability>
+        <description>Emails the quote to any specified Contacts</description>
+        <displayType>button</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Email Quote as PDF</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/apex/emailQuote?Id={!SFDC_520_Quote__c.Id}</url>
+    </webLinks>
+    <webLinks>
+        <fullName>ReportViewCurrentTotals</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <encodingKey>UTF-8</encodingKey>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>600</height>
+        <isResizable>true</isResizable>
+        <linkType>url</linkType>
+        <masterLabel>Report View &amp; Current Totals</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <url>/00O46000001ZehK?pv0={!SFDC_520_Quote_ID}</url>
+        <width>900</width>
+    </webLinks>
+    <webLinks>
+        <fullName>RequestApproval</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>300</height>
+        <linkType>sControl</linkType>
+        <masterLabel>Request Approval</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <scontrol>quoteApprovalRequesthtm</scontrol>
+    </webLinks>
+    <webLinks>
+        <fullName>x1AddProductstoQuote</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>900</height>
+        <linkType>sControl</linkType>
+        <masterLabel>1) Add Products to Quote</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <scontrol>addProductQuoteV3htm</scontrol>
+    </webLinks>
+    <webLinks>
+        <fullName>x2EditLineItems</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <height>800</height>
+        <linkType>sControl</linkType>
+        <masterLabel>2) Edit Line Items</masterLabel>
+        <openType>sidebar</openType>
+        <protected>false</protected>
+        <scontrol>editQuoteLinesV3htm</scontrol>
+    </webLinks>
+    <webLinks>
+        <fullName>x3CalculateQuoteAmount</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>true</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>300</height>
+        <isResizable>true</isResizable>
+        <linkType>sControl</linkType>
+        <masterLabel>3) Calculate Quote Amount</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <scontrol>recalcQuoteAmountV3htm</scontrol>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <width>300</width>
+    </webLinks>
+    <webLinks>
+        <fullName>x4CopyDetailstoOpportunity</fullName>
+        <availability>online</availability>
+        <displayType>link</displayType>
+        <hasMenubar>false</hasMenubar>
+        <hasScrollbars>false</hasScrollbars>
+        <hasToolbar>false</hasToolbar>
+        <height>200</height>
+        <isResizable>false</isResizable>
+        <linkType>sControl</linkType>
+        <masterLabel>4) Copy Details to Opportunity</masterLabel>
+        <openType>newWindow</openType>
+        <position>none</position>
+        <protected>false</protected>
+        <scontrol>quoteLinesToOppRecordV3htm</scontrol>
+        <showsLocation>false</showsLocation>
+        <showsStatus>false</showsStatus>
+        <width>400</width>
+    </webLinks>
+</CustomObject>

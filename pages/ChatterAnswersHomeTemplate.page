@@ -1,0 +1,258 @@
+<apex:page standardStylesheets="false" showHeader="false" sidebar="false" cache="false" contentType="text/HTML">
+    <title>Cirrus Computers - Communities Home</title>
+    <div class="headerContainer">
+        <div class="headerdiv">
+            <img src="{!$Resource.Logo}" alt="Header Default" />
+            <div id="navbar">
+                <ul class="mynav">
+                    <li>Products</li><li>|</li>
+                    <li>Customer Service</li><li>|</li>
+                    <li>Careers</li><li>|</li>
+                    <li>Store</li>
+                </ul>
+                <div class="arrow-up"></div>
+            </div>
+        </div>
+        <div id="headerSep"></div>
+    </div>
+    <center>
+        
+            <div id="linkpage">
+                <div id="caTitle">Chatter Answers Communities</div>            
+                <a href="/Communities/Electronics_Main" >
+                <div class="title">
+                    <div class="conIcon">
+                        <img src="{!$Resource.ElectronicsImg}" alt="" />
+                    </div>
+                    <p class="titleText">Electronics</p>                
+                    <div class="description">
+                        <p>Community to share ideas, ask questions and get problems solved that are &quot;Electronics-related&quot;</p>
+                    </div>                    
+                </div></a>
+
+                <a href="/Communities/Services_main" >                
+                <div class="title">
+                    <div class="conIcon">
+                        <img src="{!$Resource.ServicesImg}" alt="" />
+                    </div>
+                    <p class="titleText">Services</p>                
+                    <div class="description">
+                        <p>Community to share ideas, ask questions and get problems solved that are &quot;Services&quot;</p>
+                    </div>
+                </div></a>
+                
+                <a href="/Communities/Hardware_main">
+                <div class="title">
+                    <div class="conIcon">
+                        <img src="{!$Resource.HardwareImg}" alt="" />
+                    </div>
+                    <p class="titleText">Hardware</p>
+                    <div class="description">
+                        <p>Community to share ideas, ask questions and get problems solved that are &quot;Hardware-related&quot;</p>
+                    </div>
+                </div></a>
+                
+                <a href="/Communities/My_Product_Idea_main">                
+                <div class="title">
+                    <div class="conIcon">
+                        <img src="{!$Resource.SoftwareImg}" alt="" />
+                    </div>
+                    <p class="titleText">Software</p>
+                    <div class="description">
+                        <p>Community to share ideas, ask questions and get problems solved that are &quot;Description-related&quot;</p>
+                    </div>
+                </div></a>
+            </div>
+                
+        
+    </center>
+    <div class="footerContainer">
+        <div class="footerdiv">
+            <div class="footerCon">
+                <div class="fImage"><img src="{!$Resource.twitterlogo}" alt="" /></div>
+                <div class="fText">Follow <span style="color: blue;">@askcirrus</span> on Twitter for news and updates</div>
+            </div>
+            <div class="footerCon">
+                <div class="fImage"><img src="{!$Resource.facebooklogo}" alt="" /></div>
+                <div class="fText">Become a Cirrus fan on <span style="color: blue;">Facebook</span></div>
+            </div>
+            <div class="footerCon">
+                <div class="fImage"><img src="{!$Resource.questionlogo}" alt="" style="width:64px;margin-top:-5px;" /></div>
+                <div class="fText">Questions?<br /><span style="color: blue;">help@cirruscorporation.com</span></div>
+            </div>
+            <div class="footerCon">
+                <div class="fImage"><img src="{!$Resource.copylogo}" alt="" /></div>
+                <div class="fText">Copyright Cirrus Corporation&trade;<br/>2011 &copy; All Rights Reserved</div>
+            </div>
+        </div>
+    </div>
+    
+        
+    <link href="/Communities/ChatterAnswersCSS" rel="stylesheet" type="text/css" />
+    <style>
+        body{
+            margin: 0px;
+            background-color: whitesmoke;
+        }
+        
+        #linkpage a{
+            width: 790px;
+            height: 85px;
+            text-decoration: none;
+        }
+        
+        #linkpage a:hover{
+            text-decoration: none;
+        }
+        
+        #linkpage{
+            background: -moz-linear-gradient(top, #e2e2e2 0%, #ffffff 87%); /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e2e2e2), color-stop(87%,#ffffff)); /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #e2e2e2 0%,#ffffff 87%); /* Chrome10+,Safari5.1+ */
+            padding-top:25px;
+            padding-bottom:60px;
+        }
+    
+        .title {
+            width: 600px;                        
+            -moz-border-radius: 6px;
+            -webkit-border-radius: 6px;
+            border-radius: 6px;
+            border-spacing: 0px;
+            margin: 20px 0px;
+            text-align: left;
+            clear:both;
+            height: 75px;
+            font-family: Arial;            
+        }        
+        
+        
+        .titleText{
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            font: Arial;
+            font-weight: bold;
+            line-height: 35px;
+            margin: 0px 0px 0px 88px;            
+        }
+        
+        .title a:hover{
+            text-decoratoion: none;
+        }
+        
+        .description{
+            width:600px;
+            padding: 0px 0px 0px 88px;
+        }
+        
+        .description p{
+            color: #333;
+            font-weight: normal;
+            margin: 0px;
+        }
+        
+        .conIcon{
+            float:left;
+            padding: 5px 0px 0px 10px;
+            height: 64px;
+            width: 64px;            
+        }
+        
+        .conIcon img{
+            border-radius: 6px;
+            -webkit-border-radius: 6px;
+            -moz-border-radius: 6px;
+            background-color: white;
+        }
+        
+        .footerContainer{
+            background-color: #lightgrey;
+            height: 95px;
+        }
+        
+        .headerContainer{
+            background-color: white;
+            height: 125px;
+            width: 100%;
+        }
+        
+        .headerdiv{
+            width: 790px;
+            height: 95px !important;
+        }
+        
+        #navbar{
+            width: 560px;
+            position:relative;
+            top: -33px;
+            left: 300px;
+        }
+        
+        #navbar ul{            
+            width: 560px;
+            margin: 0px;
+            padding: 0px;            
+        }
+        
+        #navbar li{
+            display: inline;
+            padding: 0px;
+            font-size: 18px;
+            font-family: Arial, Helvetica, Verdana;
+            padding-left: 30px;
+            color: #486390;
+        }
+        
+        #headerSep{
+            background: -moz-linear-gradient(top, #546ea8 0%, #486390 50%, #486390 51%, #3f537f 100%); /* FF3.6+ */            
+            background: -webkit-linear-gradient(top, #546ea8 0%,#486390 50%,#486390 51%,#3f537f 100%); /* Chrome10+,Safari5.1+ */
+            height:30px;
+            width: 100%;
+        }
+        
+        #caTitle{
+            font-size: 24px;
+            font-family: Arial;
+            font-weight: bold;
+            color: #555;
+        }
+        
+        .footerCon{
+            float: left;
+            width: 251px;
+            margin-left: 10px;          
+        }
+        
+        .fImage{
+            float: left;
+        }
+        
+        .footerCon img{
+            width: 48px;
+        }
+        
+        .footerdiv{
+            width: 1048px;
+            padding-top: 60px;
+            font-family: Arial, Helvetica, Verdana;
+        }
+        
+        .fText{
+            margin-left: 55px;
+            margin-top: 5px;
+            font-size: 14px;
+        }
+        
+        .arrow-up {
+            width: 0;
+            height: 0;
+            border-left: 12px solid transparent;
+            border-right: 12px solid transparent;        
+            border-bottom: 12px solid #486390;
+            position:relative;
+            top:2px;
+            left: 240px;
+        }
+    </style>
+</apex:page>

@@ -1,0 +1,268 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+
+<style type="text/css" media="all"> 
+body#splashBody { font-family: arial, helvetica, verdana, sans-serif; font-size: 80%; margin: 0; padding: 0; width: 97%; }
+img { border: 0; margin: 0; padding: 0; }
+p { margin: 0; padding: 0; }
+h1.appName { font-weight: bold; font-size: 100%; color: #FFF; background-color: #007DCE; padding: 10px 0 10px 8px; margin: 0 0 15px 0; }
+h2 { color: #000; padding: 2px 0 2px 8px; margin-top: 0; font-size: 90%; }
+h2.exchangeTitle { background-color: #999; }
+#splash { margin: 0; padding: 0; width: 100%; }
+#splash td { margin: 0; padding: 0; }
+#splash #splashLeft { vertical-align: top; background-color: #F3F3EC; border-bottom: 2px solid #638658; }
+#splash #splashCenter { display:block; width: 15px; background-color: #FFF; }
+#splash #splashRight { vertical-align: top; background-color: #E8E8E8; border-bottom: 2px solid #999; }
+#splash #splashLeft .about, #splash #splashLeft .exchange { width: 100%; }
+#splash #splashRight .exchange p { font-size: 90%; color: #333; margin: 0 10px 12px 10px; line-height: 1.4em; }
+#splash #splashLeft .about p { font-size: 90%; color: #333; margin: 0 10px 12px 15px; line-height: 1.4em; }
+#splash #splashLeft .about fieldset { color: #333; margin: 0 15px 10px 15px; padding: 2px; }
+#splash #splashLeft .about fieldset ul { padding: 0; margin: .3em 0 .3em 2em; }
+#splash #splashLeft .about fieldset li { padding: 0; margin: 0; }
+#splash #splashLeft .about legend { font-size: 90%; color: #333; font-weight: bold; }
+.imgDiv { text-align: center; padding: 0 0 10px 0; }
+.example {
+	xfloat: right;
+        border: 1px solid #000000;
+        padding: 4px;
+}
+</style>
+
+<title>Auto-Complete Splash Page</title>
+<script type="text/javascript" src="/js/functions.js"></script>
+<script type="text/javascript" src="/soap/ajax/8.0/connection.js"></script>
+<script>
+
+var AUTOCOMPLETE_CODE = '<s'+'cript type="text/javascript">\n';
+AUTOCOMPLETE_CODE += '    var djConfig = {\n';
+AUTOCOMPLETE_CODE += '        baseRelativePath: "/js/dojo/0.3.1/"\n';
+AUTOCOMPLETE_CODE += '    };\n';
+AUTOCOMPLETE_CODE += '</s'+'cript>\n';
+AUTOCOMPLETE_CODE += '<s'+'cript type="text/javascript" src="/js/dojo/0.3.1/dojo.js"></s'+'cript>\n';
+AUTOCOMPLETE_CODE += '<s'+'cript type="text/javascript" src="/soap/ajax/8.0/connection.js"></s'+'cript>\n';
+AUTOCOMPLETE_CODE += '<s'+'cript type="text/javascript" src="/servlet/servlet.Integration?lid=YOUR_ID_HERE"></s'+'cript>\n';
+AUTOCOMPLETE_CODE += '<s'+'cript type="text/javascript">\n';
+AUTOCOMPLETE_CODE += '    dojo.addOnLoad(AutoComplete.prototype.loadAutoComplete);\n';
+AUTOCOMPLETE_CODE += '</s'+'cript>\n';
+AUTOCOMPLETE_CODE += '\nAuto-Complete Loaded.\n';
+
+getApiURL = function(isPartner, version) {
+    var url = window.location.href;
+    var idx = url.indexOf('/', 10); // well after (http|https)://
+    var base = url.substring(0, idx) + "/services/Soap/" + (isPartner ? "u" : "c") + "/" + version;
+    return base;
+}
+
+function generateCode(){
+    var apiSession = getCookie("sid");
+    var apiURL = getApiURL(true, "7.0");
+    try {
+	    sforce.connection.init(apiSession, apiURL, true);
+	
+	    var isSuccess = false;
+	    var res = sforce.connection.query("select name, id from scontrol where name = 'AutoComplete'");
+	    if (res != null && res.size == 1){
+	        var record = res.records;
+	        var id = record.get("Id");
+	
+	        var codeResultEl = document.getElementById("codeResult");
+	
+	        if (id && codeResultEl){
+	            var code = AUTOCOMPLETE_CODE.replace("YOUR_ID_HERE", id.substring(0, 15));
+	            codeResultEl.value = code;
+	            isSuccess = true;
+	        }        
+	    }
+	
+	    if (!isSuccess){
+	        alert("Failed code generation.");
+	    }
+	} catch (e){
+	    alert("Error generating code:\n\n" + e);
+	}
+}
+</script>
+</head>
+<body id="splashBody">
+<h1 class="appName">About Auto-Complete</h1>
+<table id="splash" cellspacing="0">
+<tr>
+<td id="splashLeft" width="75%">
+
+<div class="about">
+
+<table>
+<tr>
+<td>
+
+<p>
+<FONT size="2">
+The Auto-Complete AppExchange package is a simple add-on tool to help you find data faster
+and fill out forms with fewer clicks. When typing a partial name for User/Account/Contact/Lead form
+fields in the salesforce.com user interface, the Auto-Complete tool suggests
+data that matches your criteria. 
+</FONT>
+</p>
+
+<p>
+<FONT size="2">
+As noted above, the Auto-Complete package currently only supports User, Account, Contact
+and Lead lookups from salesforce.com forms. Future support for other objects -- including
+Custom Objects -- are in the works.
+</FONT>
+</p>
+
+<!--
+<p>
+<FONT size="2">
+</FONT>
+</p>
+-->
+
+</td>
+<td>
+
+<div class="example">
+	<img src="/servlet/servlet.FileDownload?file=01546000000ooIJ">
+</div>
+
+</td>
+</tr>
+</table>
+
+<fieldset style="padding: 10px;">
+<legend>How To Install</legend>
+
+This set of steps will enable the Auto-Complete feature on all salesforce.com pages. You may want to keep this window open for reference and open another window to follow these instructions.
+<br>
+
+<ol>
+
+<li>
+<p>
+<FONT size="2">
+Navigate to "Setup->App Setup->Customize->Home->Home Page Components".
+</FONT>
+</p>
+
+<li>
+<p>
+<FONT size="2">
+Click on the "Edit" link next to "Messages &amp; Alerts".
+</FONT>
+</p>
+
+<li>
+<p>
+<FONT size="2">
+<a href="javascript:generateCode()">Click here</a> to generate the Auto-Complete HTML code.
+
+<BR><BR>
+
+<textarea id="codeResult" width="80%" height="200px" style="width:100%;height:240px;" name="code" wrap="logical" rows="10" cols="45">
+</textarea>
+
+</FONT>
+</p>
+
+<li>
+<p>
+<FONT size="2">
+Copy the code from the box above and paste it at the bottom of the "Messages &amp; Alerts" box. 
+</FONT>
+</p>
+
+<li>
+<p>
+<FONT size="2">
+Click the "Save" button to save the "Messages &amp; Alerts" Home Page Component.
+</FONT>
+</p>
+
+<li>
+<p>
+<FONT size="2">
+Navigate to "Setup->App Setup->Customize->User Interface".
+</FONT>
+</p>
+
+<li>
+<p>
+<FONT size="2">
+Check the option "Show Custom Sidebar Components on All Pages".
+</FONT>
+</p>
+
+<li>
+<p>
+<FONT size="2">
+Click "Save" to save the User Interface settings.
+</FONT>
+</p>
+
+<!--
+<li>
+<p>
+<FONT size="2">
+</FONT>
+</p>
+-->
+
+</ol>
+
+If you've successfully completed the installation, edit a contact you have access to and start typing in an Account name. A drop-down should appear with Accounts that match your search criteria! You can choose a record either by clicking an item with the mouse or by using the keyboard "Up" and "Down" keys and pressing "Tab" to select it.
+
+<BR><BR>
+
+If you have problems or questions, please email <a href="mailto:bbarugae@gmail.com">bbarugae@gmail.com</a>. Thanks and enjoy!
+
+<BR><BR>
+
+</ul>
+</fieldset>
+</div>
+</td>
+<td><div id="splashCenter"></div>
+</td>
+<td id="splashRight" width="25%">
+<div class="exchange">
+<h2 class="exchangeTitle">The AppExchange</h2>
+<p><FONT size="2">The AppExchange is the world?s first on-demand application-sharing 
+service. The dozens of pre-built applications and components it offers have 
+been created by salesforce.com customers, developers, and partners. With these 
+apps, users can do everything from managing expenses to tracking purchasing to 
+monitoring recruiting. Companies can browse, test drive, and install these apps 
+into their salesforce.com accounts with a single click. </FONT>
+</p>
+<p><FONT size="2">Using the AppExchange, organizations can easily add new apps to their 
+current salesforce.com deployments, run them alongside their existing on-demand 
+applications, and easily customize them to meet their unique needs. The breadth 
+of applications on the AppExchange ? including CRM and many other types of 
+business apps ? is limited only by the imagination of its publishers and the 
+on-demand community itself. </FONT>
+</p>
+</div>
+</td>
+</tr>
+</table>
+
+<textarea id="code" width="80%" height="200px" style="width:80%;height:200px;visibility:hidden;" name="code" wrap="logical" rows="10" cols="45">
+<script type="text/javascript">
+    var djConfig = {
+        baseRelativePath: "/js/dojo/0.3.1/"
+    };
+</script>
+<script type="text/javascript" src="/js/dojo/0.3.1/dojo.js"></script>
+<script type="text/javascript" src="/soap/ajax/8.0/connection.js"></script>
+<script type="text/javascript" src="/servlet/servlet.Integration?lid=YOUR_ID_HERE"></script>
+<script type="text/javascript">
+    dojo.addOnLoad(AutoComplete.prototype.loadAutoComplete);
+</script>
+
+Auto-Complete Loaded.
+</textarea>
+
+
+</body>
+</html>

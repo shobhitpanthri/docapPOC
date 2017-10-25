@@ -1,0 +1,40 @@
+<apex:page controller="ActivityTemplateController">
+    <apex:form >
+        <apex:pageBlock title="Activity Template">
+            <apex:selectList multiselect="false" size="1" value="{!templateName}">
+                <apex:selectOptions value="{!Templates}" />
+                <apex:actionSupport action="{!updateTasks}" rerender="lowerBlock,lowerArea" event="onchange" />
+            </apex:selectList>
+        </apex:pageBlock>
+    </apex:form>
+    <apex:form id="lowerArea">
+    <apex:pageblock title="Tasks for Escrow #{!oppty.name}" id="lowerBlock">
+        <apex:pageblockbuttons >
+            <apex:commandbutton action="{!save}" value="Add Tasks" />
+            <apex:commandbutton action="{!cancel}" value="Cancel" />        
+        </apex:pageblockbuttons>
+        
+        <apex:pageBlockTable value="{!tList}" var="item">
+                <apex:column headerValue="Subject">
+                    <apex:inputfield value="{!item.subject}" />
+                </apex:column>
+                <apex:column headerValue="Assigned To">
+                    <apex:inputfield value="{!item.ownerid}" required="false" />
+                </apex:column>
+                <apex:column headerValue="Due Date">
+                    <apex:inputfield value="{!item.activitydate}" />
+                </apex:column>
+                <apex:column headerValue="Status">
+                    <apex:inputfield value="{!item.status}" required="false" />
+                </apex:column>
+                <apex:column headerValue="Name">
+                    <apex:inputfield value="{!item.whoid}" />
+                </apex:column>
+                <apex:column headerValue="Notes">
+                    <apex:inputfield value="{!item.description}" />
+                </apex:column>
+        </apex:pageBlockTable>
+
+    </apex:pageblock>
+    </apex:form>
+</apex:page>

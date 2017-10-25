@@ -1,0 +1,20 @@
+<table cellpadding="5" width="550" height="400" cellspacing="5" border="0" >
+<tr height="400" valign="top" >
+<td locked="0" style=" font-family:arial; bLabel:main; color:#000000; font-size:12pt; bEditID:r3st1; background-color:#FFFFFF;" aEditID="c1r1" tEditID="c1r1" >
+<![CDATA[<P>The following opportunity has exceeded the allowed corporate discount of 10% and should be reviewed for approval.</P>
+<P>&nbsp;</P>
+<P>Opportunity: {!Opportunity.Name}</P>
+<P>Account: {!Account.Name}</P>
+<P>Estimated Close Date: {!Opportunity.CloseDate}</P>
+<P>Sales Stage: {!Opportunity.StageName}</P>
+<P>Amount: {!Opportunity.Amount}</P>
+<P>Discount Requested: {!Opportunity.Discount__c}</P>
+<P>&nbsp;</P>
+<P>Sales Rep: {!Opportunity.OwnerFullName}</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>
+<P>&nbsp;</P>]]></td>
+</tr>
+</table>

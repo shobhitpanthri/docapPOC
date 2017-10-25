@@ -1,0 +1,63 @@
+<apex:page contentType="text/CSS">
+     body{
+        background-color : white;
+    }
+    
+    
+    .headerdiv{
+        /*The width of the headerdiv should be consistent with the width of ChatterAnswers-div */
+        width: 790px;
+        margin: 0px auto;        
+        height: 95px;        
+    }
+    
+    .headerdiv img{
+        max-width: 790px;
+        
+    }
+    
+    .mychatteranswers{
+
+    }
+    
+    .footerdiv{
+        /*The width of the footerdiv should be consistent with the width of ChatterAnswers-div */
+        width: 100%;
+        margin: 0px auto;
+        position:relative;
+        /* The 'top' measure should be changed to precisely align the footer below the ChatterAnswers content */
+        top:0px;
+    }
+    
+    .threecolumn{
+        background-color: white;    
+    }
+    
+    .footerdiv img{
+        float: right;
+    }
+    
+    /* Only required if you need to modify the standard styling of the ChatterAnswers content
+    .csMini .threecolumn{
+        width: 850px;
+    }
+    
+    .threecolumn .leftContent{
+        padding-left: 20px;
+        width: 218px;
+    }
+    
+    .threecolumn .mainContent{
+        margin-left: 263px;
+    }
+    
+    .csMini .threecolumn .mainContent, .csMini .mainContent .lowerMainContent {
+        width: 587px;
+    }
+   
+    
+    .leftContent .feedcriterialinks li.selected a, #cs\:profile li.selected a {
+
+    }
+    */
+</apex:page>

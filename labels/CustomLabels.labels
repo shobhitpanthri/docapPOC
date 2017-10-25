@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>FieldCreatorBaseUrl</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldCreatorBaseUrl</shortDescription>
+        <value>http://callaway-mass-field-creator.appspot.com</value>
+    </labels>
+    <labels>
+        <fullName>FieldCreatorCSS</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>FieldCreatorURL</shortDescription>
+        <value>/css/fieldCreator.css</value>
+    </labels>
+    <labels>
+        <fullName>PKB2_Back_To_Results</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PKB2: Back To Results</shortDescription>
+        <value>back to search results</value>
+    </labels>
+    <labels>
+        <fullName>PKB2_Error_Admin_Notification_Email</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PKB2: Error Admin Notification Email</shortDescription>
+        <value>The Public Knowledge Base 2 (PKB2) package that is installed in your org has encountered an issue. The package was set to create an Account and Contact when a customer submits a question, but one of those transactions recently failed. This can happen when a validation rule or some other constraint is introduced on those objects.
+
+For troubleshooting purposes, below is the debug information from the Apex code that encountered the error. 
+
+Also, the package has changed the setting to prevent the creation of Contacts and Accounts. When the issue is resolved, the setting can be changed back.</value>
+    </labels>
+    <labels>
+        <fullName>PKB2_Next_Link</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PKB2: Next Link</shortDescription>
+        <value>Next</value>
+    </labels>
+    <labels>
+        <fullName>PKB2_Related_Articles</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PKB2: Related Articles</shortDescription>
+        <value>Related Articles</value>
+    </labels>
+    <labels>
+        <fullName>PKB2_Subscribe_Article_Feed</fullName>
+        <language>en_US</language>
+        <protected>false</protected>
+        <shortDescription>PKB2: Subscribe Article Feed</shortDescription>
+        <value>Subscribe to the RSS feed for this article</value>
+    </labels>
+</CustomLabels>

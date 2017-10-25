@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomPageWebLink xmlns="http://soap.sforce.com/2006/04/metadata">
+    <availability>online</availability>
+    <displayType>link</displayType>
+    <encodingKey>UTF-8</encodingKey>
+    <linkType>url</linkType>
+    <masterLabel>REPLACE Web Forms/Portal Logo</masterLabel>
+    <openType>replace</openType>
+    <protected>false</protected>
+    <url>/08146000000ty9b/e?retURL=%2Fapexpages%2Fsetup%2FviewStaticResource.apexp%3Fid%3D08146000000ty9b%26id%3D08146000000ty9b%26core.apexpages.devmode.url%3D1</url>
+</CustomPageWebLink>

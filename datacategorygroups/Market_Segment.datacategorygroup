@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Emerging Markets</label>
+                <name>Emerging_Markets</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Vertical Solutions</label>
+                <name>Vertical_Solutions</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Woman/Minority Owned</label>
+                <name>Woman_Minority_Owned</name>
+            </dataCategory>
+            <label>Small/Medium Business</label>
+            <name>Small_Medium_Business</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Government</label>
+                <name>Government</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Semiconductor</label>
+                    <name>Semiconductor</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>Consumer Device</label>
+                    <name>Consumer_Device</name>
+                </dataCategory>
+                <label>Technology</label>
+                <name>Technology</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Healthcare</label>
+                <name>Healthcare</name>
+            </dataCategory>
+            <label>Enterprise</label>
+            <name>Enterprise</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Market Segment</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

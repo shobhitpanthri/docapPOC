@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<AssignmentRules xmlns="http://soap.sforce.com/2006/04/metadata">
+    <assignmentRule>
+        <fullName>Standard</fullName>
+        <active>true</active>
+        <ruleEntry>
+            <assignedTo>spanthri@demo.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Chatter Answers</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>SLAEntitlementsQueue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.RecordTypeId</field>
+                <operation>equals</operation>
+                <value>Entitlement Case</value>
+            </criteriaItems>
+            <team>Standard Case Team</team>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>spanthri@demo.com</assignedTo>
+            <assignedToType>User</assignedToType>
+            <criteriaItems>
+                <field>Case.Origin</field>
+                <operation>equals</operation>
+                <value>Email</value>
+            </criteriaItems>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>ProductManagement</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Type</field>
+                <operation>equals</operation>
+                <value>Technical Issue</value>
+            </criteriaItems>
+            <team>Standard Case Team</team>
+        </ruleEntry>
+        <ruleEntry>
+            <assignedTo>Tier2EscalationQueue</assignedTo>
+            <assignedToType>Queue</assignedToType>
+            <criteriaItems>
+                <field>Case.Status</field>
+                <operation>equals</operation>
+                <value>Escalated</value>
+            </criteriaItems>
+            <team>Standard Case Team</team>
+        </ruleEntry>
+    </assignmentRule>
+</AssignmentRules>

@@ -1,0 +1,59 @@
+<apex:page controller="portalresults">
+<apex:pageBlock title="Knowledgebase Articles " rendered="{!showArticles}">
+            <apex:outputPanel layout="block">
+            <ul>
+                <knowledge:articleList articleVar="article"
+                    sortBy="mostViewed"
+                    keyword="{!keyword}"
+                    pageSize="10"
+                >
+                    <li><a href="{!URLFOR($Action.KnowledgeArticle.View, article.id)}" target="_blank">{!article.title}</a></li>
+                </knowledge:articleList>
+            </ul>
+            </apex:outputPanel>
+        </apex:pageBlock>
+        <apex:pageblock title="Cases" rendered="{!showAnswers3}">
+                <apex:pageblockTable value="{!caselist}" var="item">
+                    <apex:column headervalue="Case Number">
+                        <a href="/{!item.Id}" target="_top">{!item.CaseNumber}</a>
+                    </apex:column> 
+                    <apex:column headervalue="Subject" value="{!item.Subject}"/>
+                    <apex:column headervalue="Status" value="{!item.Status}"/>
+                </apex:pageblockTable>
+        </apex:pageblock>
+        <apex:pageblock title="Cases" rendered="{!noAnswers3}"> 
+            No Results Found
+        </apex:pageblock>
+        <apex:pageblock title="Community" rendered="{!showAnswers1}">
+                <apex:pageblockTable value="{!qlist}" var="result"> 
+                    <apex:column headervalue="Title">
+                        <a href="/{!result.Id}" target="_top">{!result.Title}</a>
+                    </apex:column> 
+                </apex:pageblockTable>
+        </apex:pageblock> 
+        <apex:pageblock title="Community" rendered="{!noAnswers1}">
+            No Results Found
+        </apex:pageblock>
+        <apex:pageblock title="Content" rendered="{!showAnswers4}">
+        	<apex:pageblockTable value="{!contentList}" var="clist">
+        		<apex:column headervalue="Title">
+        			<a href="/{!clist.id}" target="_top">{!clist.Title}</a>
+        		</apex:column>
+        	</apex:pageblockTable>
+        </apex:pageblock>
+        <apex:pageblock title="Content" rendered="{!noAnswers4}">
+            No Results Found
+        </apex:pageblock>
+        <apex:pageblock title="Ideas" rendered="{!showAnswers2}">
+                <apex:pageblockTable value="{!idealist}" var="idea">
+                    <apex:column headervalue="Title">
+                        <a href="/{!idea.Id}" target="_top">{!idea.Title}</a>
+                    </apex:column> 
+                    <apex:column headervalue="Category" value="{!idea.Category}"/>
+                    <apex:column headervalue="Votes" value="{!idea.VoteTotal}"/>
+                </apex:pageblockTable>
+        </apex:pageblock>
+        <apex:pageblock title="Ideas" rendered="{!noAnswers2}">
+            No Results Found
+        </apex:pageblock>
+</apex:page>

@@ -1,0 +1,263 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Dashboard xmlns="http://soap.sforce.com/2006/04/metadata">
+    <backgroundEndColor>#FFFFFF</backgroundEndColor>
+    <backgroundFadeDirection>Diagonal</backgroundFadeDirection>
+    <backgroundStartColor>#CCFFFF</backgroundStartColor>
+    <dashboardType>SpecifiedUser</dashboardType>
+    <isGridLayout>false</isGridLayout>
+    <leftSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Goal: drive at least 150% ROI with each campaign strategy</footer>
+            <header>Marketing Success</header>
+            <indicatorBreakpoint1>90.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>150.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>MarketingExecDashboard/CampaignROIbyCampaignType</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <sortBy>RowValueDescending</sortBy>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Where are our leads coming from?</footer>
+            <header>Leads by Source</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>DashboardReportsDashboardUnknown/LeadsbyLeadSource</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>LineGroupedCumulative</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Goal: Drive new business and Add-on business</footer>
+            <header>Revenue Trend by Type</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>SalesExecDashboard/RevenueTrendbyType</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>ColumnGrouped</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Same Month Sales Revenue</footer>
+            <header>Opportunity Trends</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>SalesExecDashboard/OpportunityTrends</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+    </leftSection>
+    <middleSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>BarStacked</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>What do our new business prospects look like?</footer>
+            <header>Sales Pipeline</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>SalesExecDashboard/PipelinebyStageandType</report>
+            <showPercentage>false</showPercentage>
+            <showValues>false</showValues>
+            <sortBy>RowValueDescending</sortBy>
+            <title>New vs. Existing Business</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Metric</componentType>
+            <displayUnits>Auto</displayUnits>
+            <header>Win/Loss Ratio YTD</header>
+            <indicatorBreakpoint1>25.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>30.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <metricLabel>Win Percentage in %</metricLabel>
+            <report>SalesExecDashboard/WinLossRatioonelinereport</report>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Gauge</componentType>
+            <displayUnits>Auto</displayUnits>
+            <footer>Where&apos;s our business at this moment?</footer>
+            <gaugeMax>900000.0</gaugeMax>
+            <gaugeMin>0.0</gaugeMin>
+            <header>Closed Business QTD</header>
+            <indicatorBreakpoint1>300000.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>600000.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>SalesExecDashboard/ClosedBusinessQTD</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>false</showValues>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Gauge</componentType>
+            <displayUnits>Auto</displayUnits>
+            <gaugeMax>4000000.0</gaugeMax>
+            <gaugeMin>0.0</gaugeMin>
+            <header>Closed Business YTD</header>
+            <indicatorBreakpoint1>1000000.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>3000000.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C25454</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <report>SalesExecDashboard/SALESTotalClosedYEAR</report>
+            <showPercentage>false</showPercentage>
+            <showTotal>true</showTotal>
+            <showValues>false</showValues>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <header>What do our Customers Think?</header>
+            <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#54C254</indicatorMiddleColor>
+            <report>IdeasReports/TopPortalImprovements</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Top Customer Ideas</title>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <header>What do our employees think?</header>
+            <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#54C254</indicatorLowColor>
+            <indicatorMiddleColor>#54C254</indicatorMiddleColor>
+            <report>IdeasReports/TopCompanyWideImprovements</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <sortBy>RowValueDescending</sortBy>
+            <title>Company-Wide Improvement Ideas</title>
+        </components>
+    </middleSection>
+    <rightSection>
+        <columnSize>Medium</columnSize>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>What do our customers think of us?</footer>
+            <header>Customer Satisfaction</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>ServiceExecDashboard/CustomerSatisfactionIndex</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <chartAxisRange>Auto</chartAxisRange>
+            <componentType>Pie</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <enableHover>false</enableHover>
+            <expandOthers>false</expandOthers>
+            <footer>Typically, a web portal can deflect 40% of cases annually from our support team</footer>
+            <header>Most Used Support Channels</header>
+            <legendPosition>Bottom</legendPosition>
+            <report>ServiceExecDashboard/CasesbyCaseOrigin</report>
+            <showPercentage>false</showPercentage>
+            <showValues>true</showValues>
+            <sortBy>RowLabelAscending</sortBy>
+            <title>Where are our cases coming from?</title>
+            <useReportChart>false</useReportChart>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <displayUnits>Auto</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <header>Customers with Most Open Cases</header>
+            <indicatorBreakpoint1>0.0</indicatorBreakpoint1>
+            <indicatorHighColor>#C2C254</indicatorHighColor>
+            <indicatorLowColor>#C2C254</indicatorLowColor>
+            <indicatorMiddleColor>#C2C254</indicatorMiddleColor>
+            <maxValuesDisplayed>5</maxValuesDisplayed>
+            <report>ServiceExecDashboard/OpenCasesbyAccount</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <sortBy>RowValueDescending</sortBy>
+        </components>
+        <components>
+            <autoselectColumnsFromReport>true</autoselectColumnsFromReport>
+            <componentType>Table</componentType>
+            <displayUnits>Integer</displayUnits>
+            <drillEnabled>false</drillEnabled>
+            <drillToDetailEnabled>false</drillToDetailEnabled>
+            <footer>Key deals where we need to focus our bandwidth</footer>
+            <header>Biggest Open Deals</header>
+            <indicatorBreakpoint1>50000.0</indicatorBreakpoint1>
+            <indicatorBreakpoint2>75000.0</indicatorBreakpoint2>
+            <indicatorHighColor>#54C254</indicatorHighColor>
+            <indicatorLowColor>#C2C254</indicatorLowColor>
+            <indicatorMiddleColor>#8BC254</indicatorMiddleColor>
+            <maxValuesDisplayed>6</maxValuesDisplayed>
+            <report>SalesExecDashboard/BiggestOpenDeals</report>
+            <showPicturesOnTables>true</showPicturesOnTables>
+            <sortBy>RowValueDescending</sortBy>
+        </components>
+    </rightSection>
+    <runningUser>spanthri@demo.com</runningUser>
+    <textColor>#000000</textColor>
+    <title>* CEO Dashboard</title>
+    <titleColor>#666666</titleColor>
+    <titleSize>12</titleSize>
+</Dashboard>

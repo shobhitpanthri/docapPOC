@@ -1,0 +1,16 @@
+<apex:page showheader="false" controller="CustomerPortalWelcomeController">
+
+
+	<apex:form >
+		<apex:pageBlock >
+            <apex:inputText value="{!keyword}" size="21" style="margin-left:-19px;"/>
+            <br/><br/>
+            <apex:commandlink value="Search" action="{!performSearch}" target="_top" 
+	            style="border: 2px outset;
+	 			padding: 0 2px 2px;
+	 			margin-left:-19px;
+	 			text-decoration: none;">
+ 			</apex:commandlink>
+   </apex:pageBlock>
+	</apex:form>  
+</apex:page>

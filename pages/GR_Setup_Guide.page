@@ -1,0 +1,20 @@
+<apex:page >
+<u><b>Green Rider Setup </b><br/><br/></u>
+
+<b>1) Google Key setup for Green Rider</b><br/><br/>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/CH0KQaXdkzo&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/CH0KQaXdkzo&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/>
+<br/>
+<a href='http://code.google.com/apis/maps/signup.html' target='_blank'>Sign up for Google Maps Key</a>
+<br/>
+<br/>
+<br/>
+<b>2) Green Rider Demo</b><br/><br/>
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/QB69kSmj0TY&hl=en&fs=1"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/QB69kSmj0TY&hl=en&fs=1" type="application/x-shockwave-flash" allowfullscreen="true" width="425" height="344"></embed></object>
+<br/>
+<br/>
+
+
+
+
+</apex:page>

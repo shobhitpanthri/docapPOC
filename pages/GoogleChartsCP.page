@@ -1,0 +1,12 @@
+<apex:page controller="GoogleCharts" standardstylesheets="false" showheader="false">
+<table columns="2" width="730" >
+<tr>
+<td>
+<apex:image value="{!caseURL1}" rendered="{!IF(caseURL1 == null, false, true)}"/>
+</td>
+<td >
+<apex:image value="{!caseURL2}" rendered="{!IF(caseURL2 == null, false, true)}"/>
+</td>
+</tr>
+</table>
+</apex:page>

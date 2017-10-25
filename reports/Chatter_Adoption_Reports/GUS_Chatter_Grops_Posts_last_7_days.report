@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>CollaborationGroup.FeedItems$Body</field>
+    </columns>
+    <currency>USD</currency>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>CollaborationGroup$Name</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Chatter Groups - # Posts last 7 days</name>
+    <reportType>Chatter_Groups_with_Group_Feed__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>CollaborationGroup.FeedItems$CreatedDate</dateColumn>
+        <interval>INTERVAL_LAST7</interval>
+    </timeFrameFilter>
+</Report>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<HomePageLayout xmlns="http://soap.sforce.com/2006/04/metadata">
+    <narrowComponents>standard-PortalWelcome</narrowComponents>
+    <narrowComponents>Federated Search</narrowComponents>
+    <narrowComponents>Customer Portal - Helpful Links</narrowComponents>
+    <narrowComponents>Salesforce Live Agent</narrowComponents>
+    <narrowComponents>standard-RecentItems</narrowComponents>
+    <wideComponents>HomepageTicker</wideComponents>
+    <wideComponents>* Customer Portal - IFrame to Load VF Homepage</wideComponents>
+</HomePageLayout>

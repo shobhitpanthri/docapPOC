@@ -1,0 +1,108 @@
+<apex:page controller="QuoteController" renderAs="pdf" action="{!init}">
+
+<apex:image value="{!PartnerLogo}" rendered="{!ShowPartnerLogo}" />
+<apex:image value="{!$Resource.Logo}" rendered="{!ShowInternalLogo}" />
+ <br/>
+<table cellspacing=0 cellpadding=0 width="100%">
+<tr> 
+
+  	
+
+        <td rowspan=2 valign="top">
+             
+            <table cellspacing=0 cellpadding=4 border=1>
+                <tr>
+                    <td align="left"> Prepared By: &nbsp &nbsp</td>
+                    <td align="left"> {!u.Name} </td>
+                </tr>
+                <tr>
+                    <td align="left"> Phone Number: &nbsp &nbsp</td>
+                    <td align="left"> {!u.Email} </td>
+                </tr>
+            </table>
+        </td>
+        
+        <td width="15%"></td>
+        
+        <td align="right" rowspan=2 valign="top">   
+            <table cellspacing=0 cellpadding=4 border=1>
+                <tr>
+                    <td align="right"> Date: &nbsp &nbsp</td>
+                    <td align="left"> {!given}</td>
+                </tr>
+                <tr>
+                    <td align="right"> Quote Valid Until: &nbsp &nbsp</td>
+                    <td align="left"> {!valid} </td>
+                </tr>               
+                <tr>
+                    <td align="right"> Quote ID: &nbsp &nbsp</td>
+                    <td align="left"> {!theQ.Name} </td>
+                </tr>
+                <tr>
+                    <td align="right" width="50%"> Bill To: &nbsp &nbsp </td> 
+                    <td width="50%"> {!a.BillingStreet} <br/>
+                         {!a.BillingCity},{!a.BillingState} &nbsp {!a.BillingPostalCode}<br/>
+                         {!a.BillingCountry}
+                    </td>
+                </tr>
+            </table>
+        </td>
+        
+    </tr>
+    <tr>
+    </tr>
+</table>
+<br/><br/><br/>  
+<div>
+<apex:dataTable value="{!qbli}" var="line" id="theTable" cellspacing="10" rowClasses="odd,even" styleClass="tableClass" width="100%" >
+        <apex:column >
+            <apex:facet name="header"><u>Name</u></apex:facet>
+            <apex:outputText value="{!line.Description__c}"/>
+        </apex:column>
+        <apex:column width="25%">
+            <apex:facet name="header">&nbsp</apex:facet>
+        </apex:column>
+
+        <apex:column >
+            <apex:facet name="header"><u>List Price</u></apex:facet>
+            <apex:outputText value="${!line.Unit_Price__c}"/>           
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header"><u>Discount </u></apex:facet>
+            <apex:outputText value="{!line.Sales_Discount__c}%"/>           
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header"><u>Unit Price</u></apex:facet>
+            <apex:outputText value="${! line.Unit_Net_Price__c }"/>         
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header"><u>Qty</u></apex:facet>
+            <apex:outputText value="{!line.Qty_Ordered__c}"/>           
+        </apex:column>
+        <apex:column >
+            <apex:facet name="header" ><u>Totals </u></apex:facet>
+            <apex:outputText value="${! line.Ext_Net_Price__c  }"/>         
+        </apex:column>              
+    </apex:dataTable>
+</div>
+<hr noshadow>
+<p/>
+<p/>
+<br/><br/>
+<table align="right">
+        <tr>
+            <td></td>
+            <td/>
+            <td align="right"><u>Grand Total:</u> &nbsp ${!q.Quote_Amount__c} &nbsp &nbsp &nbsp</td>
+        </tr>
+        <tr>
+            
+            <td colspan=3>
+            <br/> <br/> <br/> <br/> 
+            
+            <img  width="600" height="130" src ="{!$Resource.Signature}" align="right">
+            </td>
+        </tr>
+</table>
+
+</apex:page>

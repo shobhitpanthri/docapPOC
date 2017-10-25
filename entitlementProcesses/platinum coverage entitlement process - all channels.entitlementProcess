@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EntitlementProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <SObjectType>Case</SObjectType>
+    <active>true</active>
+    <entryStartDateField>Case.CreatedDate</entryStartDateField>
+    <exitCriteriaFilterItems>
+        <field>Case.IsClosed</field>
+        <operation>equals</operation>
+        <value>true</value>
+    </exitCriteriaFilterItems>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>First Response</milestoneName>
+        <minutesToComplete>2</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Acknowledge Ownership</milestoneName>
+        <minutesToComplete>5</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Update Case Comment</milestoneName>
+        <minutesToComplete>10</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Escalate if Resolution Unknown</milestoneName>
+        <minutesToComplete>20</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+    <milestones>
+        <milestoneCriteriaFilterItems>
+            <field>Account.Account_Priority__c</field>
+            <operation>equals</operation>
+            <value>High Priority</value>
+        </milestoneCriteriaFilterItems>
+        <milestoneName>Final Resolution</milestoneName>
+        <minutesToComplete>60</minutesToComplete>
+        <useCriteriaStartTime>false</useCriteriaStartTime>
+    </milestones>
+</EntitlementProcess>

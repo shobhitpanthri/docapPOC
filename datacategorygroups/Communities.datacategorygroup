@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<DataCategoryGroup xmlns="http://soap.sforce.com/2006/04/metadata">
+    <active>true</active>
+    <dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Training Information</label>
+                    <name>Training_Information</name>
+                </dataCategory>
+                <label>On Premise Solutions</label>
+                <name>On_Premise_Solutions</name>
+            </dataCategory>
+            <dataCategory>
+                <dataCategory>
+                    <label>Product Release Support</label>
+                    <name>Product_Release_Support</name>
+                </dataCategory>
+                <dataCategory>
+                    <label>New Features</label>
+                    <name>New_Features</name>
+                </dataCategory>
+                <dataCategory>
+                    <dataCategory>
+                        <label>8.x</label>
+                        <name>X8_x</name>
+                    </dataCategory>
+                    <dataCategory>
+                        <label>9.x</label>
+                        <name>X9_x</name>
+                    </dataCategory>
+                    <label>Updates and Patches</label>
+                    <name>Updates_and_Patches</name>
+                </dataCategory>
+                <label>On Demand Solutions</label>
+                <name>On_Demand_Solutions</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Other</label>
+                <name>Other</name>
+            </dataCategory>
+            <label>Software</label>
+            <name>Software</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Consumer</label>
+                <name>Consumer</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Enterprise</label>
+                <name>Enterprise</name>
+            </dataCategory>
+            <dataCategory>
+                <label>3rd Party</label>
+                <name>X3rd_Party</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Peripherals</label>
+                <name>Peripherals</name>
+            </dataCategory>
+            <label>Hardware</label>
+            <name>Hardware</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Hand Helds</label>
+                <name>Hand_Helds</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Computer Accessories</label>
+                <name>Computer_Accessories</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Mobile</label>
+                <name>Mobile</name>
+            </dataCategory>
+            <label>Electronics</label>
+            <name>Electronics</name>
+        </dataCategory>
+        <dataCategory>
+            <dataCategory>
+                <label>Product Support</label>
+                <name>Product_Support</name>
+            </dataCategory>
+            <dataCategory>
+                <label>Technical Services and Implementation</label>
+                <name>Technical_Services_and_Implementation</name>
+            </dataCategory>
+            <label>Services</label>
+            <name>Services</name>
+        </dataCategory>
+        <label>All</label>
+        <name>All</name>
+    </dataCategory>
+    <label>Communities</label>
+    <objectUsage>
+        <object>KnowledgeArticleVersion</object>
+    </objectUsage>
+</DataCategoryGroup>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<StaticResource xmlns="http://soap.sforce.com/2006/04/metadata">
+    <cacheControl>Public</cacheControl>
+    <contentType>application/vnd.ms-excel</contentType>
+    <description>Need to upload this into custom object to render info in the Telephony Dashboard</description>
+</StaticResource>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fields>
+        <label><!-- Background Color --></label>
+        <name>ZMG__Background_Color__c</name>
+    </fields>
+    <fields>
+        <label><!-- Display Response Count --></label>
+        <name>ZMG__Display_Response_Count__c</name>
+    </fields>
+    <fields>
+        <label><!-- Edit Redirect URL --></label>
+        <name>ZMG__Edit_Redirect_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Initialized --></label>
+        <name>ZMG__Initialized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Publisher --></label>
+        <name>ZMG__Publisher__c</name>
+    </fields>
+    <fields>
+        <label><!-- Query Params --></label>
+        <name>ZMG__Query_Params__c</name>
+    </fields>
+    <fields>
+        <label><!-- Question ID --></label>
+        <name>ZMG__Question_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Results Redirect URL --></label>
+        <name>ZMG__Results_Redirect_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Script Tag URL --></label>
+        <name>ZMG__Script_Tag_URL__c</name>
+    </fields>
+    <fields>
+        <label><!-- Show Sample If Not Initialized --></label>
+        <name>ZMG__Show_Sample_If_Not_Initialized__c</name>
+    </fields>
+    <fields>
+        <label><!-- Slot --></label>
+        <name>ZMG__Slot__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey ID --></label>
+        <name>ZMG__Survey_ID__c</name>
+    </fields>
+    <fields>
+        <label><!-- Survey Name --></label>
+        <name>ZMG__Survey_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Widget Type --></label>
+        <name>ZMG__Widget_Type__c</name>
+        <picklistValues>
+            <masterLabel>Aggregate</masterLabel>
+            <translation><!-- Aggregate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Blogger Widget</masterLabel>
+            <translation><!-- Blogger Widget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>NPS</masterLabel>
+            <translation><!-- NPS --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Survey Specific</masterLabel>
+            <translation><!-- Survey Specific --></translation>
+        </picklistValues>
+    </fields>
+</CustomObjectTranslation>

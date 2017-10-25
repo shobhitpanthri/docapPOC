@@ -1,0 +1,12 @@
+<apex:page cache="false"
+  standardStylesheets="false"
+  showHeader="false"
+  sidebar="false"
+  controller="pkb_Controller">
+
+<!-- this empty page simply invokes the PKB site template and gives us a page to set the Site homepage to -->
+<apex:composition template="pkb_Template">
+  <apex:define name="body"></apex:define>
+</apex:composition>
+
+</apex:page>
